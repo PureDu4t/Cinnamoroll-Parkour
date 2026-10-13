@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3850FD6E-1807-4894-94FE-F171206CB3B8}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{3850FD6E-1807-4894-94FE-F171206CB3B8}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="LevelSelection" ID="{B0AE7612-B478-4E81-95E4-C6B428E821D7}">
+					<ChildrenList>
+						<Switch Name="Level_01" ID="{240BD2FC-583D-4781-A266-F06486C136D9}"/>
+						<Switch Name="Level_02" ID="{9E57146C-A1A7-43D9-BEB3-D42369AD8442}"/>
+						<Switch Name="Level_03" ID="{BE72A7F9-C461-411B-8153-102D49555CDD}"/>
+						<Switch Name="Level_04" ID="{DCBA8580-9819-44AF-8B71-DCEC9EA70193}"/>
+						<Switch Name="Level_05" ID="{EE572F0D-3787-4A13-89E8-757EBAD531E5}"/>
+						<Switch Name="Level_06" ID="{47B8773E-7DA2-42F0-B122-94C02850E1B8}"/>
+						<Switch Name="Level_07" ID="{784AF7A8-AE90-4B38-A34A-E57D20D47A24}"/>
+						<Switch Name="Level_08" ID="{EF033764-DAC1-4945-87BC-A95248523229}"/>
+						<Switch Name="Level_09" ID="{3970AC63-F505-4913-93C4-9B1BA920DA63}"/>
+						<Switch Name="Level_10" ID="{02BBB607-018B-4FCE-A914-6D6091D6C149}"/>
+						<Switch Name="Level_11" ID="{678F8358-20D6-492C-812E-BEBFD8F0DEEB}"/>
+						<Switch Name="Level_12" ID="{EE2DF8B9-77FE-49A6-84A7-E9FDF1066D8A}"/>
+						<Switch Name="Level_13" ID="{7CEB9795-906E-46FD-A9EC-28C9C77B9746}"/>
+						<Switch Name="Level_14" ID="{66932D3A-352B-439E-87E9-D531ED5C399E}"/>
+						<Switch Name="Level_15" ID="{6181A086-3242-4879-8FB8-B31B6FB4E249}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Broadcast_Cell_Type" ID="{9049948A-CA11-4C5A-8156-1EB51142A889}">
+					<ChildrenList>
+						<Switch Name="Ground" ID="{2AF5E9B2-2C28-42D3-A3FF-DD5321C496BC}"/>
+						<Switch Name="Lever" ID="{3F2F510E-D621-4C7C-99DF-BE2493443D22}"/>
+						<Switch Name="Fan" ID="{02E36EE8-180F-43C6-AAC4-7FAC88E14F54}"/>
+						<Switch Name="Battery" ID="{17595F57-A427-451F-972A-C82511DD3632}"/>
+						<Switch Name="Lore" ID="{05D77435-FE19-4083-9D16-2BA9ED701374}"/>
+						<Switch Name="Win" ID="{A7DEDB90-93CA-4F11-ACDB-28F5C5B85EE3}"/>
+						<Switch Name="Wall" ID="{7EB2A6FC-36B0-46DF-A401-9D169F34126F}"/>
+						<Switch Name="MoveableWall" ID="{DF322C46-30B1-41A2-A495-E55C1901FCE0}"/>
+						<Switch Name="Cloud" ID="{DB15CBC3-9A1A-4B05-8AD8-A03988428235}"/>
+						<Switch Name="Empty" ID="{172612E1-A8CA-447E-A558-CC3C53835358}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Broadcast_Cell_PitchStep" ID="{2B7EE2F4-A2B4-4A86-A5F0-94F3EF5AC299}">
+					<ChildrenList>
+						<Switch Name="P1_C" ID="{281582FD-00A9-4896-8F27-E1603B01968F}"/>
+						<Switch Name="P2_D" ID="{C47CEF4A-A063-4F0F-8865-5DD8D1C41128}"/>
+						<Switch Name="P3_E" ID="{9F2AC288-744E-4F0F-8634-E8A78F87FDBF}"/>
+						<Switch Name="P4_F" ID="{746F96BD-5FA1-4BD6-A381-018C431DD024}"/>
+						<Switch Name="P5_G" ID="{5988F2A8-A55D-45AA-9DA3-1E04DD45C7A9}"/>
+						<Switch Name="P6_A" ID="{E4EE23E3-EEA9-48FE-A18E-1D44E0EE488D}"/>
+						<Switch Name="P7_B" ID="{CD7145A9-E4E2-4AB5-90A8-6C810DE741D9}"/>
+						<Switch Name="P8_C2" ID="{8E380255-AD64-4B2E-A095-450F6159490C}"/>
+						<Switch Name="P9_D2" ID="{10A80E21-1730-4627-9930-B3C0541E5395}"/>
+						<Switch Name="P10_E2" ID="{513A4D08-4A67-4BB8-B63A-F1BF2E04AE26}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Tutorial" ID="{B660C0ED-230D-4237-93BE-37CE7D82106D}">
+					<ChildrenList>
+						<Switch Name="Left" ID="{EB01CE79-1B99-4518-8119-FFE2286A40E1}"/>
+						<Switch Name="Right" ID="{7FD0ABF4-AB06-4403-A69E-5269C4D389DA}"/>
+						<Switch Name="Space" ID="{D9E5586E-93B0-4449-BAE6-0A41C7B105D6}"/>
+						<Switch Name="S" ID="{E5F7DCBC-E05F-4E98-B589-1DFF4F4EF5D8}"/>
+						<Switch Name="W" ID="{19D61968-73F6-4845-A0E2-BF8900F6732C}"/>
+						<Switch Name="A" ID="{3D2CB47F-3E3E-4C78-9144-5E61D2702152}"/>
+						<Switch Name="D" ID="{AB2F6EB5-2237-4433-87E9-2C99E804A804}"/>
+						<Switch Name="Q" ID="{BF73E23E-C2A3-467C-AC1B-3C8D459FCA83}"/>
+						<Switch Name="Ground" ID="{6EBAD213-96D5-4720-9D46-083E99812AB4}"/>
+						<Switch Name="Wall" ID="{0386950C-0893-4668-876A-5588468289E6}"/>
+						<Switch Name="Lore" ID="{1C2938F2-006E-4AF9-9FF9-72D58A004203}"/>
+						<Switch Name="Win" ID="{3207063F-0C87-4538-998F-9C764833505C}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

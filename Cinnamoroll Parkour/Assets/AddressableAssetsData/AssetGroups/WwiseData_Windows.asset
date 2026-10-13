@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: WwiseData_Windows
+  m_EditorClassIdentifier: 
+  m_GroupName: WwiseData_Windows
+  m_GUID: efcadf4f9160542bcb0d2dc96904b1cf
+  m_SerializeEntries:
+  - m_GUID: 4b47d4c94c9194e6faa1f10c13910168
+    m_Address: Assets/WwiseData/Bank/Windows/Bus/Reverb.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d27788e8730d47d18e6b37f27318579
+    m_Address: Assets/WwiseData/Bank/Windows/Main.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f49260bb99b54cb18e94db5540d7aec
+    m_Address: Assets/WwiseData/Bank/Windows/Bus/Plate.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a0c6ceef7e23347bc83c898659d5410a
+    m_Address: Assets/WwiseData/Bank/Windows/Bus/Med_Room.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e1b80d841dc6746fc8a69f6effafff82, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d4cb8cf27fe2646c1a12998ccf110fc1, type: 2}

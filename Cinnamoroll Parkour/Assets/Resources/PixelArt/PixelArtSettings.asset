@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10930ae387ec448084840dafebec5975, type: 3}
+  m_Name: PixelArtSettings
+  m_EditorClassIdentifier: 
+  enabled: 1
+  replaceCharacter: 1
+  showLevelHud: 1
+  sky: {fileID: 2800000, guid: b2190128d0384206a29c2a81d37a0beb, type: 3}
+  tiles: {fileID: 2800000, guid: 16deca7092504c0ebcad3d274d85e644, type: 3}
+  character: {fileID: 2800000, guid: 7ff4842841cb4827976a8f720954ef5b, type: 3}
+  ink: {r: 0.19, g: 0.23, b: 0.4, a: 1}
+  accent: {r: 0.43, g: 0.5, b: 0.82, a: 1}
+  panel: {r: 1, g: 0.99, b: 0.96, a: 0.97}
+  border: {r: 0.7, g: 0.76, b: 0.93, a: 1}
+  selected: {r: 0.88, g: 0.92, b: 1, a: 1}
+  cafe: {fileID: 2800000, guid: e21402fa01c04ada972ff9198062d183, type: 3}
+  forest: {fileID: 2800000, guid: 9d88d392693646b0893031bb0a21faff, type: 3}
+  cafeTerrain: {fileID: 2800000, guid: 785609af458249f9a121af0766e7b32f, type: 3}
+  forestTerrain: {fileID: 2800000, guid: 43cab7533d6b400da864f14ba1e98c5c, type: 3}
+  invisibleWallTiles: {fileID: 2800000, guid: 4f753602ef694b77a8aff3b759ee3b88, type: 3}
+  cloudInvisibleWall: {fileID: 2800000, guid: 7e1ebbb40dcb487389ad2d523bba912d, type: 3}
+  cafeProps: {fileID: 2800000, guid: 39133819cd2c4606b53615f47bfae6da, type: 3}
+  cafeArchitecture: {fileID: 2800000, guid: 2508b8bd90f348bfbbc1e255e9fbd66d, type: 3}
+  cafeHeightFurniture: {fileID: 2800000, guid: 9fd9399dae70408491613f122831d83c, type: 3}
+  cafeCreamBoundary: {fileID: 2800000, guid: 2e6042bfd1314a48968f40082bb04592, type: 3}
+  uiSkin: {fileID: 2800000, guid: 8e0a44778ff74bd4a9ddfc571cc5621b, type: 3}

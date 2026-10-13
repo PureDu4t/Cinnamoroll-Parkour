@@ -1,0 +1,23 @@
+public enum CellType
+{
+    Empty,
+    Ground,
+    Wall,
+    Door,
+    CrackedWall,
+    Lever,
+    Cannon,
+    Battery,
+    Goal,
+    Enemy,
+    Lore,
+    SmallJumpHintRight,
+    SmallJumpHintLeft,
+    SmallJumpHintBoth,
+    BigJumpHintRight,
+    BigJumpHintLeft,
+    BigJumpHintBoth,
+    Background,
+    Death,
+    AirWall
+}

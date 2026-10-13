@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Speech Setup.unity
+    guid: a0522d3caa8f4d699e120e1b5f1e9758
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 57e3dfc7a0d347b5b3aa7c8d0a7d8309
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: bbcb6684baf3b411ab52b4ff8becff09
+  - enabled: 1
+    path: Assets/Scenes/Level Select.unity
+    guid: 29b2b3296a6974396a5cacef1bb672e6
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 31aab52cf83854639bb8ca5674e6d7f7
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 1a401b385ec054fa4b72ac0778e7b916
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 68911d02a69d2476bab5149c224c485d
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: acf67dc54fbc246fa844712d72515cb9
+  - enabled: 1
+    path: Assets/Scenes/Level 5.unity
+    guid: d9cd93849b35e46a28fbb5161e45ee1d
+  - enabled: 1
+    path: Assets/Scenes/Level 6.unity
+    guid: ad72cb63d663d4a4eac55901f8f0f205
+  - enabled: 1
+    path: Assets/Scenes/Level 7.unity
+    guid: 5dccfa9dfed18464ba45fd3dbcd1798b
+  - enabled: 1
+    path: Assets/Scenes/Level 8.unity
+    guid: 29eb8a329e833470492ee85eff1f6551
+  - enabled: 1
+    path: Assets/Scenes/Level 9.unity
+    guid: 5fab65f09319a4024bb059ccd702238f
+  - enabled: 1
+    path: Assets/Scenes/Level 10.unity
+    guid: 6c6fe101a543e420f880d6c4e0e850cb
+  - enabled: 1
+    path: Assets/Scenes/Level 11.unity
+    guid: 4861f1a1d529d4ef09370355c25fd740
+  - enabled: 1
+    path: Assets/Scenes/Level 12.unity
+    guid: 9eb2ccafd635d48db96ab552e6468bcb
+  - enabled: 1
+    path: Assets/Scenes/Level 13.unity
+    guid: 246fef330fad2492dacc2e9ef20b9a70
+  - enabled: 1
+    path: Assets/Scenes/Level 14.unity
+    guid: 5e529ed86b7384a4385f453a27cb37f4
+  - enabled: 1
+    path: Assets/Scenes/Level 15.unity
+    guid: ed7f410b91c0a4ece9ea2f72e564c134
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 00aa03817a9034e308a2b5205bd04335
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 3e31c7465aac04bde88c2156fce6c651, type: 2}
+  m_UseUCBPForAssetBundles: 0

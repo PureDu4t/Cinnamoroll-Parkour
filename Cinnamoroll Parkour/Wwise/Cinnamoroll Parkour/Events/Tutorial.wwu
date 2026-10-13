@@ -1,0 +1,1944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}" SchemaVersion="133" RootDocumentID="{C6D73447-BEF6-4EF2-BC63-EFF2180E3750}" ParentDocumentID="{C6D73447-BEF6-4EF2-BC63-EFF2180E3750}">
+	<Events>
+		<WorkUnit Name="Tutorial" ID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}" OwnerID="{C6D73447-BEF6-4EF2-BC63-EFF2180E3750}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="Lore" ID="{37A025D5-FA89-4B0E-92E2-C28C7FF7E619}" ShortID="368934579">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="17"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Folder Name="L1" ID="{304FB969-F265-4F11-95CD-196E5236EAB4}" ShortID="720917724">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Event Name="Play_LT_3" ID="{9F6E75BB-44DA-4FE8-9893-8C78532D6907}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{586FA3CB-726B-4B90-A112-0A16AA481B39}" ShortID="920513594">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-2" ID="{4A4E2B31-6777-4524-9E0C-86B18182D16F}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{392726AB-6D9C-4590-97AB-226256E5E60A}" ShortID="641894033">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT_1" ID="{6F9C5B40-BE20-4D40-97D9-F3E3158BB97C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{3F00E450-D888-41EB-83C3-FF9FFA275CF4}" ShortID="807734476">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-1_OnCollision" ID="{69E88901-1241-43A7-BDFA-A73D069CF4F4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{715DBD9E-4BB3-4B2E-8BEE-0C07B95F4AF5}" ShortID="228969165">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-On Start" ID="{B3568A01-783D-4790-AAD4-3B353984505E}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{5825E9FE-6BE8-4713-A209-DD85ECA773FA}" ShortID="616112314">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-Win" ID="{B72C0943-4690-45EB-9764-95767FC7C705}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_LT_WinOnCollision" ID="{101289FD-FC24-49D4-9BBC-B67E6D0FE70E}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{4CE4F7F6-915D-4007-AFF8-E47C75C2D01C}" ShortID="627104694">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT_1" ID="{6F9C5B40-BE20-4D40-97D9-F3E3158BB97C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{4841FB86-D889-4697-B964-C9A44AFC2CCE}" ShortID="34889405">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-1_OnCollision" ID="{69E88901-1241-43A7-BDFA-A73D069CF4F4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{8553FCC6-569E-4400-A444-7E9F2586C5A4}" ShortID="880792380">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-2" ID="{4A4E2B31-6777-4524-9E0C-86B18182D16F}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{9D0A8835-5CCC-47E2-A2B5-0FA7A7B61F25}" ShortID="605900760">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-On Start" ID="{B3568A01-783D-4790-AAD4-3B353984505E}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{248D3222-C60A-479F-AD2E-81D8D93C20F3}" ShortID="755311578">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-Win" ID="{B72C0943-4690-45EB-9764-95767FC7C705}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_LT_1" ID="{6D458A33-6F03-4A46-A50B-9852757429DD}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{F96AD07C-4D6B-429C-801C-4DB698C12116}" ShortID="587802309">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-1_OnCollision" ID="{69E88901-1241-43A7-BDFA-A73D069CF4F4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{56A22672-0C78-4061-A089-036ADC764056}" ShortID="5490924">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-2" ID="{4A4E2B31-6777-4524-9E0C-86B18182D16F}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{83E22097-036F-46C4-AED6-1428D9488CAD}" ShortID="339062361">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-On Start" ID="{B3568A01-783D-4790-AAD4-3B353984505E}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{FB2EF037-478E-46E6-8EBF-17ADFEEFB39D}" ShortID="622722413">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-Win" ID="{B72C0943-4690-45EB-9764-95767FC7C705}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{CD8F676D-A9AE-456A-A41B-74451A83B996}" ShortID="743894450">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT_1" ID="{6F9C5B40-BE20-4D40-97D9-F3E3158BB97C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_LT_1OnCollision" ID="{127276E1-D66A-41E6-9279-EA1FA21E9692}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{793E0275-4C13-4A47-A258-A2059F0E851D}" ShortID="466999147">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-2" ID="{4A4E2B31-6777-4524-9E0C-86B18182D16F}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{044F1FCE-67A4-4566-9C9A-936297FF8F9D}" ShortID="936569415">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-Win" ID="{B72C0943-4690-45EB-9764-95767FC7C705}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{57A9F4CD-E618-403B-908E-D01C1AD5D829}" ShortID="559052920">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT_1" ID="{6F9C5B40-BE20-4D40-97D9-F3E3158BB97C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{6D5FFA5E-8255-42AB-AE3F-06D1A7AFFFF8}" ShortID="914341395">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-On Start" ID="{B3568A01-783D-4790-AAD4-3B353984505E}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{1153370F-3BD4-42C0-B8B6-813478D8502D}" ShortID="43913624">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.5"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-1_OnCollision" ID="{69E88901-1241-43A7-BDFA-A73D069CF4F4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_LT_Start" ID="{A9F620D5-22DF-45D0-A82F-19978EF6252E}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{8DBBED77-41E5-40E8-957F-977350F7340A}" ShortID="168620882">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-On Start" ID="{B3568A01-783D-4790-AAD4-3B353984505E}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{DA6E967F-E4F6-4D67-9D93-D7AA0B550A74}" ShortID="571691677">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LevelSelect_1" ID="{BE9B25AF-1310-48A1-B95F-52D870C9AAC0}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_LT_2" ID="{CCCE03D8-848F-4E2B-8C3C-D6F4A369E1A2}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{6A8F2147-865B-4D54-890E-707EADDC2772}" ShortID="812547712">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT_1" ID="{6F9C5B40-BE20-4D40-97D9-F3E3158BB97C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{1C6DA955-80B6-4240-B0D0-4A269D28D98D}" ShortID="761648030">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-1_OnCollision" ID="{69E88901-1241-43A7-BDFA-A73D069CF4F4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{3A74B22A-4CBF-4A47-844D-69797AC4876B}" ShortID="924404305">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-On Start" ID="{B3568A01-783D-4790-AAD4-3B353984505E}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{60198AF6-1243-414A-AD1D-B0026D4FEEFF}" ShortID="1018367919">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-Win" ID="{B72C0943-4690-45EB-9764-95767FC7C705}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{A139B182-D056-4752-BA61-CDB4A883377C}" ShortID="732757274">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LT-2" ID="{4A4E2B31-6777-4524-9E0C-86B18182D16F}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="L2" ID="{A5A8F49B-E68F-430A-8F1A-1B7F378259F0}" ShortID="294472002">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Event Name="Play_L2_1" ID="{5D02BFB7-F85B-45B2-AF76-849233D52697}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{DC55DE0F-64DB-438B-AA4A-8614BCCA7E69}" ShortID="285260162">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{0FBBE8D1-FD58-4AC3-98FC-035173E5FFC0}" ShortID="434905759">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2-1" ID="{C2434B58-BB94-4FA1-9F96-EC577EA957F8}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_L2_OnStart" ID="{6DBD542F-B56A-4861-A1DD-9F87F534764F}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{31609755-FAD2-44CC-8661-D66185BD5B5D}" ShortID="976092065">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="L3" ID="{06AA3651-E4D6-4FB6-BCED-CA610AB8DC14}" ShortID="153857451">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Event Name="Play_L3_1" ID="{88E44DE8-D6D9-40EF-BE99-076CA88004F5}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{CADEC4E1-A883-4C98-8BF3-DAA4D2516E60}" ShortID="371868567">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{4EB5AD9C-629F-474E-9300-A9AF44107239}" ShortID="637694083">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L3-1" ID="{358810C8-8F68-4BBA-AFD3-D9C1F948C587}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_L3_OnStart" ID="{EA1B37B0-96B3-42A6-9CED-83DBD0A8AB64}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{A7CEF786-44C0-4DD0-9461-258E44707AA5}" ShortID="591479446">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="L4" ID="{BC4BFCDD-BB4D-40AE-A0C1-CB482F384135}" ShortID="160659513">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Event Name="Play_L4_1" ID="{BCD19046-64AE-4550-9451-4E46FA4EE823}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{8BD014C4-B1B9-4234-96D7-05C1E6A78D10}" ShortID="711635243">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{90A3F7A4-BE63-41B8-BFF8-4E15D82F3227}" ShortID="158441239">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L4-2" ID="{7A7AA3FD-80C0-422B-AC9E-90E1DE788141}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{B4AE595B-B8BE-43F4-997B-672DD07ACADE}" ShortID="42444140">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L4-1" ID="{5F918AB9-E0C1-4C4E-94F4-FEB07AC9806C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_L4_OnStart" ID="{4CB1120B-E23B-49ED-B91F-47AAA9D64FDF}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{B76FA080-219F-471E-BF1C-2C1CCBCFD0C9}" ShortID="503430067">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_L4_2" ID="{988CC492-97A0-431A-8A90-57A58E3982CB}">
+									<ChildrenList>
+										<Action Name="" ID="{05DF1AFD-B954-494F-AA85-839C8D894AEC}" ShortID="1014597216">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{A36A572B-7DD4-4B51-BA6A-BEA4D928C954}" ShortID="476142877">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L4-1" ID="{5F918AB9-E0C1-4C4E-94F4-FEB07AC9806C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{CE066882-93B1-4F93-8420-C3EF28481D4A}" ShortID="584984441">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L4-2" ID="{7A7AA3FD-80C0-422B-AC9E-90E1DE788141}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="L5" ID="{1EFC902D-0E13-4DDF-9818-E394B87AF683}" ShortID="95695436">
+							<ChildrenList>
+								<Event Name="Play_L5_1" ID="{A3AD5744-EB6A-42F0-A1BE-854A272B9D00}">
+									<ChildrenList>
+										<Action Name="" ID="{4C13AA8B-0AD1-494A-B250-2972479ECD66}" ShortID="137642817">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L5-2" ID="{BE8BF0EE-2B55-40A8-BBCE-767B48E4E4B1}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{2FCDEFB3-6857-4782-B2B4-C582B77159BF}" ShortID="138131501">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{99BD8B01-2A54-499B-8E1D-EB174E853226}" ShortID="216791644">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L5-1" ID="{F988D47F-99BF-4304-8C99-A01B0A291B99}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_L5_2" ID="{AD64EC4E-01C2-4E79-A941-710952B28A43}">
+									<ChildrenList>
+										<Action Name="" ID="{DD3BB13D-42CF-4DC1-B99F-2681B16DB635}" ShortID="4359570">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L5-1" ID="{F988D47F-99BF-4304-8C99-A01B0A291B99}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{8E6ECEF7-F8EE-4D76-8864-BCA890E51F84}" ShortID="279714199">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{23BE0857-018F-4DBD-9DC0-3FF37AC4B3E0}" ShortID="391285947">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L5-2" ID="{BE8BF0EE-2B55-40A8-BBCE-767B48E4E4B1}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="L8" ID="{F78E08CF-21DF-4D72-88E4-007385A41B1E}" ShortID="710147781">
+							<ChildrenList>
+								<Event Name="Play_L8_1" ID="{D051B83A-A73F-4ED0-A73B-D76442F38B30}">
+									<ChildrenList>
+										<Action Name="" ID="{BFC933D7-7975-4042-BC34-6B9514372EFF}" ShortID="1002605893">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L8-1" ID="{7152DB0F-C34E-462B-8501-C9BA6C9D935E}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="L10" ID="{B7A3E6B7-26D5-44C5-9EB9-A2697ABC877E}" ShortID="655087296">
+							<ChildrenList>
+								<Event Name="Play_L10_2" ID="{7E62D551-3B14-4C44-AEE9-48FFB4730AE8}">
+									<ChildrenList>
+										<Action Name="" ID="{A7547D4B-5244-497A-BB21-7361EE12FBA0}" ShortID="291773859">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L10-1" ID="{D6A909E0-9308-4676-ABC0-04C9F5B17841}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{5B711FD6-3050-4638-8241-C0C056CB7350}" ShortID="143065816">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{195D4807-7F6A-4B2A-8372-45488916C08A}" ShortID="766250728">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L10-2" ID="{3FBF10A4-ECD5-4191-9F4A-C50827EC62AE}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_L10_1" ID="{2F1AF13C-81A4-4157-B6BD-530E90055A4B}">
+									<ChildrenList>
+										<Action Name="" ID="{D572BD76-ACEA-416F-9975-72B49315D106}" ShortID="491594165">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L10-2" ID="{3FBF10A4-ECD5-4191-9F4A-C50827EC62AE}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{BCECEA91-A057-451D-A852-B4AC549BA9F0}" ShortID="681374441">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{0E502FB0-E17C-4659-9C73-DF2E5E05E010}" ShortID="12994566">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L10-1" ID="{D6A909E0-9308-4676-ABC0-04C9F5B17841}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="L11" ID="{6D8D8033-A1C1-408C-A938-92D37E8E21E1}" ShortID="482838444">
+							<ChildrenList>
+								<Event Name="Play_L11_1" ID="{30C5654F-9A9F-4C34-827A-DCF0246D401A}">
+									<ChildrenList>
+										<Action Name="" ID="{F2B1DF61-B68E-41A4-98EA-7D61D6D91C70}" ShortID="956363783">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{B3D5DB6B-1A9F-4CB2-9E22-7217ECBF768C}" ShortID="934919997">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L11-1" ID="{A23A56B2-9C85-4F33-BF0B-50B7E4EE1E8A}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="L14" ID="{DAE2242F-36D1-4C26-8A00-F10AABF57B28}" ShortID="116481591">
+							<ChildrenList>
+								<Event Name="Play_L14_1" ID="{5B7FA685-356C-402B-B112-79852F6CAD15}">
+									<ChildrenList>
+										<Action Name="" ID="{74EA7EFE-7410-4239-A619-2B8F3A2ABAE0}" ShortID="988724929">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L14-2" ID="{834E6EFD-7138-4466-A334-D712253F0190}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{7D7757DE-414E-4854-84F7-9029080D3831}" ShortID="10407583">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L14-1" ID="{B49BF903-2526-472C-88E7-9FBBF9948263}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_L14_2" ID="{43A8FC24-690B-452D-B8A5-0DBB1DB48A58}">
+									<ChildrenList>
+										<Action Name="" ID="{976B2240-3A96-4D5A-BA6C-BD995E3431C3}" ShortID="855346103">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L14-2" ID="{834E6EFD-7138-4466-A334-D712253F0190}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{B64EC0FA-11E4-4FA0-A75B-D086D50CAEFA}" ShortID="634179272">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="L14-1" ID="{B49BF903-2526-472C-88E7-9FBBF9948263}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Event Name="Stop_All_Lore" ID="{1356D89C-E656-4D28-9BCB-549E33C29A5D}">
+							<ChildrenList>
+								<Action Name="" ID="{E715F20E-6DF5-4554-B9AE-80A5E49AD24E}" ShortID="880628120">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LT-1_OnCollision" ID="{69E88901-1241-43A7-BDFA-A73D069CF4F4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{302B19C0-67D0-4236-9002-A0656F18303B}" ShortID="150667576">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LT-2" ID="{4A4E2B31-6777-4524-9E0C-86B18182D16F}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E857FBDD-7666-4267-B039-0EFC9B46FBF4}" ShortID="173792585">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LT-On Start" ID="{B3568A01-783D-4790-AAD4-3B353984505E}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{11D27B13-EEAA-4538-9B61-BABD5907B1BF}" ShortID="738999540">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LT-Win" ID="{B72C0943-4690-45EB-9764-95767FC7C705}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C5C65EBD-697B-498C-8290-8BAADC94280A}" ShortID="551370880">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LT_1" ID="{6F9C5B40-BE20-4D40-97D9-F3E3158BB97C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E3B2486D-E3BE-4C95-8A04-8A46B983D205}" ShortID="259542260">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L2-1" ID="{C2434B58-BB94-4FA1-9F96-EC577EA957F8}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{22BEE209-7671-4A1E-B5A1-0425EAF29FB4}" ShortID="92505987">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D39F34A5-5655-499B-9CE4-220526C1AB18}" ShortID="270775423">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L3-1" ID="{358810C8-8F68-4BBA-AFD3-D9C1F948C587}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3087F46E-459F-4F9D-B256-1EFA5C455269}" ShortID="10061527">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L4-1" ID="{5F918AB9-E0C1-4C4E-94F4-FEB07AC9806C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E4089810-716B-4AAD-8652-78583C5529DD}" ShortID="718126568">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L4-2" ID="{7A7AA3FD-80C0-422B-AC9E-90E1DE788141}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{44A5D50F-A2CB-4282-AABA-AD9DFCBF0F24}" ShortID="831466042">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L5-1" ID="{F988D47F-99BF-4304-8C99-A01B0A291B99}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8DE79BE4-64D5-49EE-BAD9-D69983BADE85}" ShortID="949904689">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L5-2" ID="{BE8BF0EE-2B55-40A8-BBCE-767B48E4E4B1}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A46968E0-2C41-4605-A3EB-798B30EA5D1A}" ShortID="623764378">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L8-1" ID="{7152DB0F-C34E-462B-8501-C9BA6C9D935E}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6743054A-293F-405A-9F6E-86776FDBF438}" ShortID="299292406">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L10-1" ID="{D6A909E0-9308-4676-ABC0-04C9F5B17841}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{98D6856E-1CD3-418C-B7C1-47991D1142B7}" ShortID="689187771">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L10-2" ID="{3FBF10A4-ECD5-4191-9F4A-C50827EC62AE}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B209F79E-46E8-4E6D-8497-8A8E1D6A5D9B}" ShortID="539487610">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L11-1" ID="{A23A56B2-9C85-4F33-BF0B-50B7E4EE1E8A}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{476C1058-E85B-490C-89BC-87B5F81DAD82}" ShortID="186292023">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L14-1" ID="{B49BF903-2526-472C-88E7-9FBBF9948263}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4AC0304C-37E9-4EDE-81B0-251BB0F8AE08}" ShortID="878275728">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L14-2" ID="{834E6EFD-7138-4466-A334-D712253F0190}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="LoreSFX" ID="{89AF3FEC-31B7-47A4-A810-FEAEB1A1CC57}" ShortID="537221979">
+							<ChildrenList>
+								<Event Name="Play_Ground0" ID="{063F2E19-1530-4797-889A-4B6081F1FCE8}">
+									<ChildrenList>
+										<Action Name="" ID="{EEA333D7-AB19-4AEF-B02A-D785C748D605}" ShortID="525391591">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="C_SFX_Ground_Pitch" ID="{7ACCB5DA-EA86-453C-82F5-DD13E058DFE3}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Lore0" ID="{3E6A885E-E3BD-4390-BAD6-A78D83140309}">
+									<ChildrenList>
+										<Action Name="" ID="{FD311187-B1BB-46A3-9779-169EA92D584B}" ShortID="246591235">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="C_SFX_Lore_Pitch" ID="{0DF32177-98F3-44D1-A29C-1D3BFA342B09}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Wall0" ID="{7D5F71DF-64AA-4C5D-B198-0D471814F983}">
+									<ChildrenList>
+										<Action Name="" ID="{B82C8AF8-B494-481D-BCDF-57499677550C}" ShortID="280769370">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="C_SFX_Wall_Pitch" ID="{8A8C86C6-8C58-4CCC-A124-0C90B6AD5B9D}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_XPulse" ID="{69C37B70-A289-4AB8-9F92-EE0FEB737846}">
+									<ChildrenList>
+										<Action Name="" ID="{BA23F29E-1763-4389-9517-095C3B8AAA2C}" ShortID="618431682">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="XPulse" ID="{02FD481A-7F1C-4945-A459-C94947C265EE}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Collision" ID="{50070DC3-7CFB-4937-BBD5-45681669E7F3}" ShortID="60398719">
+					<ChildrenList>
+						<Event Name="Lore_Collision" ID="{D1AD8D76-F328-4DD4-AFA1-E9A8AC5C72A7}">
+							<ChildrenList>
+								<Action Name="" ID="{92AF674F-23D4-467B-A9EF-61DE3C6ED89D}" ShortID="979100484">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Lore_Collision" ID="{9FF922A7-22BE-439A-BD21-798758F8C002}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Win_Collision" ID="{4721795A-5DBB-4D11-881C-4C06286F2629}">
+							<ChildrenList>
+								<Action Name="" ID="{64F1B858-3669-49D4-BA03-5DDF6EE88D63}" ShortID="404552025">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Win_Collision" ID="{84382463-A2DF-41A4-A4D6-3A9FE5D31DCE}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Vo" ID="{5D7B98C8-B0F4-4FD1-A3E2-FC8559310521}" ShortID="446016460">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Play_StartVo" ID="{AE6EA5CF-ACCA-4BFC-89C2-478F65849F93}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{0D0D76D2-A594-44A7-AA3F-627B1993494F}" ShortID="1004992622">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Vo_Start" ID="{E47D87B9-CA59-4851-81ED-E13239BBDEAA}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A6666D26-8003-4F21-9C9E-1D25A6E3CB50}" ShortID="380084548">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="12"/>
+										<Property Name="Volume" Type="Real64" Value="-76"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerPositionTone_Airborne" ID="{970CD473-9FAF-48F8-866B-C19DBFD11B96}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BB96825A-C218-4AB5-AE33-2DC8173B41AC}" ShortID="434207989">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="12"/>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerPositionTone_XPulse" ID="{638D424F-EC89-48F0-9868-EE36D0B510E1}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{77C9185E-7E68-4748-8411-CC0F8F87FB23}" ShortID="655727197">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="16"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerPositionTone_Airborne" ID="{970CD473-9FAF-48F8-866B-C19DBFD11B96}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7650D1BF-860D-4C01-92BC-89D074A94E89}" ShortID="208210912">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerPositionTone_XPulse" ID="{638D424F-EC89-48F0-9868-EE36D0B510E1}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CB4E97F1-FFC8-4411-8D94-C84DCDD3765E}" ShortID="658979817">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level_Selection_Voices" ID="{DA0B950B-614F-4EBD-B572-33F7A92B4A98}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_RandomVo" ID="{72BB4BA1-E7E8-47F8-9A0C-F753B60C9263}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{319553B9-0037-4C13-909E-9313B5927D15}" ShortID="837727820">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="20">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{61DE9AD9-3BC0-4823-9825-09081578073B}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="3"/>
+															<Property Name="Min" Type="Real64" Value="-3"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RandomVo" ID="{4E863A82-A2EC-49CA-958F-8CF1B5656A25}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SuccessVo" ID="{FF1781C7-EDDB-48A1-AE08-999833020961}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{ECA83190-6BD1-43A3-94DE-2C3FD1BEBBEF}" ShortID="347756062">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Vo_LevelConfirm" ID="{470370DA-8363-44C3-9077-8E8E16DABB41}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Jump_RandomVo" ID="{8CF09977-08C2-4ECC-98B5-FAF7D3210C08}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{AAE6A261-5EA3-412F-8824-E9E59086F635}" ShortID="841392570">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jump_RandomVo" ID="{AA87E1C4-5541-4B1B-8E85-2638897CA21C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E4D29FBA-8815-43E2-85ED-ACA48CF037CB}" ShortID="545231013">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RandomVo" ID="{4E863A82-A2EC-49CA-958F-8CF1B5656A25}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_RandomVo" ID="{922A7911-BD5F-4F02-AFEF-E33E68545F4D}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{65065A6E-751D-439B-ADE2-C95BC05CA98F}" ShortID="866213054">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E4DBF222-1EEF-4C28-85B8-9EA016B205E0}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RandomVo" ID="{4E863A82-A2EC-49CA-958F-8CF1B5656A25}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Stingers" ID="{FED6A873-8393-4A4B-A0D2-A406F30DE440}" ShortID="780378447">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Play_WIn" ID="{102F495F-2828-427D-A5F6-464AE4803509}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{14ADAFF6-9C3D-4DB5-A932-7A2BE0E3FE21}" ShortID="576861638">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LT-Win" ID="{B72C0943-4690-45EB-9764-95767FC7C705}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{645B88B8-8A86-4C55-9378-E22C63664355}" ShortID="575353808">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LT-1_OnCollision" ID="{69E88901-1241-43A7-BDFA-A73D069CF4F4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D3D0E3BF-1909-4F80-AC2D-98621BD1F5D3}" ShortID="860532841">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LT-2" ID="{4A4E2B31-6777-4524-9E0C-86B18182D16F}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EABE9E6C-B170-48F5-8EA8-8B9A6C91D4BE}" ShortID="73553255">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LT-On Start" ID="{B3568A01-783D-4790-AAD4-3B353984505E}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3546A623-5B55-4675-8429-0AA05D6B5A66}" ShortID="508227678">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LT-Win" ID="{B72C0943-4690-45EB-9764-95767FC7C705}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AB7C871F-1D45-4B70-9A3C-3E0549815A31}" ShortID="1033490987">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LT_1" ID="{6F9C5B40-BE20-4D40-97D9-F3E3158BB97C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A25E1E31-4F2A-4F36-8F55-C850BF617416}" ShortID="1060626234">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L2-1" ID="{C2434B58-BB94-4FA1-9F96-EC577EA957F8}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F89F67EB-C515-4E71-ADB9-79BAAB7DC8F0}" ShortID="460588312">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L2_Start" ID="{D6A40EA7-0C7B-4A0B-A53F-367D3AA21FD4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DE4DA76F-D472-421D-A9F8-263429C59CD4}" ShortID="934376781">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L3-1" ID="{358810C8-8F68-4BBA-AFD3-D9C1F948C587}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CA486DD6-60EB-4BB2-9827-1CFF7057A0AA}" ShortID="591799637">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L4-1" ID="{5F918AB9-E0C1-4C4E-94F4-FEB07AC9806C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E6682039-04CD-4BAA-82FE-4FC3537F7F6B}" ShortID="249544195">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L4-2" ID="{7A7AA3FD-80C0-422B-AC9E-90E1DE788141}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{281AE73A-EAC7-4842-9327-AF6887EB2401}" ShortID="6475153">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L5-1" ID="{F988D47F-99BF-4304-8C99-A01B0A291B99}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3C0F3704-DCC4-4B9E-A2BE-5CC727AF81A1}" ShortID="598513974">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L5-2" ID="{BE8BF0EE-2B55-40A8-BBCE-767B48E4E4B1}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7D7FFD4E-B53D-4B6D-BA22-BE4885DACA3A}" ShortID="883581975">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L8-1" ID="{7152DB0F-C34E-462B-8501-C9BA6C9D935E}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{159A6D73-7B04-42DD-AB87-BFA7C1F4F209}" ShortID="253765308">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L10-1" ID="{D6A909E0-9308-4676-ABC0-04C9F5B17841}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B723D4A2-6CC6-4F03-848E-0B618FFA293B}" ShortID="106444423">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L10-2" ID="{3FBF10A4-ECD5-4191-9F4A-C50827EC62AE}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{50A47D98-BA5B-41AD-BA6D-FD1556C78E0F}" ShortID="208993300">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L11-1" ID="{A23A56B2-9C85-4F33-BF0B-50B7E4EE1E8A}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1FDA4FD7-C242-4689-9134-2FD2DDF0BF4D}" ShortID="853902608">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L14-1" ID="{B49BF903-2526-472C-88E7-9FBBF9948263}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6343986E-45D1-4689-ADC8-C98C94237E24}" ShortID="656591188">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="L14-2" ID="{834E6EFD-7138-4466-A334-D712253F0190}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{54D57A18-5A9B-4867-98B0-E7A90B84B0B1}" ShortID="491979511">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stinger_Win" ID="{9EF6BCD1-C5C8-4E8D-A11D-47EF1CAB97DF}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Lore" ID="{7ED4D705-FA00-480B-B43E-8FDE712BA881}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{EFB85472-B66A-49AA-BD3D-8133E41A3946}" ShortID="267247615">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stinger_Lore_Play" ID="{46EB9689-4D4F-441C-90F9-0F37F4A541C2}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_LevelSelectFX" ID="{2B0EB12B-E258-41E6-A192-70C06034D69A}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{3383237B-D1E8-4CDF-A27E-5DFECC69B895}" ShortID="667517827">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_LevelSelect" ID="{33B7309B-A571-4787-A420-5A82396B512E}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{2C982AB1-F09A-4AFE-894A-7F7EF3EB8567}" ShortID="459274607">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Play_Coffee" ID="{34ACF25F-DDE9-4304-8187-F44BE50800FD}">
+							<ChildrenList>
+								<Action Name="" ID="{A67ED8B5-5162-4E03-B308-ECB365406CE0}" ShortID="367794872">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Coffee" ID="{62DA3E72-F8C7-4285-B9A3-4303C9D77E2C}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3B8BA358-E3AA-4249-8989-D1EECC7F4F8E}" ShortID="376854450">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Coffee_B1" ID="{F29561A3-0D3A-49C5-A911-9CA7BA2BEBC9}" WorkUnitID="{5C3751BB-CDDA-439B-B9D8-6FFCFBE8A4BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="Menu" ID="{A750B2D7-8CCF-4170-BB19-0D4DC7C1DE89}" ShortID="797617181">
+							<ChildrenList>
+								<Event Name="Play_MX_Menu" ID="{0E1801E0-34B9-4900-A700-F61169A0F03E}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{5A690BB0-31AD-47BE-8440-76BF33839547}" ShortID="607062118">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LevelSelect_1" ID="{BE9B25AF-1310-48A1-B95F-52D870C9AAC0}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{E8F2C185-E720-4C68-8D13-74969E1B3A67}" ShortID="802805107">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Level_Selection_Voices" ID="{DA0B950B-614F-4EBD-B572-33F7A92B4A98}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{D588A366-6031-46B7-BF3B-FAE43AD0BE4A}" ShortID="57535051">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="MainTitle" ID="{75005C8A-D641-463B-9F0E-540114C82A82}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{3BE83CFA-6290-4EB5-BA80-0BB15DB9A3B8}" ShortID="565661082">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="1.5"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Nar_Title" ID="{6A7AAC08-2C72-438A-89AE-1BC9255086B1}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{202E719C-B7BA-4B35-AC4C-51ACCE22BC0E}" ShortID="310425594">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="5"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Menu_Guide_Repeat" ID="{11C4E9DA-D218-4C4C-877F-9A5B51EEAEC2}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{6CEC45C1-1B28-4E8E-AA04-D1B22770658C}" ShortID="491365048">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="16"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="MainTitle" ID="{75005C8A-D641-463B-9F0E-540114C82A82}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{FA55907D-F515-4E9A-9CC9-CD372F25809D}" ShortID="917254490">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LoadingMusic" ID="{50033871-A752-410C-B969-F3C693FA3F4B}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_MX_Menu" ID="{3E04AED3-355D-40DD-AEE0-732F55CFBE3C}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{26A90541-87FB-4560-BA02-39DE98EC2B8A}" ShortID="752249330">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Nar_Title" ID="{6A7AAC08-2C72-438A-89AE-1BC9255086B1}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{CCDECFDA-DBDA-420A-9691-6390F5D640E0}" ShortID="53602850">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="MainTitle" ID="{75005C8A-D641-463B-9F0E-540114C82A82}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{011F1DF4-71D8-4A5F-8C38-A076FBC6AC27}" ShortID="298747258">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Menu_Guide_Repeat" ID="{11C4E9DA-D218-4C4C-877F-9A5B51EEAEC2}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{37D30F0F-F743-419A-B593-060E87F7C7A1}" ShortID="873986953">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Nar_Title" ID="{6A7AAC08-2C72-438A-89AE-1BC9255086B1}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_MX_LevelSelect" ID="{297FA703-F655-4627-BFF6-3467B0D610AC}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{4BAF31A3-71AB-4440-A508-BC63F3AE951A}" ShortID="282100991">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="MainTitle" ID="{75005C8A-D641-463B-9F0E-540114C82A82}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{710290C4-E792-4FBF-9980-62CA55A02844}" ShortID="805991025">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Menu_Guide_Repeat" ID="{11C4E9DA-D218-4C4C-877F-9A5B51EEAEC2}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{BBAC517F-56B5-4373-BFE9-5F6465FA7B42}" ShortID="189365503">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Level_Selection_Voices" ID="{DA0B950B-614F-4EBD-B572-33F7A92B4A98}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{C03234B7-8C5A-46BB-8577-11DBB9BA7786}" ShortID="727130089">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LevelSelect_1" ID="{BE9B25AF-1310-48A1-B95F-52D870C9AAC0}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="LevelSelect" ID="{57CFF7D3-F411-411D-B045-BEE1C2EEF179}" ShortID="185007944">
+							<ChildrenList>
+								<Event Name="Play_MX_LevelSelect" ID="{54FB03AE-B2F8-459C-B67F-BE521FB2BC96}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{5DDF8524-0EEE-410E-95C4-046C57935177}" ShortID="889704765">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Cinnamoroll Parkour_Loop" ID="{B932411B-2B61-4E0F-86A8-0FB3D7948D87}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{8FBC1FC5-EE8B-4388-97F6-82F8605DF7D7}" ShortID="726333909">
+											<PropertyList>
+												<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+												<Property Name="ActionType" Type="int16" Value="12"/>
+												<Property Name="Volume" Type="Real64" Value="-5"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="MainTitle" ID="{75005C8A-D641-463B-9F0E-540114C82A82}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Credits" ID="{0D11247F-306B-4822-8B6F-D3CC243B7C8C}" ShortID="260100508">
+							<ChildrenList>
+								<Event Name="Play_End_Credits" ID="{48D4EDA0-5E96-4A9C-A6BC-222D96E32558}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{B3B74F9C-C58A-4224-8C52-99338BFBF775}" ShortID="506501720">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="EndCredits" ID="{C28A8AF1-5B53-478B-8255-1714D6DC8206}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{C7783477-584B-4632-9474-BB816676738C}" ShortID="719951359">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Nar_Credits" ID="{872D0121-C318-4C1D-B32E-CEA3DE66F3BF}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_End_Credits" ID="{B37FAB7D-752D-4CCA-A470-73C03DABF7E1}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{8876B924-5254-4066-B36F-C017CF7ACF2C}" ShortID="114363435">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Nar_Credits" ID="{872D0121-C318-4C1D-B32E-CEA3DE66F3BF}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{B8159CE9-8360-40EB-9589-BC7945220670}" ShortID="32020954">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="EndCredits" ID="{C28A8AF1-5B53-478B-8255-1714D6DC8206}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Event Name="Play_Forest" ID="{6F0B6507-30F4-427A-A61E-B9A59B2C86AF}">
+							<ChildrenList>
+								<Action Name="" ID="{5769137C-2FF4-42C6-A83E-DABD960C3973}" ShortID="923090053">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Forest" ID="{A8C1A226-79C9-4409-89EB-32F75BBF8E05}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DD8DE4D4-ED7D-4839-8130-10CE8679561D}" ShortID="535141871">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Forest_Intro" ID="{BBD5164E-D911-44A6-83A6-A677FF1BE7E3}" WorkUnitID="{5C3751BB-CDDA-439B-B9D8-6FFCFBE8A4BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Cloud" ID="{3FCE6D19-B030-4032-AC6A-ABC04636B8DD}">
+							<ChildrenList>
+								<Action Name="" ID="{DAA71A68-4BE1-4217-B1DD-5CE75A542CDD}" ShortID="214894244">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cloud" ID="{44844CF3-C775-4516-A6DE-3C2E0643E3D7}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5B05AC02-3AB6-4849-A8F5-B2F1FF9B59BB}" ShortID="1029841918">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cloud_B1" ID="{9EB1FEB9-D8CA-4A34-9349-11263EFBE4D8}" WorkUnitID="{5C3751BB-CDDA-439B-B9D8-6FFCFBE8A4BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Loading" ID="{BB7127D9-B57F-47DA-A200-8D731CAD5082}">
+							<ChildrenList>
+								<Action Name="" ID="{09E8BABC-2B4D-4AC5-83C4-3DD3A84B03BA}" ShortID="36438643">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LoadingMusic" ID="{50033871-A752-410C-B969-F3C693FA3F4B}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A12D0EA6-0628-4E5F-ABC9-8761CB5CB3B7}" ShortID="122225100">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cinnamoroll Parkour_Loop" ID="{B932411B-2B61-4E0F-86A8-0FB3D7948D87}" WorkUnitID="{287EEA5E-DEBC-4AD4-A5C8-172865D04EA8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{FF172A77-2E74-4CF5-96BF-E35E92F905B2}" ShortID="637203537">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Loop" ID="{9E50D593-9DB8-4333-B16A-480313DEEDE0}" WorkUnitID="{5C3751BB-CDDA-439B-B9D8-6FFCFBE8A4BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Loading_Transition" ID="{3F75623C-8E06-420D-9C65-E2646173D44E}">
+							<ChildrenList>
+								<Action Name="" ID="{1EC370B3-C3E6-48FE-AF50-F40B782E58DA}" ShortID="216019362">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Finish" ID="{2B94A19A-D0C1-4A84-95EB-0DBE61A37DAA}" WorkUnitID="{5C3751BB-CDDA-439B-B9D8-6FFCFBE8A4BF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

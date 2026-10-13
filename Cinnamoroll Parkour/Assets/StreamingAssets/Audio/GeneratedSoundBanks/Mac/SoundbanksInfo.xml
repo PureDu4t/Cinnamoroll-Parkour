@@ -1,0 +1,2669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../../../../../Wwise/Cinnamoroll Parkour</ProjectRoot>
+		<SourceFilesRoot>../../../../../Wwise/Cinnamoroll Parkour/.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../../../Wwise/Cinnamoroll Parkour/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D0AE45FC-9816-1361-F2D4-FBACD1F81B73}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1159390747" Name="Room_Medium_Tiled" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2712164154" Name="Ducking" LibName="Wwise Meter" LibId="8454147"/>
+					<Plugin Id="3160090811" Name="New_Compressor" LibName="Wwise Compressor" LibId="7077891"/>
+				</ShareSets>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="120894080" Name="PlayerPositionTone_Bus"/>
+				<Bus Id="377197776" Name="Nav"/>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="573466488" Name="DIalogue_Bus"/>
+				<Bus Id="649003210" Name="Broadcast">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3160090811"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="817096458" Name="Player_SFX"/>
+				<Bus Id="930427193" Name="Narration">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2712164154"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="1534528548" Name="Vo"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="278471273" Name="Med_Room">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1159390747"/>
+						</ShareSets>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="348963605" Name="Reverb"/>
+					</AuxBusRefs>
+				</AuxBus>
+				<AuxBus Id="282449107" Name="Plate">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1259256166"/>
+						</ShareSets>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="348963605" Name="Reverb"/>
+					</AuxBusRefs>
+				</AuxBus>
+				<AuxBus Id="348963605" Name="Reverb"/>
+			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
+				<GameParameter Id="926379701" Name="Player_Y_Pitch"/>
+				<GameParameter Id="1029930033" Name="SS_Air_Fury"/>
+				<GameParameter Id="1047257139" Name="Player_X_Pan"/>
+				<GameParameter Id="1351367891" Name="SS_Air_Fear"/>
+				<GameParameter Id="1766625469" Name="Player_PositionTone_Volume"/>
+				<GameParameter Id="2648548617" Name="SS_Air_Month"/>
+				<GameParameter Id="2712164154" Name="Ducking"/>
+				<GameParameter Id="3002758120" Name="SS_Air_Freefall"/>
+				<GameParameter Id="3074696722" Name="SS_Air_Size"/>
+				<GameParameter Id="3203397129" Name="SS_Air_TimeOfDay"/>
+				<GameParameter Id="3715662592" Name="SS_Air_Storm"/>
+				<GameParameter Id="3847924954" Name="SS_Air_Presence"/>
+				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="732211977" Name="LevelSelection">
+					<Switches>
+						<Switch Id="987635873" Name="Level_01"/>
+						<Switch Id="987635874" Name="Level_02"/>
+						<Switch Id="987635875" Name="Level_03"/>
+						<Switch Id="987635876" Name="Level_04"/>
+						<Switch Id="987635877" Name="Level_05"/>
+						<Switch Id="987635878" Name="Level_06"/>
+						<Switch Id="987635879" Name="Level_07"/>
+						<Switch Id="987635880" Name="Level_08"/>
+						<Switch Id="987635881" Name="Level_09"/>
+						<Switch Id="1004413456" Name="Level_13"/>
+						<Switch Id="1004413457" Name="Level_12"/>
+						<Switch Id="1004413458" Name="Level_11"/>
+						<Switch Id="1004413459" Name="Level_10"/>
+						<Switch Id="1004413462" Name="Level_15"/>
+						<Switch Id="1004413463" Name="Level_14"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1683342792" Name="Broadcast_Cell_Type">
+					<Switches>
+						<Switch Id="204455109" Name="Lore"/>
+						<Switch Id="979765101" Name="Win"/>
+						<Switch Id="1183803264" Name="Fan"/>
+						<Switch Id="1350606868" Name="Cloud"/>
+						<Switch Id="2108779961" Name="Wall"/>
+						<Switch Id="2304303686" Name="MoveableWall"/>
+						<Switch Id="2326215132" Name="Battery"/>
+						<Switch Id="2528658256" Name="Ground"/>
+						<Switch Id="2782712987" Name="Lever"/>
+						<Switch Id="3354297748" Name="Empty"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1849339260" Name="Broadcast_Cell_PitchStep">
+					<Switches>
+						<Switch Id="1143664290" Name="P5_G"/>
+						<Switch Id="1144105707" Name="P6_A"/>
+						<Switch Id="1144650026" Name="P3_E"/>
+						<Switch Id="1144797058" Name="P2_D"/>
+						<Switch Id="1274595141" Name="P9_D2"/>
+						<Switch Id="2217579130" Name="P4_F"/>
+						<Switch Id="2217726161" Name="P7_B"/>
+						<Switch Id="2218020226" Name="P1_C"/>
+						<Switch Id="2776792043" Name="P8_C2"/>
+						<Switch Id="4198180294" Name="P10_E2"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3762955427" Name="Tutorial">
+					<Switches>
+						<Switch Id="4109362" Name="Left"/>
+						<Switch Id="84696424" Name="W"/>
+						<Switch Id="84696428" Name="S"/>
+						<Switch Id="84696430" Name="Q"/>
+						<Switch Id="84696443" Name="D"/>
+						<Switch Id="84696446" Name="A"/>
+						<Switch Id="204455109" Name="Lore"/>
+						<Switch Id="979765101" Name="Win"/>
+						<Switch Id="2108779961" Name="Wall"/>
+						<Switch Id="2528658256" Name="Ground"/>
+						<Switch Id="3893817417" Name="Right"/>
+						<Switch Id="4164838345" Name="Space"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+			<AcousticTextures>
+				<AcousticTexture Id="504532776" Name="Brick">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="18"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="23"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="513139656" Name="Mountain">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="841620460" Name="Concrete">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="14"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1755085759" Name="Wood_Deep">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="1"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="8"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1873957695" Name="Anechoic">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1970351858" Name="Fabric">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="3"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="13"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="48"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="72"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2058049674" Name="Wood">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2412606308" Name="Carpet">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="46"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="45"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="76"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2637588553" Name="Tile">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="67"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="41"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2928161104" Name="Curtains">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="7"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="60"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="84"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3195498748" Name="Cork_Tiles">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="14"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="30"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="73"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3670307564" Name="Drywall">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="2"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4168643977" Name="Acoustic_Banner">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="37"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4262522749" Name="Wood_Bright">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="10"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="9"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+			</AcousticTextures>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FEEE7F30-34DD-608E-73BA-CD4D03577B67}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="1778868" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E_SFX_Lore_Pitch.wav</ShortName>
+					<CachePath>SFX/E_SFX_Lore_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="3548770" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>A_SFX_Ground_Pitch.wav</ShortName>
+					<CachePath>SFX/A_SFX_Ground_Pitch_9C2695D7.wem</CachePath>
+				</File>
+				<File Id="23801847" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E2_SFX_Fan_Pitch.wav</ShortName>
+					<CachePath>SFX/E2_SFX_Fan_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="23809650" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C_SFX_Fan_Pitch.wav</ShortName>
+					<CachePath>SFX/C_SFX_Fan_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="29253307" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tutorial_Ground.wav</ShortName>
+					<CachePath>SFX/Tutorial_Ground_6073608A.wem</CachePath>
+				</File>
+				<File Id="31530662" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C2_SFX_Win_Pitch.wav</ShortName>
+					<CachePath>SFX/C2_SFX_Win_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="32443878" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>14.wav</ShortName>
+					<CachePath>SFX/14_6073608A.wem</CachePath>
+				</File>
+				<File Id="38161007" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>F_SFX_Lore_Pitch.wav</ShortName>
+					<CachePath>SFX/F_SFX_Lore_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="45891252" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C_SFX_Wall_Pitch.wav</ShortName>
+					<CachePath>SFX/C_SFX_Wall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="50247933" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stinger_Win.wav</ShortName>
+					<CachePath>SFX/Stinger_Win_6073608A.wem</CachePath>
+				</File>
+				<File Id="59872974" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>G_SFX_Lore_Pitch.wav</ShortName>
+					<CachePath>SFX/G_SFX_Lore_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="63819010" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E2_SFX_MoveableWall_Pitch.wav</ShortName>
+					<CachePath>SFX/E2_SFX_MoveableWall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="65376009" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>openart-tts-20260701001638-RzLjjyyygUPtMCNC_1782836199457_f2a0254bL5-2.wav</ShortName>
+					<CachePath>SFX/openart-tts-20260701001638-RzLjjyyygUPtMCNC_1782836199457_f2a0254bL5-2_6073608A.wem</CachePath>
+				</File>
+				<File Id="67941170" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E_SFX_Wall_Pitch.wav</ShortName>
+					<CachePath>SFX/E_SFX_Wall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="79513394" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Nar_Title.wav</ShortName>
+					<CachePath>SFX/Nar_Title_6073608A.wem</CachePath>
+				</File>
+				<File Id="81932503" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>B_SFX_Lever_Pitch.wav</ShortName>
+					<CachePath>SFX/B_SFX_Lever_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="82316466" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C_SFX_Cloud_Pitch.wav</ShortName>
+					<CachePath>SFX/C_SFX_Cloud_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="98345644" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C2_SFX_MoveableWall_Pitch.wav</ShortName>
+					<CachePath>SFX/C2_SFX_MoveableWall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="109699754" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L11-1.wav</ShortName>
+					<CachePath>SFX/L11-1_6073608A.wem</CachePath>
+				</File>
+				<File Id="110350344" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>6.wav</ShortName>
+					<CachePath>SFX/6_6073608A.wem</CachePath>
+				</File>
+				<File Id="112692735" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L4-2.wav</ShortName>
+					<CachePath>SFX/L4-2_6073608A.wem</CachePath>
+				</File>
+				<File Id="114231013" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tutorial_S.wav</ShortName>
+					<CachePath>SFX/Tutorial_S_6073608A.wem</CachePath>
+				</File>
+				<File Id="114430215" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cinnamoroll Parkour_Loop.wav</ShortName>
+					<CachePath>SFX/Cinnamoroll Parkour_Loop_784441D4.wem</CachePath>
+				</File>
+				<File Id="120438893" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D2_SFX_Wall_Pitch.wav</ShortName>
+					<CachePath>SFX/D2_SFX_Wall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="121141460" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vo_RandomPlay4.wav</ShortName>
+					<CachePath>SFX/Vo_RandomPlay4_6073608A.wem</CachePath>
+				</File>
+				<File Id="144893544" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MainTitle_AI.wav</ShortName>
+					<CachePath>SFX/MainTitle_AI_784441D4.wem</CachePath>
+				</File>
+				<File Id="144978697" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E2_SFX_Wall_Pitch.wav</ShortName>
+					<CachePath>SFX/E2_SFX_Wall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="155369183" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>F_SFX_Wall_Pitch.wav</ShortName>
+					<CachePath>SFX/F_SFX_Wall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="156838964" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L10-2.wav</ShortName>
+					<CachePath>SFX/L10-2_6073608A.wem</CachePath>
+				</File>
+				<File Id="162576838" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D_SFX_MoveableWall_Pitch.wav</ShortName>
+					<CachePath>SFX/D_SFX_MoveableWall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="170646122" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D_SFX_Ground_Pitch.wav</ShortName>
+					<CachePath>SFX/D_SFX_Ground_Pitch_9C2695D7.wem</CachePath>
+				</File>
+				<File Id="175412979" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E2_SFX_Cloud_Pitch.wav</ShortName>
+					<CachePath>SFX/E2_SFX_Cloud_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="183336580" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D2_SFX_Cloud_Pitch.wav</ShortName>
+					<CachePath>SFX/D2_SFX_Cloud_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="196265466" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>G_SFX_Win_Pitch.wav</ShortName>
+					<CachePath>SFX/G_SFX_Win_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="200288665" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C2_SFX_Cloud_Pitch.wav</ShortName>
+					<CachePath>SFX/C2_SFX_Cloud_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="210289030" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E_SFX_MoveableWall_Pitch.wav</ShortName>
+					<CachePath>SFX/E_SFX_MoveableWall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="212919543" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C2_SFX_Wall_Pitch.wav</ShortName>
+					<CachePath>SFX/C2_SFX_Wall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="220368910" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E2_SFX_Ground_Pitch.wav</ShortName>
+					<CachePath>SFX/E2_SFX_Ground_Pitch_9C2695D7.wem</CachePath>
+				</File>
+				<File Id="228689753" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C2_SFX_Ground_Pitch.wav</ShortName>
+					<CachePath>SFX/C2_SFX_Ground_Pitch_9C2695D7.wem</CachePath>
+				</File>
+				<File Id="236673331" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>G_SFX_Lever_Pitch.wav</ShortName>
+					<CachePath>SFX/G_SFX_Lever_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="280974445" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L14-2.wav</ShortName>
+					<CachePath>SFX/L14-2_6073608A.wem</CachePath>
+				</File>
+				<File Id="281395502" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tutorial_Jump.wav</ShortName>
+					<CachePath>SFX/Tutorial_Jump_6073608A.wem</CachePath>
+				</File>
+				<File Id="320063939" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C_SFX_Win_Pitch.wav</ShortName>
+					<CachePath>SFX/C_SFX_Win_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="321944039" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L4-1.wav</ShortName>
+					<CachePath>SFX/L4-1_6073608A.wem</CachePath>
+				</File>
+				<File Id="330162885" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>11.wav</ShortName>
+					<CachePath>SFX/11_6073608A.wem</CachePath>
+				</File>
+				<File Id="338676788" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C_SFX_Lever_Pitch.wav</ShortName>
+					<CachePath>SFX/C_SFX_Lever_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="342025370" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Nar_Menu_Guide.wav</ShortName>
+					<CachePath>SFX/Nar_Menu_Guide_6073608A.wem</CachePath>
+				</File>
+				<File Id="346710368" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tutorial_Wall.wav</ShortName>
+					<CachePath>SFX/Tutorial_Wall_6073608A.wem</CachePath>
+				</File>
+				<File Id="364940942" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_AG_Cinematic_FX_ui_one_shot_scifi_blip_positive_swept_squeak_bass_swell_01.4_1_bipLand.wav</ShortName>
+					<CachePath>SFX/ESM_AG_Cinematic_FX_ui_one_shot_scifi_blip_positive_swept_squeak_bass_swell_01.4_1_bipLand_6073608A.wem</CachePath>
+				</File>
+				<File Id="366153077" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D2_SFX_Lever_Pitch.wav</ShortName>
+					<CachePath>SFX/D2_SFX_Lever_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="368032864" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>B_SFX_Ground_Pitch.wav</ShortName>
+					<CachePath>SFX/B_SFX_Ground_Pitch_9C2695D7.wem</CachePath>
+				</File>
+				<File Id="370369678" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E2_SFX_Lore_Pitch.wav</ShortName>
+					<CachePath>SFX/E2_SFX_Lore_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="375089670" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_LevelSelect.wav</ShortName>
+					<CachePath>SFX/SFX_LevelSelect_6073608A.wem</CachePath>
+				</File>
+				<File Id="375138027" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>G_SFX_Fan_Pitch.wav</ShortName>
+					<CachePath>SFX/G_SFX_Fan_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="379494889" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tutorial_Q.wav</ShortName>
+					<CachePath>SFX/Tutorial_Q_6073608A.wem</CachePath>
+				</File>
+				<File Id="390283133" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D2_SFX_MoveableWall_Pitch.wav</ShortName>
+					<CachePath>SFX/D2_SFX_MoveableWall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="394346048" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>G_SFX_MoveableWall_Pitch.wav</ShortName>
+					<CachePath>SFX/G_SFX_MoveableWall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="395617778" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>A_SFX_Win_Pitch.wav</ShortName>
+					<CachePath>SFX/A_SFX_Win_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="401672867" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>B_SFX_Win_Pitch.wav</ShortName>
+					<CachePath>SFX/B_SFX_Win_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="402547671" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C2_SFX_Battery_Pitch.wav</ShortName>
+					<CachePath>SFX/C2_SFX_Battery_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="406694538" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>点击按钮.wav</ShortName>
+					<CachePath>SFX/点击按钮_2C54DCA5.wem</CachePath>
+				</File>
+				<File Id="408191367" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vo_Start.wav</ShortName>
+					<CachePath>SFX/Vo_Start_6073608A.wem</CachePath>
+				</File>
+				<File Id="411234060" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L2-1.wav</ShortName>
+					<CachePath>SFX/L2-1_6073608A.wem</CachePath>
+				</File>
+				<File Id="427549132" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MUS_Broadcast_Drums.wav</ShortName>
+					<CachePath>SFX/MUS_Broadcast_Drums_784441D4.wem</CachePath>
+				</File>
+				<File Id="431554780" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>#シナモンアニメだもん 総集編 1-20話.19Land.wav</ShortName>
+					<CachePath>SFX/#シナモンアニメだもん 総集編 1-20話.19Land_6073608A.wem</CachePath>
+				</File>
+				<File Id="433896442" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>G_SFX_Cloud_Pitch.wav</ShortName>
+					<CachePath>SFX/G_SFX_Cloud_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="435080753" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>B_SFX_Lore_Pitch.wav</ShortName>
+					<CachePath>SFX/B_SFX_Lore_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="442943222" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D_SFX_Cloud_Pitch.wav</ShortName>
+					<CachePath>SFX/D_SFX_Cloud_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="447310089" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Nar_T1.wav</ShortName>
+					<CachePath>SFX/Nar_T1_6073608A.wem</CachePath>
+				</File>
+				<File Id="453433154" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>9.wav</ShortName>
+					<CachePath>SFX/9_6073608A.wem</CachePath>
+				</File>
+				<File Id="455939806" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D2_SFX_Ground_Pitch.wav</ShortName>
+					<CachePath>SFX/D2_SFX_Ground_Pitch_9C2695D7.wem</CachePath>
+				</File>
+				<File Id="456076367" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E_SFX_Win_Pitch.wav</ShortName>
+					<CachePath>SFX/E_SFX_Win_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="460416882" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vo_RandomPlay5.wav</ShortName>
+					<CachePath>SFX/Vo_RandomPlay5_6073608A.wem</CachePath>
+				</File>
+				<File Id="472278284" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D_SFX_Battery_Pitch.wav</ShortName>
+					<CachePath>SFX/D_SFX_Battery_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="474540471" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LT-On Start.wav</ShortName>
+					<CachePath>SFX/LT-On Start_6073608A.wem</CachePath>
+				</File>
+				<File Id="474629260" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>F_SFX_Cloud_Pitch.wav</ShortName>
+					<CachePath>SFX/F_SFX_Cloud_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="484171553" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C_SFX_Lore_Pitch.wav</ShortName>
+					<CachePath>SFX/C_SFX_Lore_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="494654095" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LT_1.wav</ShortName>
+					<CachePath>SFX/LT_1_6073608A.wem</CachePath>
+				</File>
+				<File Id="498573314" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E_SFX_Lever_Pitch.wav</ShortName>
+					<CachePath>SFX/E_SFX_Lever_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="501164636" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tutorial_Left.wav</ShortName>
+					<CachePath>SFX/Tutorial_Left_6073608A.wem</CachePath>
+				</File>
+				<File Id="505736460" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D_SFX_Fan_Pitch.wav</ShortName>
+					<CachePath>SFX/D_SFX_Fan_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="506773331" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vo_Success.wav</ShortName>
+					<CachePath>SFX/Vo_Success_6073608A.wem</CachePath>
+				</File>
+				<File Id="508897303" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tutorial_Right.wav</ShortName>
+					<CachePath>SFX/Tutorial_Right_6073608A.wem</CachePath>
+				</File>
+				<File Id="518970831" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LevelSelect_1.wav</ShortName>
+					<CachePath>SFX/LevelSelect_1_6073608A.wem</CachePath>
+				</File>
+				<File Id="521071536" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L2_Start.wav</ShortName>
+					<CachePath>SFX/L2_Start_6073608A.wem</CachePath>
+				</File>
+				<File Id="525060518" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cinnamoroll Parkour_Intro.wav</ShortName>
+					<CachePath>SFX/Cinnamoroll Parkour_Intro_784441D4.wem</CachePath>
+				</File>
+				<File Id="532122631" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>5.wav</ShortName>
+					<CachePath>SFX/5_6073608A.wem</CachePath>
+				</File>
+				<File Id="541035346" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E_SFX_Ground_Pitch.wav</ShortName>
+					<CachePath>SFX/E_SFX_Ground_Pitch_9C2695D7.wem</CachePath>
+				</File>
+				<File Id="542645653" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Empty.wav</ShortName>
+					<CachePath>SFX/Empty_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="548654442" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Nar_Credits.wav</ShortName>
+					<CachePath>SFX/Nar_Credits_6073608A.wem</CachePath>
+				</File>
+				<File Id="551326352" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tutorial_W.wav</ShortName>
+					<CachePath>SFX/Tutorial_W_6073608A.wem</CachePath>
+				</File>
+				<File Id="558621631" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>F_SFX_Lever_Pitch.wav</ShortName>
+					<CachePath>SFX/F_SFX_Lever_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="559425900" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>G_SFX_Battery_Pitch.wav</ShortName>
+					<CachePath>SFX/G_SFX_Battery_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="568968739" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D_SFX_Lore_Pitch.wav</ShortName>
+					<CachePath>SFX/D_SFX_Lore_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="590483158" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>G_SFX_Ground_Pitch.wav</ShortName>
+					<CachePath>SFX/G_SFX_Ground_Pitch_9C2695D7.wem</CachePath>
+				</File>
+				<File Id="603063377" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L3-1.wav</ShortName>
+					<CachePath>SFX/L3-1_6073608A.wem</CachePath>
+				</File>
+				<File Id="621607312" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>1.wav</ShortName>
+					<CachePath>SFX/1_6073608A.wem</CachePath>
+				</File>
+				<File Id="622532351" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>4.wav</ShortName>
+					<CachePath>SFX/4_6073608A.wem</CachePath>
+				</File>
+				<File Id="629345362" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L10-1.wav</ShortName>
+					<CachePath>SFX/L10-1_6073608A.wem</CachePath>
+				</File>
+				<File Id="630965929" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Detect_Win.wav</ShortName>
+					<CachePath>SFX/SFX_Detect_Win_6073608A.wem</CachePath>
+				</File>
+				<File Id="644423896" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vo_RandomPlay2.wav</ShortName>
+					<CachePath>SFX/Vo_RandomPlay2_6073608A.wem</CachePath>
+				</File>
+				<File Id="645820635" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Arcade_Game_Jump_13_Classic_Retro_8_Bit_.1Jump.wav</ShortName>
+					<CachePath>SFX/ESM_Arcade_Game_Jump_13_Classic_Retro_8_Bit_.1Jump_6073608A.wem</CachePath>
+				</File>
+				<File Id="651034652" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D_SFX_Win_Pitch.wav</ShortName>
+					<CachePath>SFX/D_SFX_Win_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="651942807" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>8.wav</ShortName>
+					<CachePath>SFX/8_6073608A.wem</CachePath>
+				</File>
+				<File Id="656428153" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>B_SFX_Battery_Pitch.wav</ShortName>
+					<CachePath>SFX/B_SFX_Battery_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="678729911" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D2_SFX_Win_Pitch.wav</ShortName>
+					<CachePath>SFX/D2_SFX_Win_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="684132451" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>15.wav</ShortName>
+					<CachePath>SFX/15_6073608A.wem</CachePath>
+				</File>
+				<File Id="697304146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C2_SFX_Fan_Pitch.wav</ShortName>
+					<CachePath>SFX/C2_SFX_Fan_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="702231444" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>F_SFX_MoveableWall_Pitch.wav</ShortName>
+					<CachePath>SFX/F_SFX_MoveableWall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="708431605" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>B_SFX_Cloud_Pitch.wav</ShortName>
+					<CachePath>SFX/B_SFX_Cloud_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="730927035" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>F_SFX_Ground_Pitch.wav</ShortName>
+					<CachePath>SFX/F_SFX_Ground_Pitch_9C2695D7.wem</CachePath>
+				</File>
+				<File Id="732536098" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D_SFX_Wall_Pitch.wav</ShortName>
+					<CachePath>SFX/D_SFX_Wall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="733544585" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D2_SFX_Fan_Pitch.wav</ShortName>
+					<CachePath>SFX/D2_SFX_Fan_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="734816753" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LT-2.wav</ShortName>
+					<CachePath>SFX/LT-2_6073608A.wem</CachePath>
+				</File>
+				<File Id="752170062" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>F_SFX_Battery_Pitch.wav</ShortName>
+					<CachePath>SFX/F_SFX_Battery_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="779141761" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E2_SFX_Battery_Pitch.wav</ShortName>
+					<CachePath>SFX/E2_SFX_Battery_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="784766030" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E2_SFX_Win_Pitch.wav</ShortName>
+					<CachePath>SFX/E2_SFX_Win_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="805216688" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>A_SFX_MoveableWall_Pitch.wav</ShortName>
+					<CachePath>SFX/A_SFX_MoveableWall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="805939267" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D_SFX_Lever_Pitch.wav</ShortName>
+					<CachePath>SFX/D_SFX_Lever_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="824898907" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L5-2.wav</ShortName>
+					<CachePath>SFX/L5-2_6073608A.wem</CachePath>
+				</File>
+				<File Id="837881676" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E_SFX_Cloud_Pitch.wav</ShortName>
+					<CachePath>SFX/E_SFX_Cloud_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="840564925" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C_SFX_Battery_Pitch.wav</ShortName>
+					<CachePath>SFX/C_SFX_Battery_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="844171427" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LT-Win.wav</ShortName>
+					<CachePath>SFX/LT-Win_6073608A.wem</CachePath>
+				</File>
+				<File Id="847755765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>10.wav</ShortName>
+					<CachePath>SFX/10_6073608A.wem</CachePath>
+				</File>
+				<File Id="866981024" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L5-1.wav</ShortName>
+					<CachePath>SFX/L5-1_6073608A.wem</CachePath>
+				</File>
+				<File Id="867736681" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>12.wav</ShortName>
+					<CachePath>SFX/12_6073608A.wem</CachePath>
+				</File>
+				<File Id="872977414" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>F_SFX_Win_Pitch.wav</ShortName>
+					<CachePath>SFX/F_SFX_Win_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="878937860" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tutorial_D.wav</ShortName>
+					<CachePath>SFX/Tutorial_D_6073608A.wem</CachePath>
+				</File>
+				<File Id="888594967" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E_SFX_Fan_Pitch.wav</ShortName>
+					<CachePath>SFX/E_SFX_Fan_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="896899524" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>B_SFX_Fan_Pitch.wav</ShortName>
+					<CachePath>SFX/B_SFX_Fan_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="898405465" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>A_SFX_Lore_Pitch.wav</ShortName>
+					<CachePath>SFX/A_SFX_Lore_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="910659428" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>2.wav</ShortName>
+					<CachePath>SFX/2_6073608A.wem</CachePath>
+				</File>
+				<File Id="915565207" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>L14-1.wav</ShortName>
+					<CachePath>SFX/L14-1_6073608A.wem</CachePath>
+				</File>
+				<File Id="916766108" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D2_SFX_Battery_Pitch.wav</ShortName>
+					<CachePath>SFX/D2_SFX_Battery_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="917916161" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stinger_Lore_Play.wav</ShortName>
+					<CachePath>SFX/Stinger_Lore_Play_6073608A.wem</CachePath>
+				</File>
+				<File Id="921715665" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>A_SFX_Lever_Pitch.wav</ShortName>
+					<CachePath>SFX/A_SFX_Lever_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="933731626" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>3.wav</ShortName>
+					<CachePath>SFX/3_6073608A.wem</CachePath>
+				</File>
+				<File Id="935246004" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C2_SFX_Lever_Pitch.wav</ShortName>
+					<CachePath>SFX/C2_SFX_Lever_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="944003039" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tutorial_A.wav</ShortName>
+					<CachePath>SFX/Tutorial_A_6073608A.wem</CachePath>
+				</File>
+				<File Id="951658612" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>A_SFX_Fan_Pitch.wav</ShortName>
+					<CachePath>SFX/A_SFX_Fan_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="957560379" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>F_SFX_Fan_Pitch.wav</ShortName>
+					<CachePath>SFX/F_SFX_Fan_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="959729632" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C_SFX_MoveableWall_Pitch.wav</ShortName>
+					<CachePath>SFX/C_SFX_MoveableWall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="960072136" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>B_SFX_Wall_Pitch.wav</ShortName>
+					<CachePath>SFX/B_SFX_Wall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="960403157" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vo_RandomPlay1.wav</ShortName>
+					<CachePath>SFX/Vo_RandomPlay1_6073608A.wem</CachePath>
+				</File>
+				<File Id="965793612" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D2_SFX_Lore_Pitch.wav</ShortName>
+					<CachePath>SFX/D2_SFX_Lore_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="979114233" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E_SFX_Battery_Pitch.wav</ShortName>
+					<CachePath>SFX/E_SFX_Battery_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="982721274" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>B_SFX_MoveableWall_Pitch.wav</ShortName>
+					<CachePath>SFX/B_SFX_MoveableWall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="984967118" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>A_SFX_Cloud_Pitch.wav</ShortName>
+					<CachePath>SFX/A_SFX_Cloud_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="993563363" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>13.wav</ShortName>
+					<CachePath>SFX/13_6073608A.wem</CachePath>
+				</File>
+				<File Id="993921033" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C_SFX_Ground_Pitch.wav</ShortName>
+					<CachePath>SFX/C_SFX_Ground_Pitch_9C2695D7.wem</CachePath>
+				</File>
+				<File Id="1004540643" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Vo_RandomPlay3.wav</ShortName>
+					<CachePath>SFX/Vo_RandomPlay3_6073608A.wem</CachePath>
+				</File>
+				<File Id="1009303808" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tutorial_Lore.wav</ShortName>
+					<CachePath>SFX/Tutorial_Lore_6073608A.wem</CachePath>
+				</File>
+				<File Id="1015005458" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tutorial_Win.wav</ShortName>
+					<CachePath>SFX/Tutorial_Win_6073608A.wem</CachePath>
+				</File>
+				<File Id="1022273419" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>G_SFX_Wall_Pitch.wav</ShortName>
+					<CachePath>SFX/G_SFX_Wall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="1038063320" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>E2_SFX_Lever_Pitch.wav</ShortName>
+					<CachePath>SFX/E2_SFX_Lever_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="1041270729" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>C2_SFX_Lore_Pitch.wav</ShortName>
+					<CachePath>SFX/C2_SFX_Lore_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="1049566941" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>A_SFX_Battery_Pitch.wav</ShortName>
+					<CachePath>SFX/A_SFX_Battery_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="1054853624" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>A_SFX_Wall_Pitch.wav</ShortName>
+					<CachePath>SFX/A_SFX_Wall_Pitch_4B4A0975.wem</CachePath>
+				</File>
+				<File Id="1062151930" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>7.wav</ShortName>
+					<CachePath>SFX/7_6073608A.wem</CachePath>
+				</File>
+				<File Id="1071337066" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LT-1_OnCollision.wav</ShortName>
+					<CachePath>SFX/LT-1_OnCollision_6073608A.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="310732885" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="341441079" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="347489551" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="408372587" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="444456137" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="456861090" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="498502107" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="690427912" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="731005650" Name="Compressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="797970358" Name="Synth One" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="930756958" Name="Synth One" LibName="Wwise Synth One" LibId="9699330"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="84696446" Name="A" MaxAttenuation="100" DurationType="OneShot" DurationMin="1" DurationMax="3">
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2782712987"/>
+							<MediaRefs>
+								<MediaRef Id="921715665"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="310732885"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="204455109"/>
+							<MediaRefs>
+								<MediaRef Id="898405465"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="310732885"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2304303686"/>
+							<MediaRefs>
+								<MediaRef Id="805216688"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="310732885"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2326215132"/>
+							<MediaRefs>
+								<MediaRef Id="1049566941"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="310732885"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="979765101"/>
+							<MediaRefs>
+								<MediaRef Id="395617778"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="310732885"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2528658256"/>
+							<MediaRefs>
+								<MediaRef Id="3548770"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="310732885"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1350606868"/>
+							<MediaRefs>
+								<MediaRef Id="984967118"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="310732885"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="3354297748"/>
+							<MediaRefs>
+								<MediaRef Id="542645653"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="310732885"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1183803264"/>
+							<MediaRefs>
+								<MediaRef Id="951658612"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="310732885"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2108779961"/>
+							<MediaRefs>
+								<MediaRef Id="1054853624"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="310732885"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="84696445" Name="B" MaxAttenuation="100" DurationType="OneShot" DurationMin="1" DurationMax="3">
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2782712987"/>
+							<MediaRefs>
+								<MediaRef Id="81932503"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="444456137"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="204455109"/>
+							<MediaRefs>
+								<MediaRef Id="435080753"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="444456137"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2304303686"/>
+							<MediaRefs>
+								<MediaRef Id="982721274"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="444456137"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2326215132"/>
+							<MediaRefs>
+								<MediaRef Id="656428153"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="444456137"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="979765101"/>
+							<MediaRefs>
+								<MediaRef Id="401672867"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="444456137"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2528658256"/>
+							<MediaRefs>
+								<MediaRef Id="368032864"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="444456137"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1350606868"/>
+							<MediaRefs>
+								<MediaRef Id="708431605"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="444456137"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="3354297748"/>
+							<MediaRefs>
+								<MediaRef Id="542645653"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="444456137"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1183803264"/>
+							<MediaRefs>
+								<MediaRef Id="896899524"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="444456137"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2108779961"/>
+							<MediaRefs>
+								<MediaRef Id="960072136"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="444456137"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="84696444" Name="C" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.68266666" DurationMax="3.4133334">
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2782712987"/>
+							<MediaRefs>
+								<MediaRef Id="338676788"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="204455109"/>
+							<MediaRefs>
+								<MediaRef Id="484171553"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2304303686"/>
+							<MediaRefs>
+								<MediaRef Id="959729632"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2326215132"/>
+							<MediaRefs>
+								<MediaRef Id="840564925"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="979765101"/>
+							<MediaRefs>
+								<MediaRef Id="320063939"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2528658256"/>
+							<MediaRefs>
+								<MediaRef Id="993921033"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1350606868"/>
+							<MediaRefs>
+								<MediaRef Id="82316466"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="3354297748"/>
+							<MediaRefs>
+								<MediaRef Id="542645653"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1183803264"/>
+							<MediaRefs>
+								<MediaRef Id="23809650"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2108779961"/>
+							<MediaRefs>
+								<MediaRef Id="45891252"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1853303302" Name="C2" MaxAttenuation="100" DurationType="OneShot" DurationMin="1" DurationMax="3">
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2782712987"/>
+							<MediaRefs>
+								<MediaRef Id="935246004"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="498502107"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="204455109"/>
+							<MediaRefs>
+								<MediaRef Id="1041270729"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="498502107"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2304303686"/>
+							<MediaRefs>
+								<MediaRef Id="98345644"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="498502107"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2326215132"/>
+							<MediaRefs>
+								<MediaRef Id="402547671"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="498502107"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="979765101"/>
+							<MediaRefs>
+								<MediaRef Id="31530662"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="498502107"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2528658256"/>
+							<MediaRefs>
+								<MediaRef Id="228689753"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="498502107"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1350606868"/>
+							<MediaRefs>
+								<MediaRef Id="200288665"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="498502107"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="3354297748"/>
+							<MediaRefs>
+								<MediaRef Id="542645653"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="498502107"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1183803264"/>
+							<MediaRefs>
+								<MediaRef Id="697304146"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="498502107"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2108779961"/>
+							<MediaRefs>
+								<MediaRef Id="212919543"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="498502107"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="84696443" Name="D" MaxAttenuation="100" DurationType="OneShot" DurationMin="1" DurationMax="3.5">
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2782712987"/>
+							<MediaRefs>
+								<MediaRef Id="805939267"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="690427912"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="204455109"/>
+							<MediaRefs>
+								<MediaRef Id="568968739"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="690427912"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2304303686"/>
+							<MediaRefs>
+								<MediaRef Id="162576838"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="690427912"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2326215132"/>
+							<MediaRefs>
+								<MediaRef Id="472278284"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="690427912"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="979765101"/>
+							<MediaRefs>
+								<MediaRef Id="651034652"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="690427912"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2528658256"/>
+							<MediaRefs>
+								<MediaRef Id="170646122"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="690427912"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1350606868"/>
+							<MediaRefs>
+								<MediaRef Id="442943222"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="690427912"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="3354297748"/>
+							<MediaRefs>
+								<MediaRef Id="542645653"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="690427912"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1183803264"/>
+							<MediaRefs>
+								<MediaRef Id="505736460"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="690427912"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2108779961"/>
+							<MediaRefs>
+								<MediaRef Id="732536098"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="690427912"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1836525715" Name="D2" MaxAttenuation="100" DurationType="OneShot" DurationMin="1" DurationMax="3">
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2782712987"/>
+							<MediaRefs>
+								<MediaRef Id="366153077"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="731005650"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="204455109"/>
+							<MediaRefs>
+								<MediaRef Id="965793612"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="731005650"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2304303686"/>
+							<MediaRefs>
+								<MediaRef Id="390283133"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="731005650"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2326215132"/>
+							<MediaRefs>
+								<MediaRef Id="916766108"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="731005650"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="979765101"/>
+							<MediaRefs>
+								<MediaRef Id="678729911"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="731005650"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2528658256"/>
+							<MediaRefs>
+								<MediaRef Id="455939806"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="731005650"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1350606868"/>
+							<MediaRefs>
+								<MediaRef Id="183336580"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="731005650"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="3354297748"/>
+							<MediaRefs>
+								<MediaRef Id="542645653"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="731005650"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1183803264"/>
+							<MediaRefs>
+								<MediaRef Id="733544585"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="731005650"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2108779961"/>
+							<MediaRefs>
+								<MediaRef Id="120438893"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="731005650"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="84696442" Name="E" MaxAttenuation="100" DurationType="OneShot" DurationMin="1" DurationMax="3">
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2782712987"/>
+							<MediaRefs>
+								<MediaRef Id="498573314"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="341441079"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="204455109"/>
+							<MediaRefs>
+								<MediaRef Id="1778868"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="341441079"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2304303686"/>
+							<MediaRefs>
+								<MediaRef Id="210289030"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="341441079"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2326215132"/>
+							<MediaRefs>
+								<MediaRef Id="979114233"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="341441079"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="979765101"/>
+							<MediaRefs>
+								<MediaRef Id="456076367"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="341441079"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2528658256"/>
+							<MediaRefs>
+								<MediaRef Id="541035346"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="341441079"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1350606868"/>
+							<MediaRefs>
+								<MediaRef Id="837881676"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="341441079"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="3354297748"/>
+							<MediaRefs>
+								<MediaRef Id="542645653"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="341441079"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1183803264"/>
+							<MediaRefs>
+								<MediaRef Id="888594967"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="341441079"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2108779961"/>
+							<MediaRefs>
+								<MediaRef Id="67941170"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="341441079"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1819748156" Name="E2" MaxAttenuation="100" DurationType="OneShot" DurationMin="3" DurationMax="3">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="456861090"/>
+						</Custom>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2782712987"/>
+							<MediaRefs>
+								<MediaRef Id="1038063320"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="456861090"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="204455109"/>
+							<MediaRefs>
+								<MediaRef Id="370369678"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="456861090"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2304303686"/>
+							<MediaRefs>
+								<MediaRef Id="63819010"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="456861090"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2326215132"/>
+							<MediaRefs>
+								<MediaRef Id="779141761"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="456861090"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="979765101"/>
+							<MediaRefs>
+								<MediaRef Id="784766030"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="456861090"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2528658256"/>
+							<MediaRefs>
+								<MediaRef Id="220368910"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="456861090"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1350606868"/>
+							<MediaRefs>
+								<MediaRef Id="175412979"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="456861090"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1183803264"/>
+							<MediaRefs>
+								<MediaRef Id="23801847"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="456861090"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2108779961"/>
+							<MediaRefs>
+								<MediaRef Id="144978697"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="456861090"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="84696441" Name="F" MaxAttenuation="100" DurationType="OneShot" DurationMin="1" DurationMax="3">
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2782712987"/>
+							<MediaRefs>
+								<MediaRef Id="558621631"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="347489551"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="204455109"/>
+							<MediaRefs>
+								<MediaRef Id="38161007"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="347489551"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2304303686"/>
+							<MediaRefs>
+								<MediaRef Id="702231444"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="347489551"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2326215132"/>
+							<MediaRefs>
+								<MediaRef Id="752170062"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="347489551"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="979765101"/>
+							<MediaRefs>
+								<MediaRef Id="872977414"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="347489551"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2528658256"/>
+							<MediaRefs>
+								<MediaRef Id="730927035"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="347489551"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1350606868"/>
+							<MediaRefs>
+								<MediaRef Id="474629260"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="347489551"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="3354297748"/>
+							<MediaRefs>
+								<MediaRef Id="542645653"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="347489551"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1183803264"/>
+							<MediaRefs>
+								<MediaRef Id="957560379"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="347489551"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2108779961"/>
+							<MediaRefs>
+								<MediaRef Id="155369183"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="347489551"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="84696440" Name="G" MaxAttenuation="100" DurationType="OneShot" DurationMin="1" DurationMax="3">
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2782712987"/>
+							<MediaRefs>
+								<MediaRef Id="236673331"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="408372587"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="204455109"/>
+							<MediaRefs>
+								<MediaRef Id="59872974"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="408372587"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2304303686"/>
+							<MediaRefs>
+								<MediaRef Id="394346048"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="408372587"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2326215132"/>
+							<MediaRefs>
+								<MediaRef Id="559425900"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="408372587"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="979765101"/>
+							<MediaRefs>
+								<MediaRef Id="196265466"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="408372587"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2528658256"/>
+							<MediaRefs>
+								<MediaRef Id="590483158"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="408372587"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1350606868"/>
+							<MediaRefs>
+								<MediaRef Id="433896442"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="408372587"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="3354297748"/>
+							<MediaRefs>
+								<MediaRef Id="542645653"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="408372587"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="1183803264"/>
+							<MediaRefs>
+								<MediaRef Id="375138027"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="408372587"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1683342792" Id="2108779961"/>
+							<MediaRefs>
+								<MediaRef Id="1022273419"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="408372587"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="264866792" Name="Lore_Collision" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+					<MediaRefs>
+						<MediaRef Id="406694538"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="2549646816" Name="Mute_PlayerPositionTone_Airborne" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2403889813" Name="Play_Broadcast_Drums" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="427549132"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="1172822028" Name="Play_Death" DurationType="OneShot" DurationMin="4.5128956" DurationMax="4.5128956">
+					<MediaRefs>
+						<MediaRef Id="460416882"/>
+						<MediaRef Id="644423896"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="2949884818" Name="Play_End_Credits" DurationType="OneShot" DurationMin="89.234276" DurationMax="89.234276">
+					<MediaRefs>
+						<MediaRef Id="144893544"/>
+						<MediaRef Id="548654442"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3854155799" Name="Play_Footsteps" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="431554780"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3689126666" Name="Play_Jump" DurationType="OneShot" DurationMin="0.110854164" DurationMax="0.110854164">
+					<MediaRefs>
+						<MediaRef Id="645820635"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="495578665" Name="Play_Jump_RandomVo" DurationType="OneShot" DurationMin="0.8234375" DurationMax="1.2869792">
+					<MediaRefs>
+						<MediaRef Id="121141460"/>
+						<MediaRef Id="960403157"/>
+						<MediaRef Id="1004540643"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="1964619705" Name="Play_L10_1" DurationType="OneShot" DurationMin="1.8273125" DurationMax="1.8273125">
+					<MediaRefs>
+						<MediaRef Id="156838964"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="1964619706" Name="Play_L10_2" DurationType="OneShot" DurationMin="7.383042" DurationMax="7.383042">
+					<MediaRefs>
+						<MediaRef Id="629345362"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3038136960" Name="Play_L11_1" DurationType="OneShot" DurationMin="3.939625" DurationMax="3.939625">
+					<MediaRefs>
+						<MediaRef Id="109699754"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3037695709" Name="Play_L14_1" DurationType="OneShot" DurationMin="3.6486666" DurationMax="3.6486666">
+					<MediaRefs>
+						<MediaRef Id="280974445"/>
+						<MediaRef Id="915565207"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3037695710" Name="Play_L14_2" DurationType="OneShot" DurationMin="1.2710625" DurationMax="1.2710625">
+					<MediaRefs>
+						<MediaRef Id="280974445"/>
+						<MediaRef Id="915565207"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3475640672" Name="Play_L2_1" DurationType="OneShot" DurationMin="51.208042" DurationMax="51.208042">
+					<MediaRefs>
+						<MediaRef Id="411234060"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="1194025040" Name="Play_L2_OnStart" DurationType="OneShot" DurationMin="7.478" DurationMax="7.478">
+					<MediaRefs>
+						<MediaRef Id="521071536"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="254588057" Name="Play_L3_1" DurationType="OneShot" DurationMin="18.916895" DurationMax="18.916895">
+					<MediaRefs>
+						<MediaRef Id="603063377"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="149853905" Name="Play_L3_OnStart" DurationType="OneShot" DurationMin="7.478" DurationMax="7.478">
+					<MediaRefs>
+						<MediaRef Id="521071536"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="254146770" Name="Play_L4_1" DurationType="OneShot" DurationMin="14.711166" DurationMax="14.711166">
+					<MediaRefs>
+						<MediaRef Id="321944039"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="254146769" Name="Play_L4_2" DurationType="OneShot" DurationMin="9.139812" DurationMax="9.139812">
+					<MediaRefs>
+						<MediaRef Id="112692735"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="249707322" Name="Play_L4_OnStart" DurationType="OneShot" DurationMin="7.478" DurationMax="7.478">
+					<MediaRefs>
+						<MediaRef Id="521071536"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3475493515" Name="Play_L5_1" DurationType="OneShot" DurationMin="6.979396" DurationMax="6.979396">
+					<MediaRefs>
+						<MediaRef Id="866981024"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3475493512" Name="Play_L5_2" DurationType="OneShot" DurationMin="10.6606455" DurationMax="10.6606455">
+					<MediaRefs>
+						<MediaRef Id="824898907"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="253455286" Name="Play_L8_1" DurationType="OneShot" DurationMin="5.472" DurationMax="5.472">
+					<MediaRefs>
+						<MediaRef Id="65376009"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="4285282925" Name="Play_Land" DurationType="OneShot" DurationMin="0.16666667" DurationMax="0.16666667">
+					<MediaRefs>
+						<MediaRef Id="364940942"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="617543412" Name="Play_LevelConfirm" DurationType="OneShot" DurationMin="1.34375" DurationMax="1.34375">
+					<MediaRefs>
+						<MediaRef Id="506773331"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="1628811220" Name="Play_LevelSelect" DurationType="OneShot" DurationMin="1.08" DurationMax="1.584">
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="1004413459"/>
+							<MediaRefs>
+								<MediaRef Id="847755765"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="987635877"/>
+							<MediaRefs>
+								<MediaRef Id="532122631"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="1004413463"/>
+							<MediaRefs>
+								<MediaRef Id="32443878"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="987635878"/>
+							<MediaRefs>
+								<MediaRef Id="110350344"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="1004413458"/>
+							<MediaRefs>
+								<MediaRef Id="330162885"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="987635881"/>
+							<MediaRefs>
+								<MediaRef Id="453433154"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="987635880"/>
+							<MediaRefs>
+								<MediaRef Id="651942807"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="987635874"/>
+							<MediaRefs>
+								<MediaRef Id="910659428"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="987635876"/>
+							<MediaRefs>
+								<MediaRef Id="622532351"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="1004413462"/>
+							<MediaRefs>
+								<MediaRef Id="684132451"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="1004413456"/>
+							<MediaRefs>
+								<MediaRef Id="993563363"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="987635879"/>
+							<MediaRefs>
+								<MediaRef Id="1062151930"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="1004413457"/>
+							<MediaRefs>
+								<MediaRef Id="867736681"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="987635875"/>
+							<MediaRefs>
+								<MediaRef Id="933731626"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="732211977" Id="987635873" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="621607312"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="492328278" Name="Play_LevelSelectFX" DurationType="OneShot" DurationMin="0.17604166" DurationMax="0.17604166">
+					<MediaRefs>
+						<MediaRef Id="375089670"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="375589320" Name="Play_LevelSelectLore" DurationType="OneShot" DurationMin="7.654917" DurationMax="7.654917">
+					<MediaRefs>
+						<MediaRef Id="280974445"/>
+						<MediaRef Id="518970831"/>
+						<MediaRef Id="915565207"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3813243862" Name="Play_Lore" DurationType="OneShot" DurationMin="4" DurationMax="4">
+					<MediaRefs>
+						<MediaRef Id="917916161"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="243701010" Name="Play_LT_1" DurationType="OneShot" DurationMin="34.290855" DurationMax="34.290855">
+					<MediaRefs>
+						<MediaRef Id="494654095"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="520505691" Name="Play_LT_1OnCollision" DurationType="OneShot" DurationMin="5.2991877" DurationMax="5.2991877">
+					<MediaRefs>
+						<MediaRef Id="1071337066"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="243701009" Name="Play_LT_2" DurationType="OneShot" DurationMin="5" DurationMax="5">
+					<MediaRefs>
+						<MediaRef Id="734816753"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="243701008" Name="Play_LT_3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1775097163" Name="Play_LT_Start" DurationType="OneShot" DurationMin="17.732521" DurationMax="17.732521">
+					<MediaRefs>
+						<MediaRef Id="474540471"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="2463617210" Name="Play_LT_WinOnCollision" DurationType="OneShot" DurationMin="6.0715833" DurationMax="6.0715833">
+					<MediaRefs>
+						<MediaRef Id="844171427"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="2898413582" Name="Play_MX_LevelSelect" DurationType="OneShot" DurationMin="58.034687" DurationMax="58.034687">
+					<MediaRefs>
+						<MediaRef Id="114430215"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1022453873" Name="Play_MX_Menu" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="79513394"/>
+						<MediaRef Id="114430215"/>
+						<MediaRef Id="342025370"/>
+						<MediaRef Id="525060518"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="714125809" Name="Play_PlayerPositionTone_Airborne" MaxAttenuation="100" DurationType="Infinite">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="930756958"/>
+						</Custom>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3843357604" Name="Play_PlayerPositionTone_XPulse" MaxAttenuation="100" DurationType="Infinite">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="797970358"/>
+						</Custom>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="820981162" Name="Play_RandomVo" DurationType="OneShot" DurationMin="20.512896" DurationMax="26.512896">
+					<MediaRefs>
+						<MediaRef Id="644423896"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="2419452367" Name="Play_StartVo" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="408191367"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="797970358"/>
+						</Custom>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="2158585690" Name="Play_SuccessVo" DurationType="OneShot" DurationMin="1.34375" DurationMax="1.34375">
+					<MediaRefs>
+						<MediaRef Id="506773331"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="4069469053" Name="Play_Tutorial_Start" DurationType="OneShot" DurationMin="14.607521" DurationMax="14.607521">
+					<MediaRefs>
+						<MediaRef Id="447310089"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3614464626" Name="Play_Tutorial_Voices" DurationType="OneShot" DurationMin="1.7856458" DurationMax="3.8361666">
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3762955427" Id="2108779961"/>
+							<MediaRefs>
+								<MediaRef Id="346710368"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3762955427" Id="2528658256"/>
+							<MediaRefs>
+								<MediaRef Id="29253307"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3762955427" Id="84696430"/>
+							<MediaRefs>
+								<MediaRef Id="379494889"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3762955427" Id="979765101"/>
+							<MediaRefs>
+								<MediaRef Id="1015005458"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3762955427" Id="84696424"/>
+							<MediaRefs>
+								<MediaRef Id="551326352"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3762955427" Id="4164838345"/>
+							<MediaRefs>
+								<MediaRef Id="281395502"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3762955427" Id="4109362" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="501164636"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3762955427" Id="84696446"/>
+							<MediaRefs>
+								<MediaRef Id="944003039"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3762955427" Id="84696443"/>
+							<MediaRefs>
+								<MediaRef Id="878937860"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3762955427" Id="84696428"/>
+							<MediaRefs>
+								<MediaRef Id="114231013"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3762955427" Id="204455109"/>
+							<MediaRefs>
+								<MediaRef Id="1009303808"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3762955427" Id="3893817417"/>
+							<MediaRefs>
+								<MediaRef Id="508897303"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2955987680" Name="Play_WIn" DurationType="OneShot" DurationMin="3" DurationMax="3">
+					<MediaRefs>
+						<MediaRef Id="50247933"/>
+						<MediaRef Id="280974445"/>
+						<MediaRef Id="915565207"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="2431650291" Name="Pulse_PlayerPositionTone_XPulse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1981237384" Name="Stop_All_Lore" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="280974445"/>
+						<MediaRef Id="915565207"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="282449107" Name="Plate"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="1902799896" Name="Stop_End_Credits" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2963349357" Name="Stop_Footsteps" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="146837212" Name="Stop_MX_LevelSelect" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2638592923" Name="Stop_MX_Menu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3283001359" Name="Stop_PlayerPositionTone_Airborne" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3013518714" Name="Stop_PlayerPositionTone_XPulse" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1669608868" Name="Stop_RandomVo" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="997434397" Name="Unmute_PlayerPositionTone_Airborne" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2711876432" Name="Win_Collision" DurationType="OneShot" DurationMin="1.95" DurationMax="1.95">
+					<MediaRefs>
+						<MediaRef Id="630965929"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="278471273" Name="Med_Room"/>
+					</AuxBusRefs>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="926379701" Name="Player_Y_Pitch"/>
+				<GameParameter Id="1766625469" Name="Player_PositionTone_Volume"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="732211977" Name="LevelSelection">
+					<Switches>
+						<Switch Id="987635873" Name="Level_01"/>
+						<Switch Id="987635874" Name="Level_02"/>
+						<Switch Id="987635875" Name="Level_03"/>
+						<Switch Id="987635876" Name="Level_04"/>
+						<Switch Id="987635877" Name="Level_05"/>
+						<Switch Id="987635878" Name="Level_06"/>
+						<Switch Id="987635879" Name="Level_07"/>
+						<Switch Id="987635880" Name="Level_08"/>
+						<Switch Id="987635881" Name="Level_09"/>
+						<Switch Id="1004413456" Name="Level_13"/>
+						<Switch Id="1004413457" Name="Level_12"/>
+						<Switch Id="1004413458" Name="Level_11"/>
+						<Switch Id="1004413459" Name="Level_10"/>
+						<Switch Id="1004413462" Name="Level_15"/>
+						<Switch Id="1004413463" Name="Level_14"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1683342792" Name="Broadcast_Cell_Type">
+					<Switches>
+						<Switch Id="204455109" Name="Lore"/>
+						<Switch Id="979765101" Name="Win"/>
+						<Switch Id="1183803264" Name="Fan"/>
+						<Switch Id="1350606868" Name="Cloud"/>
+						<Switch Id="2108779961" Name="Wall"/>
+						<Switch Id="2304303686" Name="MoveableWall"/>
+						<Switch Id="2326215132" Name="Battery"/>
+						<Switch Id="2528658256" Name="Ground"/>
+						<Switch Id="2782712987" Name="Lever"/>
+						<Switch Id="3354297748" Name="Empty"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3762955427" Name="Tutorial">
+					<Switches>
+						<Switch Id="4109362" Name="Left"/>
+						<Switch Id="84696424" Name="W"/>
+						<Switch Id="84696428" Name="S"/>
+						<Switch Id="84696430" Name="Q"/>
+						<Switch Id="84696443" Name="D"/>
+						<Switch Id="84696446" Name="A"/>
+						<Switch Id="204455109" Name="Lore"/>
+						<Switch Id="979765101" Name="Win"/>
+						<Switch Id="2108779961" Name="Wall"/>
+						<Switch Id="2528658256" Name="Ground"/>
+						<Switch Id="3893817417" Name="Right"/>
+						<Switch Id="4164838345" Name="Space"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{94E7D3F7-C328-2659-9CE3-A2AEBF903D76}</FileHash>
+</SoundBanksInfo>

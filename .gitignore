@@ -204,3 +204,49 @@ crashlytics-build.properties
 **/.idea/**/*.iml
 **/.idea/**/contentModel.xml
 **/.idea/**/modules.xml
+
+###################################################
+############ CINNAMOROLL PROJECT FILES ############
+###################################################
+
+# Exported game builds, old installers and ZIPs kept under APP.
+/Cinnamoroll Parkour/APP/
+
+# Generated native debug symbols (not needed to run the game).
+**/*.dSYM/
+**/*.dSYM.meta
+*.ilk
+*.exp
+
+# Local crash reports and temporary diagnostics.
+mono_crash.*
+*.dmp
+*.dump
+*.log
+/Cinnamoroll Parkour/logRun*.txt
+
+# Manual/editor backups; retain the current source and normal Unity .meta files.
+*.bak
+*.bak.meta
+*.bak_*
+*.backup
+*.backup.meta
+*.orig
+*.orig.meta
+*.rej
+
+# Wwise authoring caches and generated export output.
+# Unity's imported Assets/WwiseData banks are intentionally retained.
+**/[Ww]wise/**/.cache/
+**/[Ww]wise/**/.backup/
+**/[Ww]wise/**/GeneratedSoundBanks/
+**/[Ww]wise/**/SoundBankInfoCache.dat
+
+# Previous experimental model (162.5 MiB); game uses Baker + Lessac instead.
+# Download/restore this model before selecting the Melo profile in the TTS plugin.
+/Cinnamoroll Parkour/Assets/StreamingAssets/SherpaOnnx/tts-models/vits-melo-tts-zh_en/
+/Cinnamoroll Parkour/Assets/StreamingAssets/SherpaOnnx/tts-models/vits-melo-tts-zh_en.meta
+
+# Keep required runtime/source files: other .onnx profiles, .wav, .bnk,
+# .wem, .dll, .dylib, .a, .bundle and ordinary Unity .meta files.
+# Required large binaries should use Git LFS instead of blanket ignore rules.

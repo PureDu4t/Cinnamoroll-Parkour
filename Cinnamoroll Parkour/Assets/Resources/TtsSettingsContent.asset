@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bcb19c62434080b4bd866881edc537, type: 3}
+  m_Name: TtsSettingsContent
+  m_EditorClassIdentifier: 
+  chineseInstructions: "\u9009\u62e9\u4f60\u7684\u8bed\u8a00\u3002"
+  englishInstructions: "Choose your language."
+  chineseSample: "\u8fd9\u662f\u5f53\u524d\u8bed\u97f3\u7684\u6548\u679c\u3002\u6b22\u8fce\u6765\u5230\u7389\u6842\u72d7\u7684\u4e16\u754c\uff01\u8bf7\u542c\u542c\u8fd9\u4e2a\u901f\u5ea6\u662f\u5426\u9002\u5408\u4f60\u3002"
+  englishSample: "This is your current voice and speed. Welcome to Cinnamoroll's world! Listen and choose a comfortable speed."
+  chineseSpeedPrompt: "\u8bf7\u9009\u62e9\u4f60\u7684\u8bed\u901f\u3002"
+  englishSpeedPrompt: "Please choose your speech speed."
+  chineseEnterPrompt: "\u6309 E \u8fdb\u5165\u6e38\u620f\u3002"
+  englishEnterPrompt: "Press E to enter the game."
+  loadingText: "Loading"

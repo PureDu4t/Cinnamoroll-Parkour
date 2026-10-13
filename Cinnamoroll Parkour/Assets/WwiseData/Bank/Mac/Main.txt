@@ -1,0 +1,356 @@
+Event	ID	Name			Wwise Object Path	Notes
+	84696440	G			\Default Work Unit\Navigation\Play_Broadcast_Cell\G	
+	84696441	F			\Default Work Unit\Navigation\Play_Broadcast_Cell\F	
+	84696442	E			\Default Work Unit\Navigation\Play_Broadcast_Cell\E	
+	84696443	D			\Default Work Unit\Navigation\Play_Broadcast_Cell\D	
+	84696444	C			\Default Work Unit\Navigation\Play_Broadcast_Cell\C	
+	84696445	B			\Default Work Unit\Navigation\Play_Broadcast_Cell\B	
+	84696446	A			\Default Work Unit\Navigation\Play_Broadcast_Cell\A	
+	145119921	Play_Cloud			\Default Work Unit\Tutorial\Music\Play_Cloud	
+	146837212	Stop_MX_LevelSelect			\Default Work Unit\Tutorial\Music\Menu\Stop_MX_LevelSelect	
+	149853905	Play_L3_OnStart			\Default Work Unit\Tutorial\Lore\L3\Play_L3_OnStart	
+	207755397	Play_Forest			\Default Work Unit\Tutorial\Music\Play_Forest	
+	243701008	Play_LT_3			\Default Work Unit\Tutorial\Lore\L1\Play_LT_3	
+	243701009	Play_LT_2			\Default Work Unit\Tutorial\Lore\L1\Play_LT_2	
+	243701010	Play_LT_1			\Default Work Unit\Tutorial\Lore\L1\Play_LT_1	
+	249707322	Play_L4_OnStart			\Default Work Unit\Tutorial\Lore\L4\Play_L4_OnStart	
+	253455286	Play_L8_1			\Default Work Unit\Tutorial\Lore\L8\Play_L8_1	
+	254146769	Play_L4_2			\Default Work Unit\Tutorial\Lore\L4\Play_L4_2	
+	254146770	Play_L4_1			\Default Work Unit\Tutorial\Lore\L4\Play_L4_1	
+	254588057	Play_L3_1			\Default Work Unit\Tutorial\Lore\L3\Play_L3_1	
+	264866792	Lore_Collision			\Default Work Unit\Tutorial\Collision\Lore_Collision	
+	375589320	Play_LevelSelectLore			\Default Work Unit\Level Select\Play_LevelSelectLore	
+	492328278	Play_LevelSelectFX			\Default Work Unit\Tutorial\Stingers\Play_LevelSelectFX	
+	495578665	Play_Jump_RandomVo			\Default Work Unit\Tutorial\Vo\Play_Jump_RandomVo	
+	520505691	Play_LT_1OnCollision			\Default Work Unit\Tutorial\Lore\L1\Play_LT_1OnCollision	
+	562855446	Play_Wall0			\Default Work Unit\Tutorial\Lore\LoreSFX\Play_Wall0	
+	617543412	Play_LevelConfirm			\Default Work Unit\Level Select\Play_LevelConfirm	
+	714125809	Play_PlayerPositionTone_Airborne			\Default Work Unit\Player\PlayerPositionTone\Play_PlayerPositionTone_Airborne	
+	820981162	Play_RandomVo			\Default Work Unit\Tutorial\Vo\Play_RandomVo	
+	997434397	Unmute_PlayerPositionTone_Airborne			\Default Work Unit\Player\PlayerPositionTone\Unmute_PlayerPositionTone_Airborne	
+	1012391550	Play_Coffee			\Default Work Unit\Tutorial\Music\Play_Coffee	
+	1022453873	Play_MX_Menu			\Default Work Unit\Tutorial\Music\Menu\Play_MX_Menu	
+	1148704825	Play_Ground0			\Default Work Unit\Tutorial\Lore\LoreSFX\Play_Ground0	
+	1172822028	Play_Death			\Default Work Unit\Player\Play_Death	
+	1194025040	Play_L2_OnStart			\Default Work Unit\Tutorial\Lore\L2\Play_L2_OnStart	
+	1628811220	Play_LevelSelect			\Default Work Unit\Level Select\Play_LevelSelect	
+	1669608868	Stop_RandomVo			\Default Work Unit\Tutorial\Vo\Stop_RandomVo	
+	1775097163	Play_LT_Start			\Default Work Unit\Tutorial\Lore\L1\Play_LT_Start	
+	1819748156	E2			\Default Work Unit\Navigation\Play_Broadcast_Cell\E2	
+	1836525715	D2			\Default Work Unit\Navigation\Play_Broadcast_Cell\D2	
+	1853303302	C2			\Default Work Unit\Navigation\Play_Broadcast_Cell\C2	
+	1902799896	Stop_End_Credits			\Default Work Unit\Tutorial\Music\Credits\Stop_End_Credits	
+	1964619705	Play_L10_1			\Default Work Unit\Tutorial\Lore\L10\Play_L10_1	
+	1964619706	Play_L10_2			\Default Work Unit\Tutorial\Lore\L10\Play_L10_2	
+	1981237384	Stop_All_Lore			\Default Work Unit\Tutorial\Lore\Stop_All_Lore	
+	2158585690	Play_SuccessVo			\Default Work Unit\Tutorial\Vo\Play_SuccessVo	
+	2163478416	Play_Loading_Transition			\Default Work Unit\Tutorial\Music\Play_Loading_Transition	
+	2403889813	Play_Broadcast_Drums			\Default Work Unit\Navigation\Play_Broadcast_Drums	
+	2419452367	Play_StartVo			\Default Work Unit\Tutorial\Vo\Play_StartVo	
+	2431650291	Pulse_PlayerPositionTone_XPulse			\Default Work Unit\Player\PlayerPositionTone\Pulse_PlayerPositionTone_XPulse	
+	2463617210	Play_LT_WinOnCollision			\Default Work Unit\Tutorial\Lore\L1\Play_LT_WinOnCollision	
+	2549646816	Mute_PlayerPositionTone_Airborne			\Default Work Unit\Player\PlayerPositionTone\Mute_PlayerPositionTone_Airborne	
+	2638592923	Stop_MX_Menu			\Default Work Unit\Tutorial\Music\Menu\Stop_MX_Menu	
+	2711876432	Win_Collision			\Default Work Unit\Tutorial\Collision\Win_Collision	
+	2729308626	Play_Lore0			\Default Work Unit\Tutorial\Lore\LoreSFX\Play_Lore0	
+	2898413582	Play_MX_LevelSelect			\Default Work Unit\Tutorial\Music\LevelSelect\Play_MX_LevelSelect	
+	2949884818	Play_End_Credits			\Default Work Unit\Tutorial\Music\Credits\Play_End_Credits	
+	2955987680	Play_WIn			\Default Work Unit\Tutorial\Stingers\Play_WIn	
+	2963349357	Stop_Footsteps			\Default Work Unit\Player\Stop_Footsteps	
+	3013518714	Stop_PlayerPositionTone_XPulse			\Default Work Unit\Player\PlayerPositionTone\Stop_PlayerPositionTone_XPulse	
+	3037695709	Play_L14_1			\Default Work Unit\Tutorial\Lore\L14\Play_L14_1	
+	3037695710	Play_L14_2			\Default Work Unit\Tutorial\Lore\L14\Play_L14_2	
+	3038136960	Play_L11_1			\Default Work Unit\Tutorial\Lore\L11\Play_L11_1	
+	3283001359	Stop_PlayerPositionTone_Airborne			\Default Work Unit\Player\PlayerPositionTone\Stop_PlayerPositionTone_Airborne	
+	3475493512	Play_L5_2			\Default Work Unit\Tutorial\Lore\L5\Play_L5_2	
+	3475493515	Play_L5_1			\Default Work Unit\Tutorial\Lore\L5\Play_L5_1	
+	3475640672	Play_L2_1			\Default Work Unit\Tutorial\Lore\L2\Play_L2_1	
+	3614464626	Play_Tutorial_Voices			\Default Work Unit\Narration\Play_Tutorial_Voices	
+	3689126666	Play_Jump			\Default Work Unit\Player\Play_Jump	
+	3778343913	Play_XPulse			\Default Work Unit\Tutorial\Lore\LoreSFX\Play_XPulse	
+	3782258718	Play_Loading			\Default Work Unit\Tutorial\Music\Play_Loading	
+	3813243862	Play_Lore			\Default Work Unit\Tutorial\Stingers\Play_Lore	
+	3843357604	Play_PlayerPositionTone_XPulse			\Default Work Unit\Player\PlayerPositionTone\Play_PlayerPositionTone_XPulse	
+	3854155799	Play_Footsteps			\Default Work Unit\Player\Play_Footsteps	
+	4069469053	Play_Tutorial_Start			\Default Work Unit\Narration\Play_Tutorial_Start	
+	4285282925	Play_Land			\Default Work Unit\Player\Play_Land	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	732211977	LevelSelection			\Default Work Unit\LevelSelection	
+	1683342792	Broadcast_Cell_Type			\Default Work Unit\Broadcast_Cell_Type	
+	3762955427	Tutorial			\Default Work Unit\Tutorial	
+
+Switch	ID	Name	Switch Group			Notes
+	987635873	Level_01	LevelSelection			
+	987635874	Level_02	LevelSelection			
+	987635875	Level_03	LevelSelection			
+	987635876	Level_04	LevelSelection			
+	987635877	Level_05	LevelSelection			
+	987635878	Level_06	LevelSelection			
+	987635879	Level_07	LevelSelection			
+	987635880	Level_08	LevelSelection			
+	987635881	Level_09	LevelSelection			
+	1004413456	Level_13	LevelSelection			
+	1004413457	Level_12	LevelSelection			
+	1004413458	Level_11	LevelSelection			
+	1004413459	Level_10	LevelSelection			
+	1004413462	Level_15	LevelSelection			
+	1004413463	Level_14	LevelSelection			
+	204455109	Lore	Broadcast_Cell_Type			
+	979765101	Win	Broadcast_Cell_Type			
+	1183803264	Fan	Broadcast_Cell_Type			
+	1350606868	Cloud	Broadcast_Cell_Type			
+	2108779961	Wall	Broadcast_Cell_Type			
+	2304303686	MoveableWall	Broadcast_Cell_Type			
+	2326215132	Battery	Broadcast_Cell_Type			
+	2528658256	Ground	Broadcast_Cell_Type			
+	2782712987	Lever	Broadcast_Cell_Type			
+	3354297748	Empty	Broadcast_Cell_Type			
+	4109362	Left	Tutorial			
+	84696424	W	Tutorial			
+	84696428	S	Tutorial			
+	84696430	Q	Tutorial			
+	84696443	D	Tutorial			
+	84696446	A	Tutorial			
+	204455109	Lore	Tutorial			
+	979765101	Win	Tutorial			
+	2108779961	Wall	Tutorial			
+	2528658256	Ground	Tutorial			
+	3893817417	Right	Tutorial			
+	4164838345	Space	Tutorial			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1011905588	Coffee_Branching			\Default Work Unit\Coffee_Branching	
+	2679118456	Forest_InOut			\Default Work Unit\Forest_InOut	
+	3438831509	Loading_State			\Default Work Unit\Loading_State	
+	3829554629	Cloud_Branching			\Default Work Unit\Cloud_Branching	
+
+State	ID	Name	State Group			Notes
+	589294033	Coffee_Outro	Coffee_Branching			
+	748895195	None	Coffee_Branching			
+	3068162896	Coffee_B2	Coffee_Branching			
+	3068162897	Coffee_B3	Coffee_Branching			
+	3068162899	Coffee_B1	Coffee_Branching			
+	242565924	Forest_Ending	Forest_InOut			
+	748895195	None	Forest_InOut			
+	1257194736	Forest_Layer	Forest_InOut			
+	2629624105	Forest_Intro	Forest_InOut			
+	691006007	Loop	Loading_State			
+	748895195	None	Loading_State			
+	2555741448	Finish	Loading_State			
+	748895195	None	Cloud_Branching			
+	1522068880	Cloud_B1	Cloud_Branching			
+	1522068882	Cloud_B3	Cloud_Branching			
+	1522068883	Cloud_B2	Cloud_Branching			
+	1522068885	Cloud_B4	Cloud_Branching			
+	1794864920	Cloud_T34	Cloud_Branching			
+	1894821564	Cloud_Outro	Cloud_Branching			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	926379701	Player_Y_Pitch			\Default Work Unit\Player_Y_Pitch	
+	1766625469	Player_PositionTone_Volume			\Default Work Unit\Player_PositionTone_Volume	
+	2930467551	Loading_RTPC			\Default Work Unit\Loading_RTPC	
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	641173278	Modulator Envelope (Custom)				
+	1007802703	Modulator Envelope (Custom)				
+
+Effect plug-ins	ID	Name	Type				Notes
+	310732885	Compressor (Custom)	Wwise Compressor			
+	341441079	Compressor (Custom)	Wwise Compressor			
+	347489551	Compressor (Custom)	Wwise Compressor			
+	408372587	Compressor (Custom)	Wwise Compressor			
+	444456137	Compressor (Custom)	Wwise Compressor			
+	456861090	Compressor (Custom)	Wwise Compressor			
+	498502107	Compressor (Custom)	Wwise Compressor			
+	690427912	Compressor (Custom)	Wwise Compressor			
+	731005650	Compressor (Custom)	Wwise Compressor			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	797970358	Synth One	Wwise Synth One		\Containers\Default Work Unit\Nav\PlayerPositionTone_XPulse\Synth One	
+	930756958	Synth One	Wwise Synth One		\Containers\Default Work Unit\Nav\PlayerPositionTone_Airborne\Synth One	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	359908	S3B4	.cache\73\{7319C07D-E034-2CB5-0C10-7AC040E57F28}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Cloud\Cloud_Branch4\S3B4\S3B4		2052976
+	1778868	E_SFX_Lore_Pitch	.cache\0E\{0EBE13CB-6B2B-4571-8896-4A2F9FFDABDB}.wem		\Containers\Default Work Unit\Nav\3E\E_SFX_Lore_Pitch		288096
+	3548770	A_SFX_Ground_Pitch	.cache\98\{98B7EB1B-C754-99E8-8CA8-81BBE4AF408C}.wem		\Containers\Default Work Unit\Nav\6A\A_SFX_Ground_Pitch		288096
+	23801847	E2_SFX_Fan_Pitch	.cache\18\{18AA8F01-15D4-2D7A-5EB2-A7C0849436CD}.wem		\Containers\Default Work Unit\Nav\10E\E2_SFX_Fan_Pitch		288096
+	23809650	C_SFX_Fan_Pitch	.cache\E4\{E4CF431C-93DD-B6CB-199B-61FEDAD85861}.wem		\Containers\Default Work Unit\Nav\1C\C_SFX_Fan_Pitch		196768
+	29253307	Tutorial_Ground	.cache\CE\{CE0F4877-D4CE-E9E0-1813-EA89143FBC30}.wem		\Containers\Default Work Unit\Narration\Keybind_Voices\Tutorial_Ground		171534
+	31530662	C2_SFX_Win_Pitch	.cache\AB\{AB9ABC20-E78A-8532-B5A2-DD27F39AB34C}.wem		\Containers\Default Work Unit\Nav\8C\C2_SFX_Win_Pitch		288096
+	32443878	14	.cache\90\{90E14E7B-D948-6AFC-363D-25422858802C}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\14		141792
+	38161007	F_SFX_Lore_Pitch	.cache\A3\{A37E6FC3-2B9C-3D21-03FC-88B0D44F4AF2}.wem		\Containers\Default Work Unit\Nav\4F\F_SFX_Lore_Pitch		288096
+	45891252	C_SFX_Wall_Pitch	.cache\AF\{AF55195C-0A80-1CFF-F30A-339475586FB9}.wem		\Containers\Default Work Unit\Nav\1C\C_SFX_Wall_Pitch		288112
+	50247933	Stinger_Win	.cache\8C\{8CA23DEE-8389-5A82-B499-BB8B785D6060}.wem		\Containers\Default Work Unit\Stingers\Stinger_Win		288112
+	59872974	G_SFX_Lore_Pitch	.cache\29\{292B9BD5-60C3-6FD2-CFE0-01F80ED1A164}.wem		\Containers\Default Work Unit\Nav\5G\G_SFX_Lore_Pitch		288096
+	63819010	E2_SFX_MoveableWall_Pitch	.cache\D8\{D8726772-7C7E-3BFB-4F56-3C8A3077CF5A}.wem		\Containers\Default Work Unit\Nav\10E\E2_SFX_MoveableWall_Pitch		288096
+	65376009	L8-1	.cache\24\{24A18E93-7030-FEA7-C0EC-48F593289A66}.wem		\Containers\Default Work Unit\Lore\L8\L8-1		525408
+	67941170	E_SFX_Wall_Pitch	.cache\1E\{1EEA0E1B-0E07-1B1B-4805-1EF5E79EDF26}.wem		\Containers\Default Work Unit\Nav\3E\E_SFX_Wall_Pitch		288112
+	79513394	Nar_Title	.cache\EC\{ECEA8E30-7EB3-7CBA-9702-C01C83DFE4B1}.wem		\Containers\Default Work Unit\Narration\Nar_Title		336112
+	81932503	B_SFX_Lever_Pitch	.cache\99\{9910AF4B-5B92-1286-4E99-2609BC69B057}.wem		\Containers\Default Work Unit\Nav\7B\B_SFX_Lever_Pitch		288096
+	82316466	C_SFX_Cloud_Pitch	.cache\D3\{D3A7EC82-F3ED-92C8-E6D3-24FDD177F91E}.wem		\Containers\Default Work Unit\Nav\1C\C_SFX_Cloud_Pitch		327840
+	98345644	C2_SFX_MoveableWall_Pitch	.cache\90\{90742A9C-337A-6B59-A361-BD6C8AD3045F}.wem		\Containers\Default Work Unit\Nav\8C\C2_SFX_MoveableWall_Pitch		288096
+	109699754	L11-1	.cache\2E\{2E3C25D5-A1AE-3828-8DA0-257293F75B53}.wem		\Containers\Default Work Unit\Lore\L11\L11-1		378300
+	110350344	6	.cache\A8\{A8153AE8-30B2-E039-CBD3-5AFCBAA5A505}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\6		103776
+	112692735	L4-2	.cache\72\{72B266A7-AC41-0F97-774B-86480C62DDDE}.wem		\Containers\Default Work Unit\Lore\L4\L4-2		877518
+	114231013	Tutorial_S	.cache\F6\{F60478A9-4AFB-AD10-F384-8B8CFF2C9EA2}.wem		\Containers\Default Work Unit\Narration\Keybind_Voices\Tutorial_S		292118
+	114430215	Cinnamoroll Parkour_Loop	.cache\DC\{DCBABD57-9511-B4FE-D44F-E7C55098B74C}.wem		\Containers\Music (Migrated)\Default Work Unit\MainTitle\Cinnamoroll Parkour_Loop\Cinnamoroll Parkour_Loop		5664112
+	120438893	D2_SFX_Wall_Pitch	.cache\76\{7629F070-CF4C-3CE5-B9FC-514AE67E32C5}.wem		\Containers\Default Work Unit\Nav\9D\D2_SFX_Wall_Pitch		288112
+	121141460	Vo_RandomPlay4	.cache\14\{147CF271-4214-BBF3-B2F0-4FE308F2A3C7}.wem		\Containers\Default Work Unit\Vo\Jump_RandomVo\Vo_RandomPlay4		79162
+	144893544	MainTitle_AI	.cache\F7\{F72BE8CD-1728-04C1-FF6F-2C66545C3AB1}.wem		\Containers\Music (Migrated)\Default Work Unit\EndCredits\AI_Placeholder\MainTitle_AI		8566602
+	144978697	E2_SFX_Wall_Pitch	.cache\1A\{1A2F6CDF-0766-EF3C-0B7D-7DF979495C95}.wem		\Containers\Default Work Unit\Nav\10E\E2_SFX_Wall_Pitch		288112
+	155369183	F_SFX_Wall_Pitch	.cache\1B\{1B2B3E75-5486-4286-6C13-639BA82064DC}.wem		\Containers\Default Work Unit\Nav\4F\F_SFX_Wall_Pitch		288112
+	156838964	L10-1	.cache\E8\{E8D645E9-1C07-FC2A-CD8F-28843D23EA47}.wem		\Containers\Default Work Unit\Lore\L10\L10-1		175518
+	162576838	D_SFX_MoveableWall_Pitch	.cache\92\{929193C7-66AF-A655-9B2D-5364A97FC1E5}.wem		\Containers\Default Work Unit\Nav\2D\D_SFX_MoveableWall_Pitch		288096
+	170646122	D_SFX_Ground_Pitch	.cache\C2\{C2F99C6B-3088-A773-27B6-93E7DE6E7743}.wem		\Containers\Default Work Unit\Nav\2D\D_SFX_Ground_Pitch		288096
+	175412979	E2_SFX_Cloud_Pitch	.cache\7E\{7EF4F11C-EBA2-7F6C-AB97-B5CBCBF40527}.wem		\Containers\Default Work Unit\Nav\10E\E2_SFX_Cloud_Pitch		288096
+	179403966	S2E	.cache\FE\{FEF850BA-21DE-3D7B-5AA3-3D7401763A8F}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Forest\Forest_Intro\S2E\S2E		645232
+	183336580	D2_SFX_Cloud_Pitch	.cache\83\{83B3773E-36B2-4ADF-36B3-C2697B6FEA4D}.wem		\Containers\Default Work Unit\Nav\9D\D2_SFX_Cloud_Pitch		288096
+	196265466	G_SFX_Win_Pitch	.cache\BD\{BD463AE2-D4BD-2BBB-4359-0542DF0F2C7D}.wem		\Containers\Default Work Unit\Nav\5G\G_SFX_Win_Pitch		288096
+	200288665	C2_SFX_Cloud_Pitch	.cache\AA\{AAA12BC5-9518-E545-7FC6-F66B2FB13201}.wem		\Containers\Default Work Unit\Nav\8C\C2_SFX_Cloud_Pitch		288096
+	210289030	E_SFX_MoveableWall_Pitch	.cache\F0\{F09E528F-E1E9-3BE5-DFBB-7822049EC8F2}.wem		\Containers\Default Work Unit\Nav\3E\E_SFX_MoveableWall_Pitch		288096
+	212919543	C2_SFX_Wall_Pitch	.cache\96\{963C946E-23EB-DB24-DD3E-9559A0CF8A20}.wem		\Containers\Default Work Unit\Nav\8C\C2_SFX_Wall_Pitch		288112
+	220368910	E2_SFX_Ground_Pitch	.cache\FB\{FB141E24-68EF-E36B-6806-91D93973B495}.wem		\Containers\Default Work Unit\Nav\10E\E2_SFX_Ground_Pitch		288096
+	228689753	C2_SFX_Ground_Pitch	.cache\49\{49719141-1A6A-0419-1D00-0940156AF5F8}.wem		\Containers\Default Work Unit\Nav\8C\C2_SFX_Ground_Pitch		288096
+	229645261	S3E	.cache\16\{16F41199-047F-76D5-008A-727602E01E80}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Cloud\Cloud_Outro\S3E\S3E		1030000
+	236673331	G_SFX_Lever_Pitch	.cache\1F\{1F78EDB0-DAE7-660F-02BC-1A6974059069}.wem		\Containers\Default Work Unit\Nav\5G\G_SFX_Lever_Pitch		288096
+	262842251	Cinnamoroll Parkour Loading Loop - Flow 1	.cache\1D\{1DE84AFF-7B52-F955-046B-CEEDE44BB0EB}.wem		\Containers\Music (Migrated)\Default Work Unit\Loading\LoadingMusic\Loading_Transition\Cinnamoroll Parkour Loading Loop - Flow 1\Cinnamoroll Parkour Loading Loop - Flow 1		512112
+	272550539	Cinnamon Forest - Flow 1 Marimba	.cache\32\{32F8C4AA-6EA6-75BF-F02E-96E95AFB4B85}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Forest\Forest_Intro\Layers111\Cinnamon Forest - Flow 1 Marimba		1024112
+	280974445	L14-2	.cache\49\{49516B97-D606-159A-07B1-EE9900805065}.wem		\Containers\Default Work Unit\Lore\L14\L14-2		122118
+	281395502	Tutorial_Jump	.cache\A2\{A239DC52-8F9D-733A-E820-DF6FE4777915}.wem		\Containers\Default Work Unit\Narration\Keybind_Voices\Tutorial_Jump		368368
+	320063939	C_SFX_Win_Pitch	.cache\99\{9998AC46-DDFB-B5DC-BD64-4665A2D1DBCD}.wem		\Containers\Default Work Unit\Nav\1C\C_SFX_Win_Pitch		131232
+	321922777	Cinnamoroll Parkour Loading Loop - Flow 1	.cache\4C\{4CD4CAA6-247E-29D4-C941-C87068DDE10A}.wem		\Containers\Music (Migrated)\Default Work Unit\Loading\LoadingMusic\Loading\Cinnamoroll Parkour Loading Loop - Flow 1\Cinnamoroll Parkour Loading Loop - Flow 1		768112
+	321944039	L4-1	.cache\6D\{6D21BD6B-6823-8878-4720-A7FE4688FEC9}.wem		\Containers\Default Work Unit\Lore\L4\L4-1		1412368
+	330162885	11	.cache\FF\{FF355CFE-3AD6-119C-7C63-FA8D5159C45C}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\11		141792
+	338676788	C_SFX_Lever_Pitch	.cache\0A\{0AEF5D56-3673-0C75-1CC4-7426214B052C}.wem		\Containers\Default Work Unit\Nav\1C\C_SFX_Lever_Pitch		65696
+	342025370	Nar_Menu_Guide	.cache\3B\{3B24B31D-4217-8E6F-4220-E178591151AF}.wem		\Containers\Default Work Unit\Narration\Menu_Guide_Repeat\Nar_Menu_Guide		662368
+	346710368	Tutorial_Wall	.cache\4F\{4F8C4E46-1CD4-4C17-6CA7-2B52B745F94F}.wem		\Containers\Default Work Unit\Narration\Keybind_Voices\Tutorial_Wall		236134
+	364940942	Land	.cache\B1\{B181FADD-BFEE-6703-98A4-3438945C15F7}.wem		\Containers\Default Work Unit\Player\Land		16112
+	366153077	D2_SFX_Lever_Pitch	.cache\73\{73F88489-2ED2-9AFC-3FA9-268A525AB504}.wem		\Containers\Default Work Unit\Nav\9D\D2_SFX_Lever_Pitch		288096
+	368032864	B_SFX_Ground_Pitch	.cache\EE\{EE438CED-2894-4CCD-77B8-D2F08D159E76}.wem		\Containers\Default Work Unit\Nav\7B\B_SFX_Ground_Pitch		288096
+	370369678	E2_SFX_Lore_Pitch	.cache\FB\{FBF04DE1-0639-234A-7303-6DE08544269C}.wem		\Containers\Default Work Unit\Nav\10E\E2_SFX_Lore_Pitch		288096
+	375089670	SFX_LevelSelect	.cache\E8\{E81823DB-CFC0-CB18-F3D9-C42EC0623B77}.wem		\Containers\Default Work Unit\UI\Level_Select\SFX_LevelSelect		16996
+	375138027	G_SFX_Fan_Pitch	.cache\CC\{CC6C2523-FA93-F965-4997-ACF5777453F5}.wem		\Containers\Default Work Unit\Nav\5G\G_SFX_Fan_Pitch		288096
+	379494889	Tutorial_Q	.cache\38\{38140BD6-6E5B-B9F1-49FB-ADD9AD2A2239}.wem		\Containers\Default Work Unit\Narration\Keybind_Voices\Tutorial_Q		232118
+	390283133	D2_SFX_MoveableWall_Pitch	.cache\9E\{9E0229C7-8407-8576-98DE-06A8665BEFF2}.wem		\Containers\Default Work Unit\Nav\9D\D2_SFX_MoveableWall_Pitch		288096
+	394346048	G_SFX_MoveableWall_Pitch	.cache\2F\{2FD684C3-1081-ACE9-AC26-E6305FCC842B}.wem		\Containers\Default Work Unit\Nav\5G\G_SFX_MoveableWall_Pitch		288096
+	395617778	A_SFX_Win_Pitch	.cache\DC\{DCDF73D9-383E-F94D-A0D6-4FB136BF069C}.wem		\Containers\Default Work Unit\Nav\6A\A_SFX_Win_Pitch		288096
+	401672867	B_SFX_Win_Pitch	.cache\00\{00D6130B-78A8-2408-237E-7179C86C989A}.wem		\Containers\Default Work Unit\Nav\7B\B_SFX_Win_Pitch		288096
+	402547671	C2_SFX_Battery_Pitch	.cache\B8\{B84A68B9-B7B1-6E7B-6D5F-236193FD8E3C}.wem		\Containers\Default Work Unit\Nav\8C\C2_SFX_Battery_Pitch		288096
+	406694538	SFX_Lore_Collision	.cache\6F\{6FCA44CA-F27C-E290-0449-6F6E585E572C}.wem		\Containers\Default Work Unit\Collision\SFX_Lore_Collision		144112
+	408191367	Vo_Start	.cache\61\{613653D1-295A-D5ED-34FE-0F5C73AFA5D9}.wem		\Containers\Default Work Unit\Vo\Vo_Start		228112
+	411234060	L2-1	.cache\40\{40F186E5-EB68-6D9C-6B3B-16D1CDE386D1}.wem		\Containers\Default Work Unit\Lore\L2\L2-1		4916084
+	427549132	MUS_Broadcast_Drums	.cache\1A\{1A932EA2-BD31-413C-B10A-0FB117926420}.wem		\Containers\Default Work Unit\Nav\MUS_Broadcast_Drums		3072112
+	431554780	SFX_Footstep_06	.cache\00\{002FCDBC-6C25-FD2A-FCAF-696F7B0FA3F9}.wem		\Containers\Default Work Unit\Player\Footsteps\SFX_Footstep_06		13196
+	433896442	G_SFX_Cloud_Pitch	.cache\5C\{5C7E10CC-017A-6315-AFF0-C3BDD4EFCD49}.wem		\Containers\Default Work Unit\Nav\5G\G_SFX_Cloud_Pitch		288096
+	435080753	B_SFX_Lore_Pitch	.cache\B3\{B32CF9BB-0B35-268D-8DBB-36992CD5574B}.wem		\Containers\Default Work Unit\Nav\7B\B_SFX_Lore_Pitch		288096
+	442943222	D_SFX_Cloud_Pitch	.cache\07\{076C5F30-6788-B4BA-9192-DBBD54D66AF3}.wem		\Containers\Default Work Unit\Nav\2D\D_SFX_Cloud_Pitch		288096
+	447310089	Nar_Tutorial	.cache\CC\{CCB86938-D72E-A7E4-C17B-29622B7B795F}.wem		\Containers\Default Work Unit\Narration\Nar_Tutorial		1402418
+	453433154	9	.cache\19\{19D357F2-EF15-0005-0B19-48F2C54CCA15}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\9		124512
+	455939806	D2_SFX_Ground_Pitch	.cache\DF\{DFF6467B-C8E1-8650-2F22-19BFCC38F67F}.wem		\Containers\Default Work Unit\Nav\9D\D2_SFX_Ground_Pitch		288096
+	456076367	E_SFX_Win_Pitch	.cache\82\{825685B6-14EE-71F8-9F3C-7A33E8F686E8}.wem		\Containers\Default Work Unit\Nav\3E\E_SFX_Win_Pitch		288096
+	460416882	Death	.cache\53\{5306DFA7-0637-DA7E-269C-5074EFAF51BB}.wem		\Containers\Default Work Unit\Player\Death		160976
+	472278284	D_SFX_Battery_Pitch	.cache\F3\{F33F27AE-88A1-BF5D-0609-504423F15601}.wem		\Containers\Default Work Unit\Nav\2D\D_SFX_Battery_Pitch		288096
+	474540471	LT-On Start	.cache\DC\{DC6045F2-FB0A-C3D2-9B9B-6DE225637D8B}.wem		\Containers\Default Work Unit\Lore\L1\LT-On Start		1510418
+	474629260	F_SFX_Cloud_Pitch	.cache\4B\{4B759570-0975-2774-E24B-0076BFA57F83}.wem		\Containers\Default Work Unit\Nav\4F\F_SFX_Cloud_Pitch		288096
+	484171553	C_SFX_Lore_Pitch	.cache\FC\{FCD7EA90-89CF-9711-C29E-5270341519ED}.wem		\Containers\Default Work Unit\Nav\1C\C_SFX_Lore_Pitch		65696
+	494654095	LT_1	.cache\7F\{7F41DFB0-FCF4-61C8-7972-2D4814BA9A17}.wem		\Containers\Default Work Unit\Lore\L1\LT_1		3292018
+	498573314	E_SFX_Lever_Pitch	.cache\7C\{7CF96862-FBCF-DD85-EEB8-04B6E0D8C9A4}.wem		\Containers\Default Work Unit\Nav\3E\E_SFX_Lever_Pitch		288096
+	501164636	Tutorial_Left	.cache\E1\{E172111E-D376-8E8A-E4B8-D8E60E6AFB8E}.wem		\Containers\Default Work Unit\Narration\Keybind_Voices\Tutorial_Left		195518
+	502878564	S3B3	.cache\55\{55E3C877-A669-676A-2E6F-5D827105B132}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Cloud\Cloud_Branch3\S3B3\S3B3		2052976
+	505376765	S3B1	.cache\C6\{C6685CCD-73D4-AF31-536D-2C1220A0FDAD}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Cloud\Cloud_Branch1\S3B1\S3B1		2052976
+	505736460	D_SFX_Fan_Pitch	.cache\FD\{FD2A3FD4-6A76-B0E9-29D0-514F11265A7B}.wem		\Containers\Default Work Unit\Nav\2D\D_SFX_Fan_Pitch		288096
+	506773331	Vo_LevelConfirm	.cache\3E\{3E1AD806-0C8D-5353-6DE3-8A13D67B9AF1}.wem		\Containers\Default Work Unit\Vo\Vo_LevelConfirm		129112
+	508897303	Tutorial_Right	.cache\5C\{5C62B389-9B77-77FE-F0C0-6B63704A3913}.wem		\Containers\Default Work Unit\Narration\Keybind_Voices\Tutorial_Right		206368
+	518970831	LevelSelect_1	.cache\BF\{BFB1A4BD-7273-277A-EC92-4202C32099C5}.wem		\Containers\Default Work Unit\Lore\LevelSelect\LevelSelect_1		734968
+	521071536	L2_Start	.cache\EB\{EB87FEA7-1500-C6B4-7E97-1FFACB4951EC}.wem		\Containers\Default Work Unit\Lore\L2\L2_Start		525984
+	525060518	Cinnamoroll Parkour_Intro	.cache\05\{05319E58-F885-812B-748B-6F47B6629C24}.wem		\Containers\Music (Migrated)\Default Work Unit\MainTitle\Cinnamoroll Parkour_Intro\Cinnamoroll Parkour_Intro		640112
+	532122631	5	.cache\A6\{A6D17695-1441-EA26-418A-0FB0A62B3BBE}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\5		110688
+	541035346	E_SFX_Ground_Pitch	.cache\9C\{9C00D00A-E4FF-49EC-EA8F-0452655340A6}.wem		\Containers\Default Work Unit\Nav\3E\E_SFX_Ground_Pitch		288096
+	542645653	Empty	.cache\E8\{E8DF0225-D7D5-D9F3-78BD-DF08EAFE42CB}.wem		\Containers\Default Work Unit\Nav\4F\Empty		96112
+	548654442	Nar_Credits	.cache\F8\{F8B3ED75-2CD8-2FCE-D36F-953C716E86B5}.wem		\Containers\Default Work Unit\Narration\Nar_Credits		1754968
+	551326352	Tutorial_W	.cache\DD\{DD6CBD55-5FDD-1766-263F-6ABDA31DE07F}.wem		\Containers\Default Work Unit\Narration\Keybind_Voices\Tutorial_W		320118
+	556268498	Cinnamon Forest - Flow 1 Bass Marimba	.cache\3E\{3E4EA477-B664-F1D6-7039-C7459A1B8203}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Forest\Forest_Intro\Layers111\Cinnamon Forest - Flow 1 Bass Marimba		1024112
+	558621631	F_SFX_Lever_Pitch	.cache\63\{63D686D4-4ABC-3817-2E14-3A3BB59D9FED}.wem		\Containers\Default Work Unit\Nav\4F\F_SFX_Lever_Pitch		288096
+	559425900	G_SFX_Battery_Pitch	.cache\93\{93D8D017-93B0-5EA3-32EE-EFCE29852E31}.wem		\Containers\Default Work Unit\Nav\5G\G_SFX_Battery_Pitch		288096
+	567103381	S3T3-4	.cache\83\{83B576EA-6FCC-A825-F6F8-A83F0968C352}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Cloud\Cloud_Transition3-4\S3T3-4\S3T3-4		645232
+	568968739	D_SFX_Lore_Pitch	.cache\45\{4542AD4C-FBB8-7F8B-8AC8-9B8B47CE5430}.wem		\Containers\Default Work Unit\Nav\2D\D_SFX_Lore_Pitch		288096
+	590483158	G_SFX_Ground_Pitch	.cache\EC\{ECEA8B11-AFBB-3591-11DE-CA074A210B04}.wem		\Containers\Default Work Unit\Nav\5G\G_SFX_Ground_Pitch		288096
+	603063377	L3-1	.cache\30\{30B715EE-D30F-E3D1-C532-B60D2C8CEF81}.wem		\Containers\Default Work Unit\Lore\L3\L3-1		1816118
+	610907780	S1B3	.cache\28\{288725BD-03CE-310A-457F-459C809C0B4A}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Coffee\Coffee_Branch3\S1B3\S1B3		2182000
+	621607312	1	.cache\59\{591B8E33-BD60-5D14-55D6-5BD845D17617}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\1		124512
+	622532351	4	.cache\1D\{1D9012A7-12A7-CCFE-CC19-1822860BC5A1}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\4		110688
+	629345362	L10-2	.cache\7B\{7B9B88F9-171F-5048-9BBF-DA10DC817754}.wem		\Containers\Default Work Unit\Lore\L10\L10-2		708868
+	630965929	SFX_Win_Collision	.cache\F1\{F1472286-23A8-9EA2-7760-A26DF2463FBF}.wem		\Containers\Default Work Unit\Collision\SFX_Win_Collision		172102
+	633995514	S1B2	.cache\2E\{2E12FDFC-72BA-68A0-0B05-A7A6CCBAE2FF}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Coffee\Coffee_Branch2\S1B2\S1B2		2052976
+	644423896	Vo_RandomPlay2	.cache\D9\{D9D3FF4A-9E1C-A4C2-9AFF-918AE952F043}.wem		\Containers\Default Work Unit\Vo\RandomVo\Vo_RandomPlay2		337350
+	645820635	Jump	.cache\2E\{2E907774-8C73-2B70-32A9-4DCCC4AF3201}.wem		\Containers\Default Work Unit\Player\Jump		10754
+	646587089	Cinnamon Forest - Flow 1 Flute	.cache\0F\{0F189409-9A06-6D97-5A55-A2CCA1519BBE}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Forest\Forest_Intro\Layers111\Cinnamon Forest - Flow 1 Flute		1024112
+	651034652	D_SFX_Win_Pitch	.cache\FD\{FD6414A3-15F9-1BCD-54F4-59C90CEF0EE5}.wem		\Containers\Default Work Unit\Nav\2D\D_SFX_Win_Pitch		288096
+	651942807	8	.cache\38\{386B1C05-CEE0-3BA9-023A-02FCDC7A8A85}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\8		110688
+	656140854	Cinnamon Forest - Flow 1 Shaker	.cache\55\{55AF43FB-015C-7346-4DEE-E31859F26958}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Forest\Forest_Intro\Layers111\Cinnamon Forest - Flow 1 Shaker		1024112
+	656428153	B_SFX_Battery_Pitch	.cache\0A\{0A930B34-CB52-DCA3-6AD1-9E958EADCB6B}.wem		\Containers\Default Work Unit\Nav\7B\B_SFX_Battery_Pitch		288096
+	678729911	D2_SFX_Win_Pitch	.cache\CE\{CE983F47-096E-1613-706C-522D5D3C8EEB}.wem		\Containers\Default Work Unit\Nav\9D\D2_SFX_Win_Pitch		288096
+	684132451	15	.cache\53\{539B0700-ED7A-7694-F7F6-63704BE5891F}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\15		152160
+	697304146	C2_SFX_Fan_Pitch	.cache\09\{0928CC32-770F-240C-AA9A-8ACBCB3DDF5E}.wem		\Containers\Default Work Unit\Nav\8C\C2_SFX_Fan_Pitch		288096
+	702231444	F_SFX_MoveableWall_Pitch	.cache\F8\{F85BB1F0-EC1B-174B-0965-48ED90395C70}.wem		\Containers\Default Work Unit\Nav\4F\F_SFX_MoveableWall_Pitch		288096
+	708431605	B_SFX_Cloud_Pitch	.cache\58\{58E69987-8887-86EC-348D-60BFB9ACBD5C}.wem		\Containers\Default Work Unit\Nav\7B\B_SFX_Cloud_Pitch		288096
+	730927035	F_SFX_Ground_Pitch	.cache\D2\{D2830845-0B3F-9280-2D4F-0A5D7193C5D2}.wem		\Containers\Default Work Unit\Nav\4F\F_SFX_Ground_Pitch		288096
+	732536098	D_SFX_Wall_Pitch	.cache\70\{70959BF5-0E1E-B48C-06F9-94C1C22CC652}.wem		\Containers\Default Work Unit\Nav\2D\D_SFX_Wall_Pitch		336112
+	733544585	D2_SFX_Fan_Pitch	.cache\F1\{F19D3B24-7924-6FF5-10B3-8E86E4D349E7}.wem		\Containers\Default Work Unit\Nav\9D\D2_SFX_Fan_Pitch		288096
+	734816753	LT-2	.cache\43\{4345CF1D-CA5E-8AAF-0B6A-F8E3373D981A}.wem		\Containers\Default Work Unit\Lore\L1\LT-2		480096
+	752170062	F_SFX_Battery_Pitch	.cache\CE\{CEEE18D9-7BA0-D582-2371-231C2B0FEF4A}.wem		\Containers\Default Work Unit\Nav\4F\F_SFX_Battery_Pitch		288096
+	762514928	Cinnamon Forest - Flow 1 Guitar	.cache\4A\{4A4949C0-BC20-A965-6EF3-0064E62AE2AA}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Forest\Forest_Intro\Layers111\Cinnamon Forest - Flow 1 Guitar		1024112
+	779141761	E2_SFX_Battery_Pitch	.cache\A3\{A3FDD4BB-CA04-99F4-9F04-69E86313BB53}.wem		\Containers\Default Work Unit\Nav\10E\E2_SFX_Battery_Pitch		288096
+	784766030	E2_SFX_Win_Pitch	.cache\F2\{F2F166C6-B723-8FEF-F02C-6A7EB0A218C7}.wem		\Containers\Default Work Unit\Nav\10E\E2_SFX_Win_Pitch		288096
+	794275308	Cinnamon Forest - Flow 1 Double Bass	.cache\10\{10846A3D-A518-295D-DC48-503248A9B4B0}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Forest\Forest_Intro\Layers111\Cinnamon Forest - Flow 1 Double Bass		1024112
+	805216688	A_SFX_MoveableWall_Pitch	.cache\AC\{ACA1F0FC-9C33-73D9-B1B8-D417FD0D0030}.wem		\Containers\Default Work Unit\Nav\6A\A_SFX_MoveableWall_Pitch		288096
+	805939267	D_SFX_Lever_Pitch	.cache\28\{28E046F4-02FB-FC49-45C4-D2774284C868}.wem		\Containers\Default Work Unit\Nav\2D\D_SFX_Lever_Pitch		288096
+	824898907	L5-2	.cache\72\{7201915A-C880-60FB-6079-8F0F20212ABD}.wem		\Containers\Default Work Unit\Lore\L5\L5-2		1023518
+	833402852	Cinnamon Forest - Flow 1 Violin	.cache\85\{859135D0-70A6-147D-7F4D-B3BABFEB5F1A}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Forest\Forest_Intro\Layers111\Cinnamon Forest - Flow 1 Violin		1024112
+	837881676	E_SFX_Cloud_Pitch	.cache\1B\{1B41FDD8-B77A-F7B1-3EBD-A6CA679F89CD}.wem		\Containers\Default Work Unit\Nav\3E\E_SFX_Cloud_Pitch		288096
+	840564925	C_SFX_Battery_Pitch	.cache\14\{1476CC00-C03D-EC11-9ACF-46E757855096}.wem		\Containers\Default Work Unit\Nav\1C\C_SFX_Battery_Pitch		65696
+	844171427	LT-Win	.cache\63\{630DA25D-49BF-D8DA-1CF3-10B094865229}.wem		\Containers\Default Work Unit\Lore\L1\LT-Win		486968
+	847755765	10	.cache\86\{86121675-73B7-79B5-0F9C-501A9DEBD6EC}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\10		131424
+	866981024	L5-1	.cache\40\{406A5444-B89A-B525-B008-E1AB5262209F}.wem		\Containers\Default Work Unit\Lore\L5\L5-1		670118
+	867736681	12	.cache\63\{630C4E28-7A21-ADE0-F7A4-A099B7864F02}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\12		141792
+	872977414	F_SFX_Win_Pitch	.cache\8C\{8CBEE609-6903-4769-FE24-D2EAF97ED85F}.wem		\Containers\Default Work Unit\Nav\4F\F_SFX_Win_Pitch		288096
+	878937860	Tutorial_D	.cache\AA\{AA768E83-F6FD-84C6-6234-FE4DC6B26A39}.wem		\Containers\Default Work Unit\Narration\Keybind_Voices\Tutorial_D		343518
+	888594967	E_SFX_Fan_Pitch	.cache\C2\{C268C508-3BF1-A4F0-70C0-D173562A6D7F}.wem		\Containers\Default Work Unit\Nav\3E\E_SFX_Fan_Pitch		288096
+	896899524	B_SFX_Fan_Pitch	.cache\98\{98BB8319-E1DB-23FC-D7AE-8E88366C942E}.wem		\Containers\Default Work Unit\Nav\7B\B_SFX_Fan_Pitch		288096
+	898405465	A_SFX_Lore_Pitch	.cache\5A\{5A7D6C16-F154-0A7E-F92A-A76E4E76AEF5}.wem		\Containers\Default Work Unit\Nav\6A\A_SFX_Lore_Pitch		288096
+	902269734	S2I	.cache\56\{5672B4C5-14D4-9B06-8086-89E86336FF18}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Forest\Forest_Intro\S2I\S2I		518512
+	910659428	2	.cache\8B\{8B8690C5-777F-770C-E812-2E69535036A4}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\2		124512
+	915565207	L14-1	.cache\2B\{2B2AF9FC-F142-BB21-22ED-85D9B79A8A52}.wem		\Containers\Default Work Unit\Lore\L14\L14-1		350368
+	916766108	D2_SFX_Battery_Pitch	.cache\A5\{A5A3FB55-7073-F7AA-DCE2-816290D902F2}.wem		\Containers\Default Work Unit\Nav\9D\D2_SFX_Battery_Pitch		288096
+	917916161	Stinger_Lore_Play	.cache\D6\{D612E1ED-B42F-34CF-31E9-C6D9C9D7CD40}.wem		\Containers\Default Work Unit\Stingers\Stinger_Lore_Play		384112
+	921271536	S1B1	.cache\59\{5997A1A2-771D-7AF3-2A83-E40573E957F3}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Coffee\Coffee_Branch1\S1B1\S1B1		1030000
+	921715665	A_SFX_Lever_Pitch	.cache\26\{26C661BC-626C-01C6-02F4-4BE82ACD1578}.wem		\Containers\Default Work Unit\Nav\6A\A_SFX_Lever_Pitch		288096
+	933731626	3	.cache\25\{2541763A-74E4-5337-5A21-0F198A702D0B}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\3		124512
+	935246004	C2_SFX_Lever_Pitch	.cache\C6\{C6A16FC8-B03F-58C4-DDD0-30821E0DAF2A}.wem		\Containers\Default Work Unit\Nav\8C\C2_SFX_Lever_Pitch		288096
+	944003039	Tutorial_A	.cache\08\{08A60A37-34A9-7C38-2718-46DCC328DF00}.wem		\Containers\Default Work Unit\Narration\Keybind_Voices\Tutorial_A		336368
+	950388913	S1E	.cache\28\{28A3223C-30C4-B4F9-2CE6-83D45C748551}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Coffee\Coffee_Outro\S1E\S1E		774256
+	951658612	A_SFX_Fan_Pitch	.cache\02\{025C079E-F2FB-D2B8-A5D8-EDDC8D8A9274}.wem		\Containers\Default Work Unit\Nav\6A\A_SFX_Fan_Pitch		288096
+	953403350	S3B2	.cache\FE\{FE6580D2-6C65-0597-73D9-68AD13D52A94}.wem		\Containers\Music (Migrated)\Default Work Unit\Levels\Cloud\Cloud_Branch2\S3B2\S3B2		2052976
+	956409404	XPulse	.cache\5D\{5D52A033-78A8-1AE8-0269-C3828C944EF6}.wem		\Containers\Default Work Unit\Lore\LoreSFX\XPulse\XPulse		47012
+	957560379	F_SFX_Fan_Pitch	.cache\9D\{9D2F764E-7DD7-467B-BDE5-FB25866F6000}.wem		\Containers\Default Work Unit\Nav\4F\F_SFX_Fan_Pitch		288096
+	959729632	C_SFX_MoveableWall_Pitch	.cache\A2\{A2F50AFF-5D9F-D0E0-52C5-4FD8FE8EF827}.wem		\Containers\Default Work Unit\Nav\1C\C_SFX_MoveableWall_Pitch		131232
+	960072136	B_SFX_Wall_Pitch	.cache\C1\{C1B7225C-0892-E20C-C218-502888AECCF8}.wem		\Containers\Default Work Unit\Nav\7B\B_SFX_Wall_Pitch		288112
+	960403157	Vo_RandomPlay1	.cache\A7\{A727F425-62DB-1D47-100B-F15E0ECDC506}.wem		\Containers\Default Work Unit\Vo\Jump_RandomVo\Vo_RandomPlay1		96312
+	965793612	D2_SFX_Lore_Pitch	.cache\90\{903745CB-333A-3464-33F0-97D347DAF45E}.wem		\Containers\Default Work Unit\Nav\9D\D2_SFX_Lore_Pitch		288096
+	979114233	E_SFX_Battery_Pitch	.cache\43\{43187E5C-64EB-4BB3-1137-C5BC03B9CC82}.wem		\Containers\Default Work Unit\Nav\3E\E_SFX_Battery_Pitch		288096
+	982721274	B_SFX_MoveableWall_Pitch	.cache\9A\{9A76CE0A-CF90-FD3D-9CF2-4D35FA19AB1E}.wem		\Containers\Default Work Unit\Nav\7B\B_SFX_MoveableWall_Pitch		288096
+	984967118	A_SFX_Cloud_Pitch	.cache\CA\{CA40C9DD-ADA9-53D1-4D3A-0A8DC974906C}.wem		\Containers\Default Work Unit\Nav\6A\A_SFX_Cloud_Pitch		288096
+	993563363	13	.cache\E7\{E79AA4EE-2FD0-3E0F-A855-3EDFD772AEF6}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\13		131424
+	993921033	C_SFX_Ground_Pitch	.cache\FF\{FF2159A8-5AA4-65F7-75E4-FE7FDE30D3A0}.wem		\Containers\Default Work Unit\Nav\1C\C_SFX_Ground_Pitch		288112
+	1004540643	Vo_RandomPlay3	.cache\C6\{C67BB26A-C586-A0B0-6951-97E6A509B6AE}.wem		\Containers\Default Work Unit\Vo\Jump_RandomVo\Vo_RandomPlay3		123662
+	1009303808	Tutorial_Lore	.cache\76\{76330BD0-D301-6B00-566C-132496D15213}.wem		\Containers\Default Work Unit\Narration\Keybind_Voices\Tutorial_Lore		230984
+	1015005458	Tutorial_Win	.cache\EE\{EEF6939C-4017-C302-CB4C-913C94BE8CF9}.wem		\Containers\Default Work Unit\Narration\Keybind_Voices\Tutorial_Win		221534
+	1022273419	G_SFX_Wall_Pitch	.cache\16\{16258228-BE55-A6BB-641C-473DF2A866DB}.wem		\Containers\Default Work Unit\Nav\5G\G_SFX_Wall_Pitch		288112
+	1038063320	E2_SFX_Lever_Pitch	.cache\49\{492C5378-87F4-CD70-252D-79663929D2A0}.wem		\Containers\Default Work Unit\Nav\10E\E2_SFX_Lever_Pitch		288096
+	1041270729	C2_SFX_Lore_Pitch	.cache\6D\{6D2244A9-525E-5E1F-23CC-F3A8256A6018}.wem		\Containers\Default Work Unit\Nav\8C\C2_SFX_Lore_Pitch		288096
+	1049566941	A_SFX_Battery_Pitch	.cache\5D\{5D28AB81-34AB-BAF8-E18D-A7DDB19CBB50}.wem		\Containers\Default Work Unit\Nav\6A\A_SFX_Battery_Pitch		288096
+	1054853624	A_SFX_Wall_Pitch	.cache\7B\{7BF3CA50-B3AC-81DC-0687-7C5AC5D93601}.wem		\Containers\Default Work Unit\Nav\6A\A_SFX_Wall_Pitch		288112
+	1062151930	7	.cache\3C\{3CE7933E-AE66-7D6E-B581-7DEF0B61F0A5}.wem		\Containers\Default Work Unit\UI\Level_Select\Level_Selection_Voices\7		110688
+	1071337066	LT-1_OnCollision	.cache\D2\{D2E50BB6-9C23-C478-A78D-A67C6BF02AFF}.wem		\Containers\Default Work Unit\Lore\L1\LT-1_OnCollision		460818
+

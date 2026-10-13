@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C6D73447-BEF6-4EF2-BC63-EFF2180E3750}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{C6D73447-BEF6-4EF2-BC63-EFF2180E3750}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Tutorial" ID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}" PersistMode="Reference"/>
+				<WorkUnit Name="Level Select" ID="{0653B117-1D75-4BE0-BF11-0289E1DCBA99}" PersistMode="Reference"/>
+				<WorkUnit Name="Navigation" ID="{484DE43C-4946-41D6-8306-338A0AD93E58}" PersistMode="Reference"/>
+				<WorkUnit Name="Player" ID="{049D0EA6-0EB5-4BAC-A85F-B57C54238E49}" PersistMode="Reference"/>
+				<Folder Name="Narration" ID="{8811B522-D113-4AA7-BE38-3F5A9CA106B0}" ShortID="651351488">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="13"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Play_Tutorial_Voices" ID="{D3EAC167-D751-4127-80BA-480DC357BD56}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="13"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{A0F24250-8883-49DC-9952-B46C1334F690}" ShortID="380264357">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Keybind_Voices" ID="{A07FEBED-2C6C-46C3-99C6-B94899C907C4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Tutorial_Start" ID="{3B5D44E8-8A1B-4796-823F-0B4E9B7F6CF0}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="13"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{E5619ACA-C575-4A15-BEFA-E6A1A937B89B}" ShortID="116725411">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Nar_Tutorial" ID="{8D4D730F-C9B1-486D-9601-743B8990EB4C}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,297 @@
+Event	ID	Name			Wwise Object Path	Notes
+	84696440	G			\Default Work Unit\Navigation\Play_Broadcast_Cell\G	
+	84696441	F			\Default Work Unit\Navigation\Play_Broadcast_Cell\F	
+	84696442	E			\Default Work Unit\Navigation\Play_Broadcast_Cell\E	
+	84696443	D			\Default Work Unit\Navigation\Play_Broadcast_Cell\D	
+	84696444	C			\Default Work Unit\Navigation\Play_Broadcast_Cell\C	
+	84696445	B			\Default Work Unit\Navigation\Play_Broadcast_Cell\B	
+	84696446	A			\Default Work Unit\Navigation\Play_Broadcast_Cell\A	
+	146837212	Stop_MX_LevelSelect			\Default Work Unit\Tutorial\Music\Stop_MX_LevelSelect	
+	149853905	Play_L3_OnStart			\Default Work Unit\Tutorial\Lore\L3\Play_L3_OnStart	
+	243701008	Play_LT_3			\Default Work Unit\Tutorial\Lore\L1\Play_LT_3	
+	243701009	Play_LT_2			\Default Work Unit\Tutorial\Lore\L1\Play_LT_2	
+	243701010	Play_LT_1			\Default Work Unit\Tutorial\Lore\L1\Play_LT_1	
+	249707322	Play_L4_OnStart			\Default Work Unit\Tutorial\Lore\L4\Play_L4_OnStart	
+	253455286	Play_L8_1			\Default Work Unit\Tutorial\Lore\L8\Play_L8_1	
+	254146769	Play_L4_2			\Default Work Unit\Tutorial\Lore\L4\Play_L4_2	
+	254146770	Play_L4_1			\Default Work Unit\Tutorial\Lore\L4\Play_L4_1	
+	254588057	Play_L3_1			\Default Work Unit\Tutorial\Lore\L3\Play_L3_1	
+	264866792	Lore_Collision			\Default Work Unit\Tutorial\Collision\Lore_Collision	
+	375589320	Play_LevelSelectLore			\Default Work Unit\Level Select\Play_LevelSelectLore	
+	492328278	Play_LevelSelectFX			\Default Work Unit\Tutorial\Stingers\Play_LevelSelectFX	
+	495578665	Play_Jump_RandomVo			\Default Work Unit\Tutorial\Vo\Play_Jump_RandomVo	
+	520505691	Play_LT_1OnCollision			\Default Work Unit\Tutorial\Lore\L1\Play_LT_1OnCollision	
+	617543412	Play_LevelConfirm			\Default Work Unit\Level Select\Play_LevelConfirm	
+	714125809	Play_PlayerPositionTone_Airborne			\Default Work Unit\Player\PlayerPositionTone\Play_PlayerPositionTone_Airborne	
+	820981162	Play_RandomVo			\Default Work Unit\Tutorial\Vo\Play_RandomVo	
+	997434397	Unmute_PlayerPositionTone_Airborne			\Default Work Unit\Player\PlayerPositionTone\Unmute_PlayerPositionTone_Airborne	
+	1022453873	Play_MX_Menu			\Default Work Unit\Tutorial\Music\Play_MX_Menu	
+	1172822028	Play_Death			\Default Work Unit\Player\Play_Death	
+	1194025040	Play_L2_OnStart			\Default Work Unit\Tutorial\Lore\L2\Play_L2_OnStart	
+	1628811220	Play_LevelSelect			\Default Work Unit\Level Select\Play_LevelSelect	
+	1669608868	Stop_RandomVo			\Default Work Unit\Tutorial\Vo\Stop_RandomVo	
+	1775097163	Play_LT_Start			\Default Work Unit\Tutorial\Lore\L1\Play_LT_Start	
+	1819748156	E2			\Default Work Unit\Navigation\Play_Broadcast_Cell\E2	
+	1836525715	D2			\Default Work Unit\Navigation\Play_Broadcast_Cell\D2	
+	1853303302	C2			\Default Work Unit\Navigation\Play_Broadcast_Cell\C2	
+	1902799896	Stop_End_Credits			\Default Work Unit\Tutorial\Music\Stop_End_Credits	
+	1964619705	Play_L10_1			\Default Work Unit\Tutorial\Lore\L10\Play_L10_1	
+	1964619706	Play_L10_2			\Default Work Unit\Tutorial\Lore\L10\Play_L10_2	
+	1981237384	Stop_All_Lore			\Default Work Unit\Tutorial\Lore\Stop_All_Lore	
+	2158585690	Play_SuccessVo			\Default Work Unit\Tutorial\Vo\Play_SuccessVo	
+	2403889813	Play_Broadcast_Drums			\Default Work Unit\Navigation\Play_Broadcast_Drums	
+	2419452367	Play_StartVo			\Default Work Unit\Tutorial\Vo\Play_StartVo	
+	2431650291	Pulse_PlayerPositionTone_XPulse			\Default Work Unit\Player\PlayerPositionTone\Pulse_PlayerPositionTone_XPulse	
+	2463617210	Play_LT_WinOnCollision			\Default Work Unit\Tutorial\Lore\L1\Play_LT_WinOnCollision	
+	2549646816	Mute_PlayerPositionTone_Airborne			\Default Work Unit\Player\PlayerPositionTone\Mute_PlayerPositionTone_Airborne	
+	2638592923	Stop_MX_Menu			\Default Work Unit\Tutorial\Music\Stop_MX_Menu	
+	2711876432	Win_Collision			\Default Work Unit\Tutorial\Collision\Win_Collision	
+	2898413582	Play_MX_LevelSelect			\Default Work Unit\Tutorial\Music\Play_MX_LevelSelect	
+	2949884818	Play_End_Credits			\Default Work Unit\Tutorial\Music\Play_End_Credits	
+	2955987680	Play_WIn			\Default Work Unit\Tutorial\Stingers\Play_WIn	
+	2963349357	Stop_Footsteps			\Default Work Unit\Player\Stop_Footsteps	
+	3013518714	Stop_PlayerPositionTone_XPulse			\Default Work Unit\Player\PlayerPositionTone\Stop_PlayerPositionTone_XPulse	
+	3037695709	Play_L14_1			\Default Work Unit\Tutorial\Lore\L14\Play_L14_1	
+	3037695710	Play_L14_2			\Default Work Unit\Tutorial\Lore\L14\Play_L14_2	
+	3038136960	Play_L11_1			\Default Work Unit\Tutorial\Lore\L11\Play_L11_1	
+	3283001359	Stop_PlayerPositionTone_Airborne			\Default Work Unit\Player\PlayerPositionTone\Stop_PlayerPositionTone_Airborne	
+	3475493512	Play_L5_2			\Default Work Unit\Tutorial\Lore\L5\Play_L5_2	
+	3475493515	Play_L5_1			\Default Work Unit\Tutorial\Lore\L5\Play_L5_1	
+	3475640672	Play_L2_1			\Default Work Unit\Tutorial\Lore\L2\Play_L2_1	
+	3614464626	Play_Tutorial_Voices			\Default Work Unit\Narration\Play_Tutorial_Voices	
+	3689126666	Play_Jump			\Default Work Unit\Player\Play_Jump	
+	3813243862	Play_Lore			\Default Work Unit\Tutorial\Stingers\Play_Lore	
+	3843357604	Play_PlayerPositionTone_XPulse			\Default Work Unit\Player\PlayerPositionTone\Play_PlayerPositionTone_XPulse	
+	3854155799	Play_Footsteps			\Default Work Unit\Player\Play_Footsteps	
+	4069469053	Play_Tutorial_Start			\Default Work Unit\Narration\Play_Tutorial_Start	
+	4285282925	Play_Land			\Default Work Unit\Player\Play_Land	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	732211977	LevelSelection			\Default Work Unit\LevelSelection	
+	1683342792	Broadcast_Cell_Type			\Default Work Unit\Broadcast_Cell_Type	
+	3762955427	Tutorial			\Default Work Unit\Tutorial	
+
+Switch	ID	Name	Switch Group			Notes
+	987635873	Level_01	LevelSelection			
+	987635874	Level_02	LevelSelection			
+	987635875	Level_03	LevelSelection			
+	987635876	Level_04	LevelSelection			
+	987635877	Level_05	LevelSelection			
+	987635878	Level_06	LevelSelection			
+	987635879	Level_07	LevelSelection			
+	987635880	Level_08	LevelSelection			
+	987635881	Level_09	LevelSelection			
+	1004413456	Level_13	LevelSelection			
+	1004413457	Level_12	LevelSelection			
+	1004413458	Level_11	LevelSelection			
+	1004413459	Level_10	LevelSelection			
+	1004413462	Level_15	LevelSelection			
+	1004413463	Level_14	LevelSelection			
+	204455109	Lore	Broadcast_Cell_Type			
+	979765101	Win	Broadcast_Cell_Type			
+	1183803264	Fan	Broadcast_Cell_Type			
+	1350606868	Cloud	Broadcast_Cell_Type			
+	2108779961	Wall	Broadcast_Cell_Type			
+	2304303686	MoveableWall	Broadcast_Cell_Type			
+	2326215132	Battery	Broadcast_Cell_Type			
+	2528658256	Ground	Broadcast_Cell_Type			
+	2782712987	Lever	Broadcast_Cell_Type			
+	3354297748	Empty	Broadcast_Cell_Type			
+	4109362	Left	Tutorial			
+	84696424	W	Tutorial			
+	84696428	S	Tutorial			
+	84696430	Q	Tutorial			
+	84696443	D	Tutorial			
+	84696446	A	Tutorial			
+	204455109	Lore	Tutorial			
+	979765101	Win	Tutorial			
+	2108779961	Wall	Tutorial			
+	2528658256	Ground	Tutorial			
+	3893817417	Right	Tutorial			
+	4164838345	Space	Tutorial			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	926379701	Player_Y_Pitch			\Default Work Unit\Player_Y_Pitch	
+	1766625469	Player_PositionTone_Volume			\Default Work Unit\Player_PositionTone_Volume	
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	641173278	Modulator Envelope (Custom)				
+	1007802703	Modulator Envelope (Custom)				
+
+Effect plug-ins	ID	Name	Type				Notes
+	310732885	Compressor (Custom)	Wwise Compressor			
+	341441079	Compressor (Custom)	Wwise Compressor			
+	347489551	Compressor (Custom)	Wwise Compressor			
+	408372587	Compressor (Custom)	Wwise Compressor			
+	444456137	Compressor (Custom)	Wwise Compressor			
+	456861090	Compressor (Custom)	Wwise Compressor			
+	498502107	Compressor (Custom)	Wwise Compressor			
+	690427912	Compressor (Custom)	Wwise Compressor			
+	731005650	Compressor (Custom)	Wwise Compressor			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	797970358	Synth One	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\Nav\PlayerPositionTone_XPulse\Synth One	
+	930756958	Synth One	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\Nav\PlayerPositionTone_Airborne\Synth One	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1778868	E_SFX_Lore_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E_SFX_Lore_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\3E\E_SFX_Lore_Pitch		288096
+	3548770	A_SFX_Ground_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\A_SFX_Ground_Pitch_9C2695D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\6A\A_SFX_Ground_Pitch		288096
+	23801847	E2_SFX_Fan_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E2_SFX_Fan_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\10E\E2_SFX_Fan_Pitch		288096
+	23809650	C_SFX_Fan_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C_SFX_Fan_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\1C\C_SFX_Fan_Pitch		196768
+	29253307	Tutorial_Ground	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Tutorial_Ground_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Keybind_Voices\Tutorial_Ground		171534
+	31530662	C2_SFX_Win_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C2_SFX_Win_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\8C\C2_SFX_Win_Pitch		288096
+	32443878	14	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\14_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\14		141792
+	38161007	F_SFX_Lore_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\F_SFX_Lore_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\4F\F_SFX_Lore_Pitch		288096
+	45891252	C_SFX_Wall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C_SFX_Wall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\1C\C_SFX_Wall_Pitch		288112
+	50247933	Stinger_Win	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Stinger_Win_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stingers\Stinger_Win		288112
+	59872974	G_SFX_Lore_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\G_SFX_Lore_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\5G\G_SFX_Lore_Pitch		288096
+	63819010	E2_SFX_MoveableWall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E2_SFX_MoveableWall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\10E\E2_SFX_MoveableWall_Pitch		288096
+	65376009	L8-1	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\openart-tts-20260701001638-RzLjjyyygUPtMCNC_1782836199457_f2a0254bL5-2_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L8\L8-1		525408
+	67941170	E_SFX_Wall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E_SFX_Wall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\3E\E_SFX_Wall_Pitch		288112
+	79513394	Nar_Title	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Nar_Title_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Nar_Title		336112
+	81932503	B_SFX_Lever_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\B_SFX_Lever_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\7B\B_SFX_Lever_Pitch		288096
+	82316466	C_SFX_Cloud_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C_SFX_Cloud_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\1C\C_SFX_Cloud_Pitch		327840
+	98345644	C2_SFX_MoveableWall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C2_SFX_MoveableWall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\8C\C2_SFX_MoveableWall_Pitch		288096
+	109699754	L11-1	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\L11-1_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L11\L11-1		378300
+	110350344	6	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\6_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\6		103776
+	112692735	L4-2	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\L4-2_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L4\L4-2		877518
+	114231013	Tutorial_S	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Tutorial_S_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Keybind_Voices\Tutorial_S		292118
+	114430215	Cinnamoroll Parkour_Loop	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Cinnamoroll Parkour_Loop_784441D4.wem		\Interactive Music Hierarchy\Default Work Unit\MainTitle\Cinnamoroll Parkour_Loop\Cinnamoroll Parkour_Loop		5664112
+	120438893	D2_SFX_Wall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D2_SFX_Wall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\9D\D2_SFX_Wall_Pitch		288112
+	121141460	Vo_RandomPlay4	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Vo_RandomPlay4_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vo\Jump_RandomVo\Vo_RandomPlay4		79162
+	144893544	MainTitle_AI	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\MainTitle_AI_784441D4.wem		\Interactive Music Hierarchy\Default Work Unit\EndCredits\MainTitle_AI\MainTitle_AI		8566602
+	144978697	E2_SFX_Wall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E2_SFX_Wall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\10E\E2_SFX_Wall_Pitch		288112
+	155369183	F_SFX_Wall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\F_SFX_Wall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\4F\F_SFX_Wall_Pitch		288112
+	156838964	L10-1	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\L10-2_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L10\L10-1		175518
+	162576838	D_SFX_MoveableWall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D_SFX_MoveableWall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\2D\D_SFX_MoveableWall_Pitch		288096
+	170646122	D_SFX_Ground_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D_SFX_Ground_Pitch_9C2695D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\2D\D_SFX_Ground_Pitch		288096
+	175412979	E2_SFX_Cloud_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E2_SFX_Cloud_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\10E\E2_SFX_Cloud_Pitch		288096
+	183336580	D2_SFX_Cloud_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D2_SFX_Cloud_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\9D\D2_SFX_Cloud_Pitch		288096
+	196265466	G_SFX_Win_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\G_SFX_Win_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\5G\G_SFX_Win_Pitch		288096
+	200288665	C2_SFX_Cloud_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C2_SFX_Cloud_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\8C\C2_SFX_Cloud_Pitch		288096
+	210289030	E_SFX_MoveableWall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E_SFX_MoveableWall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\3E\E_SFX_MoveableWall_Pitch		288096
+	212919543	C2_SFX_Wall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C2_SFX_Wall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\8C\C2_SFX_Wall_Pitch		288112
+	220368910	E2_SFX_Ground_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E2_SFX_Ground_Pitch_9C2695D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\10E\E2_SFX_Ground_Pitch		288096
+	228689753	C2_SFX_Ground_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C2_SFX_Ground_Pitch_9C2695D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\8C\C2_SFX_Ground_Pitch		288096
+	236673331	G_SFX_Lever_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\G_SFX_Lever_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\5G\G_SFX_Lever_Pitch		288096
+	280974445	L14-2	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\L14-2_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L14\L14-2		122118
+	281395502	Tutorial_Jump	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Tutorial_Jump_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Keybind_Voices\Tutorial_Jump		368368
+	320063939	C_SFX_Win_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C_SFX_Win_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\1C\C_SFX_Win_Pitch		131232
+	321944039	L4-1	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\L4-1_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L4\L4-1		1412368
+	330162885	11	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\11_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\11		141792
+	338676788	C_SFX_Lever_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C_SFX_Lever_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\1C\C_SFX_Lever_Pitch		65696
+	342025370	Nar_Menu_Guide	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Nar_Menu_Guide_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Menu_Guide_Repeat\Nar_Menu_Guide		662368
+	346710368	Tutorial_Wall	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Tutorial_Wall_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Keybind_Voices\Tutorial_Wall		236134
+	364940942	Land	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\ESM_AG_Cinematic_FX_ui_one_shot_scifi_blip_positive_swept_squeak_bass_swell_01.4_1_bipLand_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Land		16112
+	366153077	D2_SFX_Lever_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D2_SFX_Lever_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\9D\D2_SFX_Lever_Pitch		288096
+	368032864	B_SFX_Ground_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\B_SFX_Ground_Pitch_9C2695D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\7B\B_SFX_Ground_Pitch		288096
+	370369678	E2_SFX_Lore_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E2_SFX_Lore_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\10E\E2_SFX_Lore_Pitch		288096
+	375089670	SFX_LevelSelect	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\SFX_LevelSelect_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\SFX_LevelSelect		16996
+	375138027	G_SFX_Fan_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\G_SFX_Fan_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\5G\G_SFX_Fan_Pitch		288096
+	379494889	Tutorial_Q	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Tutorial_Q_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Keybind_Voices\Tutorial_Q		232118
+	390283133	D2_SFX_MoveableWall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D2_SFX_MoveableWall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\9D\D2_SFX_MoveableWall_Pitch		288096
+	394346048	G_SFX_MoveableWall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\G_SFX_MoveableWall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\5G\G_SFX_MoveableWall_Pitch		288096
+	395617778	A_SFX_Win_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\A_SFX_Win_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\6A\A_SFX_Win_Pitch		288096
+	401672867	B_SFX_Win_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\B_SFX_Win_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\7B\B_SFX_Win_Pitch		288096
+	402547671	C2_SFX_Battery_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C2_SFX_Battery_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\8C\C2_SFX_Battery_Pitch		288096
+	406694538	SFX_Lore_Collision	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\点击按钮_2C54DCA5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Collision\SFX_Lore_Collision		144112
+	408191367	Vo_Start	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Vo_Start_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vo\Vo_Start		228112
+	411234060	L2-1	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\L2-1_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L2\L2-1		4916084
+	427549132	MUS_Broadcast_Drums	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\MUS_Broadcast_Drums_784441D4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\MUS_Broadcast_Drums		3072112
+	431554780	SFX_Footstep_06	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\#シナモンアニメだもん 総集編 1-20話.19Land_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\SFX_Footstep_06		13196
+	433896442	G_SFX_Cloud_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\G_SFX_Cloud_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\5G\G_SFX_Cloud_Pitch		288096
+	435080753	B_SFX_Lore_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\B_SFX_Lore_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\7B\B_SFX_Lore_Pitch		288096
+	442943222	D_SFX_Cloud_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D_SFX_Cloud_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\2D\D_SFX_Cloud_Pitch		288096
+	447310089	Nar_Tutorial	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Nar_T1_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Nar_Tutorial		1402418
+	453433154	9	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\9_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\9		124512
+	455939806	D2_SFX_Ground_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D2_SFX_Ground_Pitch_9C2695D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\9D\D2_SFX_Ground_Pitch		288096
+	456076367	E_SFX_Win_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E_SFX_Win_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\3E\E_SFX_Win_Pitch		288096
+	460416882	Death	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Vo_RandomPlay5_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death		160976
+	472278284	D_SFX_Battery_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D_SFX_Battery_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\2D\D_SFX_Battery_Pitch		288096
+	474540471	LT-On Start	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\LT-On Start_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L1\LT-On Start		1510418
+	474629260	F_SFX_Cloud_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\F_SFX_Cloud_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\4F\F_SFX_Cloud_Pitch		288096
+	484171553	C_SFX_Lore_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C_SFX_Lore_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\1C\C_SFX_Lore_Pitch		65696
+	494654095	LT_1	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\LT_1_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L1\LT_1		3292018
+	498573314	E_SFX_Lever_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E_SFX_Lever_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\3E\E_SFX_Lever_Pitch		288096
+	501164636	Tutorial_Left	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Tutorial_Left_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Keybind_Voices\Tutorial_Left		195518
+	505736460	D_SFX_Fan_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D_SFX_Fan_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\2D\D_SFX_Fan_Pitch		288096
+	506773331	Vo_LevelConfirm	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Vo_Success_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vo\Vo_LevelConfirm		129112
+	508897303	Tutorial_Right	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Tutorial_Right_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Keybind_Voices\Tutorial_Right		206368
+	518970831	LevelSelect_1	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\LevelSelect_1_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\LevelSelect\LevelSelect_1		734968
+	521071536	L2_Start	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\L2_Start_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L2\L2_Start		525984
+	525060518	Cinnamoroll Parkour_Intro	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Cinnamoroll Parkour_Intro_784441D4.wem		\Interactive Music Hierarchy\Default Work Unit\MainTitle\Cinnamoroll Parkour_Intro\Cinnamoroll Parkour_Intro		640112
+	532122631	5	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\5_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\5		110688
+	541035346	E_SFX_Ground_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E_SFX_Ground_Pitch_9C2695D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\3E\E_SFX_Ground_Pitch		288096
+	542645653	Empty	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Empty_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\4F\Empty		96112
+	548654442	Nar_Credits	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Nar_Credits_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Nar_Credits		1754968
+	551326352	Tutorial_W	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Tutorial_W_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Keybind_Voices\Tutorial_W		320118
+	558621631	F_SFX_Lever_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\F_SFX_Lever_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\4F\F_SFX_Lever_Pitch		288096
+	559425900	G_SFX_Battery_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\G_SFX_Battery_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\5G\G_SFX_Battery_Pitch		288096
+	568968739	D_SFX_Lore_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D_SFX_Lore_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\2D\D_SFX_Lore_Pitch		288096
+	590483158	G_SFX_Ground_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\G_SFX_Ground_Pitch_9C2695D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\5G\G_SFX_Ground_Pitch		288096
+	603063377	L3-1	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\L3-1_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L3\L3-1		1816118
+	621607312	1	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\1_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\1		124512
+	622532351	4	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\4_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\4		110688
+	629345362	L10-2	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\L10-1_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L10\L10-2		708868
+	630965929	SFX_Win_Collision	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\SFX_Detect_Win_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Collision\SFX_Win_Collision		172102
+	644423896	Vo_RandomPlay2	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Vo_RandomPlay2_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vo\RandomVo\Vo_RandomPlay2		337350
+	645820635	Jump	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\ESM_Arcade_Game_Jump_13_Classic_Retro_8_Bit_.1Jump_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump		10754
+	651034652	D_SFX_Win_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D_SFX_Win_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\2D\D_SFX_Win_Pitch		288096
+	651942807	8	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\8_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\8		110688
+	656428153	B_SFX_Battery_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\B_SFX_Battery_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\7B\B_SFX_Battery_Pitch		288096
+	678729911	D2_SFX_Win_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D2_SFX_Win_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\9D\D2_SFX_Win_Pitch		288096
+	684132451	15	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\15_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\15		152160
+	697304146	C2_SFX_Fan_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C2_SFX_Fan_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\8C\C2_SFX_Fan_Pitch		288096
+	702231444	F_SFX_MoveableWall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\F_SFX_MoveableWall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\4F\F_SFX_MoveableWall_Pitch		288096
+	708431605	B_SFX_Cloud_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\B_SFX_Cloud_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\7B\B_SFX_Cloud_Pitch		288096
+	730927035	F_SFX_Ground_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\F_SFX_Ground_Pitch_9C2695D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\4F\F_SFX_Ground_Pitch		288096
+	732536098	D_SFX_Wall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D_SFX_Wall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\2D\D_SFX_Wall_Pitch		336112
+	733544585	D2_SFX_Fan_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D2_SFX_Fan_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\9D\D2_SFX_Fan_Pitch		288096
+	734816753	LT-2	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\LT-2_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L1\LT-2		480096
+	752170062	F_SFX_Battery_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\F_SFX_Battery_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\4F\F_SFX_Battery_Pitch		288096
+	779141761	E2_SFX_Battery_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E2_SFX_Battery_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\10E\E2_SFX_Battery_Pitch		288096
+	784766030	E2_SFX_Win_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E2_SFX_Win_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\10E\E2_SFX_Win_Pitch		288096
+	805216688	A_SFX_MoveableWall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\A_SFX_MoveableWall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\6A\A_SFX_MoveableWall_Pitch		288096
+	805939267	D_SFX_Lever_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D_SFX_Lever_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\2D\D_SFX_Lever_Pitch		288096
+	824898907	L5-2	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\L5-2_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L5\L5-2		1023518
+	837881676	E_SFX_Cloud_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E_SFX_Cloud_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\3E\E_SFX_Cloud_Pitch		288096
+	840564925	C_SFX_Battery_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C_SFX_Battery_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\1C\C_SFX_Battery_Pitch		65696
+	844171427	LT-Win	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\LT-Win_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L1\LT-Win		486968
+	847755765	10	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\10_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\10		131424
+	866981024	L5-1	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\L5-1_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L5\L5-1		670118
+	867736681	12	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\12_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\12		141792
+	872977414	F_SFX_Win_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\F_SFX_Win_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\4F\F_SFX_Win_Pitch		288096
+	878937860	Tutorial_D	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Tutorial_D_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Keybind_Voices\Tutorial_D		343518
+	888594967	E_SFX_Fan_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E_SFX_Fan_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\3E\E_SFX_Fan_Pitch		288096
+	896899524	B_SFX_Fan_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\B_SFX_Fan_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\7B\B_SFX_Fan_Pitch		288096
+	898405465	A_SFX_Lore_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\A_SFX_Lore_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\6A\A_SFX_Lore_Pitch		288096
+	910659428	2	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\2_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\2		124512
+	915565207	L14-1	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\L14-1_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L14\L14-1		350368
+	916766108	D2_SFX_Battery_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D2_SFX_Battery_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\9D\D2_SFX_Battery_Pitch		288096
+	917916161	Stinger_Lore_Play	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Stinger_Lore_Play_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stingers\Stinger_Lore_Play		384112
+	921715665	A_SFX_Lever_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\A_SFX_Lever_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\6A\A_SFX_Lever_Pitch		288096
+	933731626	3	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\3_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\3		124512
+	935246004	C2_SFX_Lever_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C2_SFX_Lever_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\8C\C2_SFX_Lever_Pitch		288096
+	944003039	Tutorial_A	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Tutorial_A_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Keybind_Voices\Tutorial_A		336368
+	951658612	A_SFX_Fan_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\A_SFX_Fan_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\6A\A_SFX_Fan_Pitch		288096
+	957560379	F_SFX_Fan_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\F_SFX_Fan_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\4F\F_SFX_Fan_Pitch		288096
+	959729632	C_SFX_MoveableWall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C_SFX_MoveableWall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\1C\C_SFX_MoveableWall_Pitch		131232
+	960072136	B_SFX_Wall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\B_SFX_Wall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\7B\B_SFX_Wall_Pitch		288112
+	960403157	Vo_RandomPlay1	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Vo_RandomPlay1_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vo\Jump_RandomVo\Vo_RandomPlay1		96312
+	965793612	D2_SFX_Lore_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\D2_SFX_Lore_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\9D\D2_SFX_Lore_Pitch		288096
+	979114233	E_SFX_Battery_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E_SFX_Battery_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\3E\E_SFX_Battery_Pitch		288096
+	982721274	B_SFX_MoveableWall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\B_SFX_MoveableWall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\7B\B_SFX_MoveableWall_Pitch		288096
+	984967118	A_SFX_Cloud_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\A_SFX_Cloud_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\6A\A_SFX_Cloud_Pitch		288096
+	993563363	13	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\13_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\13		131424
+	993921033	C_SFX_Ground_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C_SFX_Ground_Pitch_9C2695D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\1C\C_SFX_Ground_Pitch		288112
+	1004540643	Vo_RandomPlay3	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Vo_RandomPlay3_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vo\Jump_RandomVo\Vo_RandomPlay3		123662
+	1009303808	Tutorial_Lore	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Tutorial_Lore_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Keybind_Voices\Tutorial_Lore		230984
+	1015005458	Tutorial_Win	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\Tutorial_Win_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narration\Keybind_Voices\Tutorial_Win		221534
+	1022273419	G_SFX_Wall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\G_SFX_Wall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\5G\G_SFX_Wall_Pitch		288112
+	1038063320	E2_SFX_Lever_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\E2_SFX_Lever_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\10E\E2_SFX_Lever_Pitch		288096
+	1041270729	C2_SFX_Lore_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\C2_SFX_Lore_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\8C\C2_SFX_Lore_Pitch		288096
+	1049566941	A_SFX_Battery_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\A_SFX_Battery_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\6A\A_SFX_Battery_Pitch		288096
+	1054853624	A_SFX_Wall_Pitch	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\A_SFX_Wall_Pitch_4B4A0975.wem		\Actor-Mixer Hierarchy\Default Work Unit\Nav\6A\A_SFX_Wall_Pitch		288112
+	1062151930	7	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\7_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Level_Select\Level_Selection_Voices\7		110688
+	1071337066	LT-1_OnCollision	Y:\Documents\Games\Cinnamoroll Parkour\Wwise\Cinnamoroll Parkour\.cache\Mac\SFX\LT-1_OnCollision_6073608A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lore\L1\LT-1_OnCollision		460818
+

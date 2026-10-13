@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E3ADEA0B-6846-4C63-A4BB-B579431EFAD4}" SchemaVersion="133">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{E3ADEA0B-6846-4C63-A4BB-B579431EFAD4}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Player_Y_Pitch" ID="{4C36F1ED-902F-4B3E-BB04-36461CADA361}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="2400"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Player_X_Pan" ID="{F379228B-8AAA-4716-AE8E-D06D05D24D17}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Player_PositionTone_Volume" ID="{5DCC8410-A708-4ED9-A97C-7981EA9608C7}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="-96"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-96"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Ducking" ID="{F7259D1B-E51B-4750-ACC6-332B5ECD7BC2}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Jump_HintTone_Distance" ID="{EE273CD8-815C-493A-8E2E-F1D74B284491}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Loading_RTPC" ID="{311F9509-D8B7-478F-88D2-BE099196DC99}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

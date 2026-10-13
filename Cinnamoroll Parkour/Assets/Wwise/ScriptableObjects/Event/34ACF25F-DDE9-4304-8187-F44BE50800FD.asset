@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc7bd65106da4be6890f8379ed10619, type: 3}
+  m_Name: 34ACF25F-DDE9-4304-8187-F44BE50800FD
+  m_EditorClassIdentifier: 
+  objectName: Play_Coffee
+  id: 1012391550
+  guid: 34ACF25F-DDE9-4304-8187-F44BE50800FD
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1

@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ef964d7d634319a797e8992576cb57, type: 3}
+  m_Name: TtsLoadingAudioSettings
+  m_EditorClassIdentifier: 
+  soundBank:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 16d45e18054ce410abb23f4f29f7151a, type: 2}
+  loadingEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 91e047ccb63d1429380aae90416890d5, type: 2}
+  transitionStingerEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6bfc20b17d6fb4a859a6f93af481e94c, type: 2}
+  loadingRtpcName: Loading_RTPC
+  finishedCueName: LoadingFinished
+  loadingStateGroup: Loading_State
+  loadingInitialState: Loop
+  transitionTimeout: 30
+  tailTimeout: 15
+  bpm: 90
+  beatsPerBar: 4
+  startupTargetScene: Main Menu
+  sceneRoutes:
+  - sourceScene: Tutorial
+    targetScene: Tutorial
+  - sourceScene: 
+    targetScene: Level 1
+  - sourceScene: 
+    targetScene: Level 2
+  - sourceScene: 
+    targetScene: Level 3
+  - sourceScene: 
+    targetScene: Level 4
+  - sourceScene: 
+    targetScene: Level 5
+  - sourceScene: 
+    targetScene: Level 6
+  - sourceScene: 
+    targetScene: Level 7
+  - sourceScene: 
+    targetScene: Level 8
+  - sourceScene: 
+    targetScene: Level 9
+  - sourceScene: 
+    targetScene: Level 10
+  - sourceScene: 
+    targetScene: Level 11
+  - sourceScene: 
+    targetScene: Level 12
+  - sourceScene: 
+    targetScene: Level 13
+  - sourceScene: 
+    targetScene: Level 14
+  - sourceScene: 
+    targetScene: Level 15
+  initializationTimeout: 30

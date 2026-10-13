@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Cinnamoroll Parkour" GUID="{C41E4F85-6B61-446E-9D36-106332599996}" Generator="2023.1.4.8496"/>
+	<CacheRoot>../../../../Wwise/Cinnamoroll Parkour/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Mac" GUID="{267D273C-25C3-4BDD-86BD-3E4E6D3C8C89}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="Mac"/>
+		<Platform Name="Windows" GUID="{D3F3095F-75D0-4FF5-883C-C8F07C491B64}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../Wwise/Cinnamoroll Parkour/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{0E29428D-AE71-4274-940C-060ED444A113}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{2A4E76BD-527E-A33F-808F-BFC1F15A6515}</FileHash>
+</ProjectInfo>

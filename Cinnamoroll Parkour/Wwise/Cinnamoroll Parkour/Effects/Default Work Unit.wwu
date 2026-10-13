@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EA41AF7A-4169-4B1C-BAC3-F068C0221B3A}" SchemaVersion="133">
+	<Effects>
+		<WorkUnit Name="Default Work Unit" ID="{EA41AF7A-4169-4B1C-BAC3-F068C0221B3A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Compressor" ID="{88F54D34-A1B8-4D10-9F23-15EAA2297A91}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+					<PropertyList>
+						<Property Name="Threshold" Type="Real32" Value="-42.1"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_RoomVerb" ID="{234E0F61-3732-415F-A86B-1A6D411D12FB}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+					<PropertyList>
+						<Property Name="ERLevel" Type="Real32" Value="0"/>
+						<Property Name="ERPattern" Type="int32" Value="21"/>
+						<Property Name="EnableToneControls" Type="bool" Value="True"/>
+						<Property Name="Filter1Gain" Type="Real32" Value="-3"/>
+						<Property Name="Filter2Freq" Type="Real32" Value="620"/>
+						<Property Name="Filter2Gain" Type="Real32" Value="-12"/>
+						<Property Name="Filter2Q" Type="Real32" Value="0.5"/>
+						<Property Name="Filter3Gain" Type="Real32" Value="-7.5"/>
+						<Property Name="InputLFELevel" Type="Real32" Value="-0.3"/>
+						<Property Name="LFELevel" Type="Real32" Value="-0.3"/>
+						<Property Name="PreDelay" Type="Real32" Value="0"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="Ducking" ID="{2A91FA9F-43B9-49C0-9079-9A9AA67BD932}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+					<PropertyList>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.75"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="GameParameter">
+							<ObjectRef Name="Ducking" ID="{F7259D1B-E51B-4750-ACC6-332B5ECD7BC2}" WorkUnitID="{E3ADEA0B-6846-4C63-A4BB-B579431EFAD4}"/>
+						</Reference>
+					</ReferenceList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
+	</Effects>
+</WwiseDocument>

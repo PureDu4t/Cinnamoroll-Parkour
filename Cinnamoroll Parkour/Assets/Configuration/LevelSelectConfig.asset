@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956299f05c6a04e6abc708a5cf3655c7, type: 3}
+  m_Name: LevelSelectConfig
+  m_EditorClassIdentifier: 
+  levels:
+  - sceneName: Level 1
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: b51d5d77df4994e5e85e0f2b70b8020f, type: 2}
+  - sceneName: Level 2
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: d0bf232ca6f074f29a3129d6b7b8618d, type: 2}
+  - sceneName: Level 3
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 61d7cc5df216345ce8b7996daad14541, type: 2}
+  - sceneName: Level 4
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 4e0020b6753e548169067a7de73be152, type: 2}
+  - sceneName: Level 5
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 201fefdecf3214eeb86f89792dad6853, type: 2}
+  - sceneName: Level 6
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 5cc44e9fa831c482ebfdeec7ba6098d1, type: 2}
+  - sceneName: Level 7
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: d20982a4ba9454b088e1c1bca0cc91a9, type: 2}
+  - sceneName: Level 8
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 9fd71e76a94bc43749c71d348e72eee1, type: 2}
+  - sceneName: Level 9
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: c0ef6d5a788024940ad5707c965ee607, type: 2}
+  - sceneName: Level 10
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: c22226102dffa450ea8f522c3ae7ef20, type: 2}
+  - sceneName: Level 11
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: b73df0521bf61444ba6918a85a776dd1, type: 2}
+  - sceneName: Level 12
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 47f8c4f526fe74707ae143e39a18f5fe, type: 2}
+  - sceneName: Level 13
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: aa44e7489adfc418f8eb4909781adcb0, type: 2}
+  - sceneName: Level 14
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 30cbeb7317b474f30a966045ad2caa8a, type: 2}
+  - sceneName: Level 15
+    announcementSwitch:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 2e42a31c9241e41f4b7a1f1806538226, type: 2}

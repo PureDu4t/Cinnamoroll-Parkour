@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc7bd65106da4be6890f8379ed10619, type: 3}
+  m_Name: B3081FB5-145D-40EC-808B-73C2526940C6
+  m_EditorClassIdentifier: 
+  objectName: L10_2
+  id: 1539864711
+  guid: B3081FB5-145D-40EC-808B-73C2526940C6
+  IsInUserDefinedSoundBank: 1

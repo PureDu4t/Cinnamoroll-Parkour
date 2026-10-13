@@ -1,0 +1,43 @@
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
+	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	
+	841620460	Concrete			\Factory Acoustic Textures\Textures\Concrete	
+	1755085759	Wood_Deep			\Factory Acoustic Textures\Textures\Wood_Deep	
+	1873957695	Anechoic			\Factory Acoustic Textures\Textures\Anechoic	
+	1970351858	Fabric			\Factory Acoustic Textures\Textures\Fabric	
+	2058049674	Wood			\Factory Acoustic Textures\Textures\Wood	
+	2412606308	Carpet			\Factory Acoustic Textures\Textures\Carpet	
+	2637588553	Tile			\Factory Acoustic Textures\Textures\Tile	
+	2712164154	Ducking			\Default Work Unit\Ducking	
+	2928161104	Curtains			\Factory Acoustic Textures\Textures\Curtains	
+	3195498748	Cork_Tiles			\Factory Acoustic Textures\Textures\Cork_Tiles	
+	3670307564	Drywall			\Factory Acoustic Textures\Textures\Drywall	
+	4168643977	Acoustic_Banner			\Factory Acoustic Textures\Textures\Acoustic_Banner	
+	4262522749	Wood_Bright			\Factory Acoustic Textures\Textures\Wood_Bright	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	120894080	PlayerPositionTone_Bus			\Default Work Unit\Master Audio Bus\Nav\PlayerPositionTone_Bus	
+	377197776	Nav			\Default Work Unit\Master Audio Bus\Nav	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	573466488	DIalogue_Bus			\Default Work Unit\Master Audio Bus\DIalogue_Bus	
+	649003210	Broadcast			\Default Work Unit\Master Audio Bus\Nav\Broadcast	
+	817096458	Player_SFX			\Default Work Unit\Master Audio Bus\SFX\Player_SFX	
+	930427193	Narration			\Default Work Unit\Master Audio Bus\DIalogue_Bus\Narration	
+	1534528548	Vo			\Default Work Unit\Master Audio Bus\DIalogue_Bus\Vo	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	278471273	Med_Room			\Default Work Unit\Master Audio Bus\Reverb\Med_Room	
+	282449107	Plate			\Default Work Unit\Master Audio Bus\Reverb\Plate	
+	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1159390747	Room_Medium_Tiled	Wwise RoomVerb			
+	1259256166	New_RoomVerb	Wwise RoomVerb			
+	2712164154	Ducking	Wwise Meter			
+	3160090811	New_Compressor	Wwise Compressor			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

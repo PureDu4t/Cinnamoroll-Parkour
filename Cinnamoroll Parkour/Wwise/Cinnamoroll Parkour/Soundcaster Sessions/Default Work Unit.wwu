@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8706BCA2-2A27-441B-A80B-408436A7AD9D}" SchemaVersion="133">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{8706BCA2-2A27-441B-A80B-408436A7AD9D}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{8E8E9EB6-F719-4E20-AC6F-BEC4069503D1}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_LT_Start" ID="{A9F620D5-22DF-45D0-A82F-19978EF6252E}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Broadcast_Drums" ID="{96FC4C57-096F-4901-990C-99C4213CDBDD}" WorkUnitID="{484DE43C-4946-41D6-8306-338A0AD93E58}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Jump_RandomVo" ID="{8CF09977-08C2-4ECC-98B5-FAF7D3210C08}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_LevelSelect" ID="{87492B21-466F-49F1-BF0B-F3C06F64720F}" WorkUnitID="{0653B117-1D75-4BE0-BF11-0289E1DCBA99}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Cloud" ID="{3FCE6D19-B030-4032-AC6A-ABC04636B8DD}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_LT_1" ID="{6D458A33-6F03-4A46-A50B-9852757429DD}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="C" ID="{5DC380E8-DD10-4FEF-B12E-0339D68B8933}" WorkUnitID="{484DE43C-4946-41D6-8306-338A0AD93E58}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Keybind_Voices" ID="{A07FEBED-2C6C-46C3-99C6-B94899C907C4}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_LevelSelectLore" ID="{F51A164E-B382-49EC-AADB-4735B9008037}" WorkUnitID="{0653B117-1D75-4BE0-BF11-0289E1DCBA99}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Coffee" ID="{34ACF25F-DDE9-4304-8187-F44BE50800FD}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_StartVo" ID="{AE6EA5CF-ACCA-4BFC-89C2-478F65849F93}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_PlayerPositionTone_Airborne" ID="{DD912894-A332-4D73-A6FD-FD79C4C11D0B}" WorkUnitID="{049D0EA6-0EB5-4BAC-A85F-B57C54238E49}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_L2_OnStart" ID="{6DBD542F-B56A-4861-A1DD-9F87F534764F}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_LT_1OnCollision" ID="{127276E1-D66A-41E6-9279-EA1FA21E9692}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Forest" ID="{6F0B6507-30F4-427A-A61E-B9A59B2C86AF}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_RandomVo" ID="{72BB4BA1-E7E8-47F8-9A0C-F753B60C9263}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Pulse_PlayerPositionTone_XPulse" ID="{BFB814AB-D9F4-445C-8CF9-D56184A6CFAF}" WorkUnitID="{049D0EA6-0EB5-4BAC-A85F-B57C54238E49}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_L4_1" ID="{BCD19046-64AE-4550-9451-4E46FA4EE823}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_LT_1" ID="{6D458A33-6F03-4A46-A50B-9852757429DD}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_End_Credits" ID="{48D4EDA0-5E96-4A9C-A6BC-222D96E32558}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Level_Selection_Voices" ID="{DA0B950B-614F-4EBD-B572-33F7A92B4A98}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_LT_2" ID="{CCCE03D8-848F-4E2B-8C3C-D6F4A369E1A2}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>
