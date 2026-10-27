@@ -1,0 +1,1 @@
+Built-in imagegen. Prompt: Eight-frame 4x2 seamless loop sprite sheet, cute pastel pixel art Cinnamoroll DJ wearing black sunglasses and blue headphones, scratching two vinyl decks, ears and head bobbing, pale cream and blue star stage, locked camera, no text. Frames assembled into GIF and normalized sprite sheet.

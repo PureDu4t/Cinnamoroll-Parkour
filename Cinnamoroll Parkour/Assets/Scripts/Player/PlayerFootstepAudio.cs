@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(AkGameObj))]
 [RequireComponent(typeof(PlayerJump))]
@@ -10,18 +11,10 @@ public class PlayerFootstepAudio : MonoBehaviour
     [SerializeField] private AK.Wwise.Event jumpStartEvent;
     [SerializeField] private AK.Wwise.Event landingEvent;
 
-    [Header("Footstep Loop Events")]
-    [SerializeField] private AK.Wwise.Event footstepLoopPlayEvent;
-    [SerializeField] private AK.Wwise.Event footstepLoopStopEvent;
-
-    [Header("Footstep Input")]
-    [SerializeField] private KeyCode moveLeftKey = KeyCode.LeftArrow;
-    [SerializeField] private KeyCode moveRightKey = KeyCode.RightArrow;
-
-    [Tooltip("If enabled, footsteps only play while Rigidbody2D has horizontal movement.")]
-    [SerializeField] private bool requireHorizontalMovement = true;
-
-    [SerializeField] private float minimumHorizontalSpeed = 0.05f;
+    [Header("Quarter-Cell Footsteps")]
+    [FormerlySerializedAs("footstepLoopPlayEvent")]
+    [Tooltip("每列固定分成四等份，进入新的四分之一格区域时触发。Wwise 内应配置为单次播放。")]
+    [SerializeField] private AK.Wwise.Event footstepEvent;
 
     [Header("Position Tone Events")]
     [Tooltip("Played when the player becomes airborne. Wwise should make the jump/fall position tone audible.")]
@@ -42,7 +35,7 @@ public class PlayerFootstepAudio : MonoBehaviour
     [Tooltip("Legacy fallback target. Used when the dedicated targets above are empty.")]
     [SerializeField] private Transform positionToneEventTarget;
 
-    [Header("Step Rules")]
+    [Header("Position Tone Pulse Rules")]
     [Tooltip("Minimum time between grid-step sounds while walking.")]
     [SerializeField] private float stepCooldown = 0.08f;
 
@@ -58,7 +51,10 @@ public class PlayerFootstepAudio : MonoBehaviour
     private bool hasLastGridX;
     private int lastGridX;
     private float nextAllowedStepTime;
-    private bool footstepLoopPlaying;
+    private PlayerMovement movement;
+    private int lastFootstepRegion;
+    private bool hasFootstepRegion;
+    private bool wasGrounded;
     private bool airbornePositionToneVisible;
 
     private void Awake()
@@ -66,6 +62,7 @@ public class PlayerFootstepAudio : MonoBehaviour
         playerJump = GetComponent<PlayerJump>();
         positionTracker = GetComponent<PlayerPositionTracker>();
         rb = GetComponent<Rigidbody2D>();
+        movement = GetComponent<PlayerMovement>();
     }
 
     private void OnEnable()
@@ -75,6 +72,8 @@ public class PlayerFootstepAudio : MonoBehaviour
             return;
         }
 
+        ResetFootstepRegion();
+        if (movement != null) movement.PositionReset += ResetFootstepRegion;
         playerJump.JumpStarted += PlayJumpStart;
         playerJump.Landed += PlayLanding;
     }
@@ -86,10 +85,8 @@ public class PlayerFootstepAudio : MonoBehaviour
             return;
         }
 
-        if (footstepLoopPlaying)
-        {
-            StopFootstepLoop();
-        }
+        if (movement != null) movement.PositionReset -= ResetFootstepRegion;
+        ResetFootstepRegion();
 
         playerJump.JumpStarted -= PlayJumpStart;
         playerJump.Landed -= PlayLanding;
@@ -98,7 +95,7 @@ public class PlayerFootstepAudio : MonoBehaviour
     private void LateUpdate()
     {
         UpdateAirbornePositionTone();
-        UpdateFootstepLoop();
+        UpdateRegionFootsteps();
         UpdateStep();
     }
 
@@ -118,47 +115,28 @@ public class PlayerFootstepAudio : MonoBehaviour
         }
     }
 
-    private void UpdateFootstepLoop()
+    private void ResetFootstepRegion()
     {
-        bool shouldPlayFootsteps = ShouldPlayFootstepLoop();
+        hasFootstepRegion = false;
+        wasGrounded = false;
+    }
 
-        if (shouldPlayFootsteps && !footstepLoopPlaying)
+    private void UpdateRegionFootsteps()
+    {
+        int region = positionTracker.GetFootstepRegion(rb.position);
+        bool grounded = playerJump.IsGrounded();
+        if (!hasFootstepRegion || GameSpeechSettings.BlocksGameInput || !grounded || !wasGrounded)
         {
-            if (TryPostEvent(footstepLoopPlayEvent, "footstep loop play"))
-            {
-                footstepLoopPlaying = true;
-            }
-
+            lastFootstepRegion = region;
+            hasFootstepRegion = true;
+            wasGrounded = grounded;
             return;
         }
 
-        if (!shouldPlayFootsteps && footstepLoopPlaying)
-        {
-            StopFootstepLoop();
-        }
-    }
-
-    private bool ShouldPlayFootstepLoop()
-    {
-        if (!playerJump.IsGrounded())
-        {
-            return false;
-        }
-
-        bool leftPressed = Input.GetKey(moveLeftKey);
-        bool rightPressed = Input.GetKey(moveRightKey);
-
-        if (leftPressed == rightPressed)
-        {
-            return false;
-        }
-
-        if (!requireHorizontalMovement)
-        {
-            return true;
-        }
-
-        return Mathf.Abs(rb.linearVelocity.x) >= minimumHorizontalSpeed;
+        int crossedRegions = System.Math.Abs(region - lastFootstepRegion);
+        lastFootstepRegion = region;
+        // Crossing either direction triggers; movement within one fixed region does not.
+        for (int i = 0; i < crossedRegions; i++) TryPostEvent(footstepEvent, "quarter-cell footstep");
     }
 
     private void UpdateStep()
@@ -250,20 +228,6 @@ public class PlayerFootstepAudio : MonoBehaviour
         airbornePositionToneVisible = false;
     }
 
-    private void StopFootstepLoop()
-    {
-        TryPostEvent(footstepLoopStopEvent, "footstep loop stop");
-        footstepLoopPlaying = false;
-    }
-
-    private void OnDestroy()
-    {
-        if (footstepLoopPlaying)
-        {
-            StopFootstepLoop();
-        }
-    }
-
     private GameObject GetAirbornePositionToneEventGameObject()
     {
         if (airbornePositionToneEventTarget != null)
@@ -300,6 +264,7 @@ public class PlayerFootstepAudio : MonoBehaviour
         GameObject targetGameObject = null
     )
     {
+        if (GameSpeechSettings.BlocksGameInput) return false;
         if (eventToPlay == null || !eventToPlay.IsValid())
         {
             return false;

@@ -74,3 +74,19 @@ Tutorial、Level 1–15 自动显示 TTS 加载页，并生成当前语言和语
 关卡开场语音：Tutorial、Level 1–15 的 Play_StartVo 自动 Start 触发由 TtsSceneLoading 暂存，只有收到 LoadingFinished 且加载成功后才调用原 AkEvent。加载失败时不播放，R 重试成功后播放一次。Level Select / Credits 没有关卡加载页，仍使用原有 Start 行为。
 
 设置页 UI：保留背景图，采用圆角语言卡片、三步进度指示、语速滑条及 Replay/Stop 按钮。所有文字使用 Resources/Fonts/SpeechUiFont.otf（Noto Sans CJK SC，Include Font Data 已启用），字体及 OFL 授权随项目打包，不再调用 PingFang 等系统字体。键盘选择和 E/R/Q 的操作沿用原流程。
+
+## Loading 期间的碰撞与交互事件
+
+脚步声使用固定地图分区：PlayerPositionTracker 按 Tilemap 的每列边界细分四等份，PlayerFootstepAudio 在地面进入另一份时发送 Footstep Event（原 Footstep Loop Play Event 引用自动迁移）。在同一分区内往返不会触发；反向跨回上一分区会再次触发，低帧率跨越多份会逐份提交。空中、Loading、复活传送只更新分区基准，不补播脚步。XPulse 仍按原整格规则触发。Wwise 的 Footsteps 容器使用 Step，关闭 Loop 和 Special Transitions；每次 Play_Footsteps 只选一个脚步音色。
+
+LoadingInteractionGate 在加载页或语音设置阻止输入时，暂存 AkTriggerEnter2D、LoreInteractable、DeathSceneResetTrigger 的进入通知；关闭后检查双方碰撞体仍重叠才触发，重复通知合并，已离开或销毁的对象丢弃。地面和墙的物理碰撞始终保留。脚步、撞墙、跳跃及闲置语音在此期间不播放。
+音乐初始化例外：第 1–15 关 Stage1 的 AkTriggerEnter2D 勾选 Initialize Before Music Transition。资源准备完成后，TtsSceneLoading 先发送其现有 Event，再请求目标 Music State，防止继承上关残留的 Branch/Layer State。此路径仅播放 Wwise Event，不触发 TTS；加载时的初始重叠不再补播，离开后重新进入仍按原触发规则执行。其余区域不勾选，继续等加载页关闭。
+原生 AkEvent.HandleEvent 通过 AkEventLoadingGate.Defer 接入同一规则，只拦截带碰撞/交互对象的调用，不拦截传 null 的启动或音乐回调。更新 Wwise Integration 时须保留此适配及 IAkEventPlaybackOverride.cs 中的桥接类。
+Play_StartVo 的加载后播放会等待关闭加载页的输入保护帧结束，避免 TtsText 将该次开场误判为被阻止的交互。第 2、3、4、5、11 关 LT_Start 的中文提示已去掉开头两秒停顿，英文为 Press E to listen.
+
+## 中文中插播英文字母或单词（填写方式）
+
+在 Tts Text 的中文文本中直接填写 `按[en:E]聆听语音，按[en:S]进行播报。`。
+`[en:内容]` 使用已配置的英文 Lessac 模型，标记外仍使用原来的语言和语速。
+无需添加音效插入列表条目；支持与 `[sfx:名称]`、`[pause:0.5]` 混用。
+关卡加载页会分别预生成中英文片段并缓存，播放时依次播放；第一次加载包含两种模型时会增加准备时间。

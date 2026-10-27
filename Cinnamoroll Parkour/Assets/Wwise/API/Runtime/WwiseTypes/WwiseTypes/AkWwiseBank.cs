@@ -63,7 +63,10 @@ namespace AK.Wwise
 		{
 			if (IsValid())
 			{
-				AkAddressableBankManager.Instance.UnloadBank(WwiseObjectReference.AddressableBank);
+				// Scene bank owners release only their own reference. The persistent
+				// music owner must keep the shared Main bank alive across scene changes.
+				AkAddressableBankManager.Instance.UnloadBank(WwiseObjectReference.AddressableBank,
+					ignoreRefCount: false, removeFromBankDictionary: false);
 			}
 		}
 #else

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - sceneName: Level 1
+    chineseTtsText: 第一关。
+    englishTtsText: Level 1.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -21,6 +23,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: b51d5d77df4994e5e85e0f2b70b8020f, type: 2}
   - sceneName: Level 2
+    chineseTtsText: 第二关。
+    englishTtsText: Level 2.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -28,6 +32,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: d0bf232ca6f074f29a3129d6b7b8618d, type: 2}
   - sceneName: Level 3
+    chineseTtsText: 第三关。
+    englishTtsText: Level 3.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -35,6 +41,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: 61d7cc5df216345ce8b7996daad14541, type: 2}
   - sceneName: Level 4
+    chineseTtsText: 第四关。
+    englishTtsText: Level 4.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -42,6 +50,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: 4e0020b6753e548169067a7de73be152, type: 2}
   - sceneName: Level 5
+    chineseTtsText: 第五关。
+    englishTtsText: Level 5.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -49,6 +59,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: 201fefdecf3214eeb86f89792dad6853, type: 2}
   - sceneName: Level 6
+    chineseTtsText: 第六关。
+    englishTtsText: Level 6.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -56,6 +68,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: 5cc44e9fa831c482ebfdeec7ba6098d1, type: 2}
   - sceneName: Level 7
+    chineseTtsText: 第七关。
+    englishTtsText: Level 7.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -63,6 +77,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: d20982a4ba9454b088e1c1bca0cc91a9, type: 2}
   - sceneName: Level 8
+    chineseTtsText: 第八关。
+    englishTtsText: Level 8.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -70,6 +86,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: 9fd71e76a94bc43749c71d348e72eee1, type: 2}
   - sceneName: Level 9
+    chineseTtsText: 第九关。
+    englishTtsText: Level 9.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -77,6 +95,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: c0ef6d5a788024940ad5707c965ee607, type: 2}
   - sceneName: Level 10
+    chineseTtsText: 第十关。
+    englishTtsText: Level 10.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -84,6 +104,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: c22226102dffa450ea8f522c3ae7ef20, type: 2}
   - sceneName: Level 11
+    chineseTtsText: 第十一关。
+    englishTtsText: Level 11.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -91,6 +113,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: b73df0521bf61444ba6918a85a776dd1, type: 2}
   - sceneName: Level 12
+    chineseTtsText: 第十二关。
+    englishTtsText: Level 12.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -98,6 +122,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: 47f8c4f526fe74707ae143e39a18f5fe, type: 2}
   - sceneName: Level 13
+    chineseTtsText: 第十三关。
+    englishTtsText: Level 13.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -105,6 +131,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: aa44e7489adfc418f8eb4909781adcb0, type: 2}
   - sceneName: Level 14
+    chineseTtsText: 第十四关。
+    englishTtsText: Level 14.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 
@@ -112,6 +140,8 @@ MonoBehaviour:
       groupGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: 30cbeb7317b474f30a966045ad2caa8a, type: 2}
   - sceneName: Level 15
+    chineseTtsText: 第十五关。
+    englishTtsText: Level 15.
     announcementSwitch:
       idInternal: 0
       valueGuidInternal: 

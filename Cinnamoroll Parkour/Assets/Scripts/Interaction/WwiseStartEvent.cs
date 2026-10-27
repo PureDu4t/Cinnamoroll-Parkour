@@ -11,6 +11,10 @@ public class WwiseStartEvent : MonoBehaviour
     [SerializeField] private bool playStartEvent = true;
     [SerializeField] private bool lockPlayerDuringPlayback = true;
 
+    [Header("TTS")]
+    [Tooltip("开启时，关卡加载完成后播放同一物体上的 TtsText。关闭时只播放 Wwise Event。")]
+    [SerializeField] private bool triggerTts = true;
+
     private bool bankLoaded;
     private PlayerMovement playerMovement;
     private PlayerJump playerJump;
@@ -23,30 +27,28 @@ public class WwiseStartEvent : MonoBehaviour
             yield return null;
         }
 
-        if (bankToLoad == null || !bankToLoad.IsValid())
+        // TTS is independent of the Wwise bank/event configuration.
+        if (bankToLoad != null && bankToLoad.IsValid())
         {
-            Debug.LogError(name + " is missing a valid Wwise SoundBank.");
-            yield break;
+            bankToLoad.Load();
+            bankLoaded = true;
         }
-
-        var configuredText = GetComponent<TtsText>();
-        bool usesTts = configuredText != null && configuredText.isActiveAndEnabled;
-        if (playStartEvent && !usesTts && (eventToPlay == null || !eventToPlay.IsValid()))
+        else
         {
-            Debug.LogError(name + " is missing a valid Wwise start Event.");
-            yield break;
+            Debug.LogWarning(name + " is missing a valid Wwise SoundBank. TTS can still play.", this);
         }
-
-        bankToLoad.Load();
-        bankLoaded = true;
 
         yield return null;
+        while (GameSpeechSettings.IsChoosing || TtsSceneLoading.IsLoading(gameObject.scene))
+            yield return null;
 
-        while (GameSpeechSettings.IsChoosing || TtsSceneLoading.IsLoading(gameObject.scene)) yield return null;
-
+        var configuredText = GetComponent<TtsText>();
+        bool usesTts = triggerTts && configuredText != null && configuredText.HasText;
         // A native Start trigger may already have started the same TTS.
-        if (!usesTts || !configuredText.IsPlaying)
+        if (usesTts && !configuredText.IsPlaying)
             TtsText.TryPlay(gameObject, lockPlayer: lockPlayerDuringPlayback);
+        else if (triggerTts && !usesTts)
+            Debug.LogWarning(name + " 的开场 TTS 没有可用的当前语言文本，请检查同一物体上的 TtsText。", this);
 
         if (!playStartEvent)
         {

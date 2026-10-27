@@ -1,0 +1,1 @@
+Built-in imagegen: one high-definition wide Cinnamoroll DJ illustration, black sunglasses and blue headphones, crisp outlines, cream and blue stage, blank top 25 percent for UI. Native output retained; localized subtle looping head, ear and paw deformation, no optical-flow interpolation. Full-resolution silent H.264 loop plus GIF export.

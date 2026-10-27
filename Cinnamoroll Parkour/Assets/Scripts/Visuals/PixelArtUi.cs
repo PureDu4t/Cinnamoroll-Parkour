@@ -54,12 +54,21 @@ public static class PixelArtUi
         Rect[] frames = { new Rect(.016f,.52f,.468f,.439f), new Rect(.513f,.558f,.478f,.329f),
             new Rect(.017f,.070f,.471f,.388f), new Rect(.509f,.079f,.482f,.340f) };
         Rect source = frames[Mathf.Clamp(index, 0, 3)];
+        source = Rect.MinMaxRect(Mathf.Round(source.xMin * atlas.width) / atlas.width,
+            Mathf.Round(source.yMin * atlas.height) / atlas.height,
+            Mathf.Round(source.xMax * atlas.width) / atlas.width,
+            Mathf.Round(source.yMax * atlas.height) / atlas.height);
         float cornerX = source.width * .23f, cornerY = source.height * .23f;
         float cap = Mathf.Min(24, Mathf.Min(target.width, target.height) / 3);
         float[] dx = { target.x, target.x + cap, target.xMax - cap, target.xMax };
         float[] dy = { target.y, target.y + cap, target.yMax - cap, target.yMax };
         float[] sx = { source.x, source.x + cornerX, source.xMax - cornerX, source.xMax };
         float[] sy = { source.y, source.y + cornerY, source.yMax - cornerY, source.yMax };
+        for (int i = 0; i < 4; i++)
+        {
+            sx[i] = Mathf.Round(sx[i] * atlas.width) / atlas.width;
+            sy[i] = Mathf.Round(sy[i] * atlas.height) / atlas.height;
+        }
         for (int row = 0; row < 3; row++)
             for (int col = 0; col < 3; col++)
                 GUI.DrawTextureWithTexCoords(new Rect(dx[col], dy[row], dx[col + 1] - dx[col], dy[row + 1] - dy[row]), atlas,
@@ -67,8 +76,13 @@ public static class PixelArtUi
     }
     public static void AtlasIcon(Rect r, Texture2D atlas, int index)
     {
-        if (atlas != null) GUI.DrawTextureWithTexCoords(r, atlas,
-            new Rect((index % 4) * .25f, (3 - index / 4) * .25f, .25f, .25f));
+        if (atlas == null) return;
+        float left = Mathf.Round(index % 4 * atlas.width / 4f);
+        float right = Mathf.Round((index % 4 + 1) * atlas.width / 4f);
+        float bottom = Mathf.Round((3 - index / 4) * atlas.height / 4f);
+        float top = Mathf.Round((4 - index / 4) * atlas.height / 4f);
+        GUI.DrawTextureWithTexCoords(r, atlas,
+            new Rect(left / atlas.width, bottom / atlas.height, (right - left) / atlas.width, (top - bottom) / atlas.height));
     }
     public static void Progress(Rect r, float value)
     {

@@ -72,9 +72,12 @@ public class PixelArtDirector : MonoBehaviour
             ReplaceCharacter();
         }
     }
-    private Sprite MakeSprite(Texture2D texture, Rect rect, float pixelsPerUnit)
+    private Sprite MakeSprite(Texture2D texture, Rect rect, float pixelsPerUnit, Vector2? pivot = null)
     {
-        var sprite = Sprite.Create(texture, rect, new Vector2(.5f, .5f), pixelsPerUnit, 0, SpriteMeshType.FullRect);
+        // Match the importer's integer atlas boundaries. Fractional UVs sample neighbours.
+        rect = Rect.MinMaxRect(Mathf.RoundToInt(rect.xMin), Mathf.RoundToInt(rect.yMin),
+            Mathf.RoundToInt(rect.xMax), Mathf.RoundToInt(rect.yMax));
+        var sprite = Sprite.Create(texture, rect, pivot ?? new Vector2(.5f, .5f), pixelsPerUnit, 0, SpriteMeshType.FullRect);
         ownedSprites.Add(sprite);
         return sprite;
     }
@@ -117,9 +120,8 @@ public class PixelArtDirector : MonoBehaviour
         // Crop only the book above the existing road, preserving its placement.
         width = settings.tiles.width / 4f;
         height = settings.tiles.height / 4f;
-        loreBook = Sprite.Create(settings.tiles, new Rect(2 * width, 3 * height + height * .2f, width, height * .8f),
-            new Vector2(.5f, .375f), width, 0, SpriteMeshType.FullRect);
-        ownedSprites.Add(loreBook);
+        loreBook = MakeSprite(settings.tiles, new Rect(2 * width, 3 * height + height * .2f, width, height * .8f),
+            width, new Vector2(.5f, .375f));
         Texture2D terrain = null;
         if (int.TryParse(sceneName.Replace("Level ", ""), out int number))
             terrain = number <= 5 ? settings.cafeTerrain : number <= 10 ? settings.forestTerrain : null;
@@ -393,14 +395,15 @@ public class PixelArtDirector : MonoBehaviour
     private void DrawMainMenu()
     {
         PixelArtUi.Frame(new Rect(80, 80, 620, 610), settings.panel, settings.border);
-        GUI.Label(new Rect(120, 110, 540, 30), "CINNAMOROLL PARKOUR", PixelArtUi.Text(18, settings.accent));
+        GUI.Label(new Rect(120, 110, 540, 30), (Chinese ? "玉桂狗跑酷" : "CINNAMOROLL PARKOUR"), PixelArtUi.Text(18, settings.accent));
         GUI.Label(new Rect(120, 165, 540, 95), Chinese ? "玉桂狗跑酷" : "Cinnamoroll Parkour", PixelArtUi.Text(48, settings.ink));
         GUI.Label(new Rect(120, 275, 540, 65), Chinese ? "听见每一步，探索云朵之间的小世界。" : "Follow each sound. Find your way through the clouds.", PixelArtUi.Text(20, settings.ink));
-        if (PixelArtUi.Button(new Rect(120, 385, 540, 68), Chinese ? "开始冒险   E" : "Start adventure   E", settings, true)) navigator?.NavigateFromUI("Level Select");
-        if (PixelArtUi.Button(new Rect(120, 470, 260, 58), Chinese ? "教学关卡   T" : "Tutorial   T", settings)) navigator?.NavigateFromUI("Tutorial");
-        if (PixelArtUi.Button(new Rect(400, 470, 260, 58), Chinese ? "语音设置   F2" : "Voice settings   F2", settings)) SpeechSettingsMenu.OpenFromMenu();
-        GUI.Label(new Rect(120, 555, 540, 54), Chinese ? "方向键移动 · 空格跳跃 · E 交互" : "Arrows to move · Space to jump · E to interact", PixelArtUi.Text(15, settings.ink));
-        if (PixelArtUi.Button(new Rect(120, 620, 200, 40), Chinese ? "退出   Esc" : "Quit   Esc", settings)) navigator?.QuitFromUI();
+        int focused = navigator != null ? navigator.SelectedMainMenuItem : 0;
+        if (PixelArtUi.Button(new Rect(120, 385, 540, 68), (focused == 0 ? "> " : "") + (Chinese ? "进入关卡   E" : "Start adventure   E"), settings, focused == 0)) navigator?.ActivateMainMenuItem(0);
+        if (PixelArtUi.Button(new Rect(120, 470, 260, 58), (focused == 1 ? "> " : "") + (Chinese ? "教学关卡   T" : "Tutorial   T"), settings, focused == 1)) navigator?.ActivateMainMenuItem(1);
+        if (PixelArtUi.Button(new Rect(400, 470, 260, 58), (focused == 2 ? "> " : "") + (Chinese ? "语音设置   S" : "Voice settings   S"), settings, focused == 2)) navigator?.ActivateMainMenuItem(2);
+        GUI.Label(new Rect(120, 555, 540, 54), Chinese ? "左 / 下：上一项 · 右 / 上：下一项 · E 确认" : "Left / Down: previous · Right / Up: next · E: confirm", PixelArtUi.Text(15, settings.ink));
+        if (PixelArtUi.Button(new Rect(120, 620, 200, 40), (focused == 3 ? "> " : "") + (Chinese ? "退出   Esc" : "Quit   Esc"), settings, focused == 3)) navigator?.ActivateMainMenuItem(3);
         DrawHero(new Rect(740, 195, 390, 420));
     }
     private void DrawHero(Rect rect)
@@ -421,7 +424,7 @@ public class PixelArtDirector : MonoBehaviour
                 string label = (i + 1).ToString("00") + "\n" + (Chinese ? "第 " + (i + 1) + " 关" : "LEVEL " + (i + 1));
                 if (PixelArtUi.Button(card, label, settings, selected)) selection.SelectFromUI(i);
             }
-            string chapter = selection.SelectedLevel <= 5 ? "Cinnamon Café" : selection.SelectedLevel <= 10 ? "Forest" : "Clouds";
+            string chapter = ChapterName(selection.SelectedLevel);
             GUI.Label(new Rect(105, 570, 620, 38), (Chinese ? "第 " + selection.SelectedLevel + " 关 · " : "Level " + selection.SelectedLevel + " · ") + chapter, PixelArtUi.Text(21, settings.ink));
             if (PixelArtUi.Button(new Rect(745, 565, 350, 65), Chinese ? "进入关卡   E" : "Enter level   E", settings, true)) selection.ConfirmFromUI();
             if (PixelArtUi.Button(new Rect(105, 635, 250, 40), Chinese ? "返回主菜单   Esc" : "Back to menu   Esc", settings)) selection.BackFromUI();
@@ -435,6 +438,10 @@ public class PixelArtDirector : MonoBehaviour
         GUI.Label(new Rect(210, 535, 780, 45), Chinese ? "期待下一次在云朵之间相遇。" : "See you on the next adventure.", PixelArtUi.Text(20, settings.accent, TextAnchor.MiddleCenter));
         if (PixelArtUi.Button(new Rect(390, 610, 420, 50), Chinese ? "返回主菜单   E / Esc" : "Back to menu   E / Esc", settings, true)) navigator?.NavigateFromUI("Main Menu");
     }
+    private string ChapterName(int number) => number <= 5
+        ? (Chinese ? "玉桂咖啡馆" : "Cinnamon Café")
+        : number <= 10 ? (Chinese ? "森林" : "Forest") : (Chinese ? "云端" : "Clouds");
+
     private void DrawLevelHud()
     {
         float scale = Mathf.Min(Screen.width / 1200f, Screen.height / 760f);
@@ -444,9 +451,9 @@ public class PixelArtDirector : MonoBehaviour
         string levelTitle = sceneName == "Tutorial" ? (Chinese ? "教学关卡" : "Tutorial")
             : Chinese ? "第 " + sceneName.Replace("Level ", "") + " 关" : sceneName;
         PixelArtUi.FittedLabel(new Rect(54, 41, 216, 28), levelTitle, 22, settings.ink, TextAnchor.MiddleLeft);
-        string chapter = "Clouds";
+        string chapter = ChapterName(11);
         if (int.TryParse(sceneName.Replace("Level ", ""), out int number))
-            chapter = number <= 5 ? "Cinnamon Café" : number <= 10 ? "Forest" : "Clouds";
+            chapter = ChapterName(number);
         PixelArtUi.FittedLabel(new Rect(54, 73, 216, 18), chapter, 14, settings.accent, TextAnchor.MiddleLeft);
         PixelArtUi.Frame(new Rect(324, 20, 570, 76), settings.panel, settings.border);
         PixelArtUi.FittedLabel(new Rect(356, 42, 506, 30),

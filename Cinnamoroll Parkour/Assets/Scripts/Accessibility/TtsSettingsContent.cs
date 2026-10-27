@@ -4,6 +4,13 @@ using UnityEngine;
 public class TtsSettingsContent : ScriptableObject
 {
     public string loadingText = "Loading";
+    [Header("音量设置（语言选择之前，双语）")]
+    [TextArea(2, 5)] public string chineseMixerPrompt = "请调整音乐、音效和语音的音量。上下方向键选择，左右方向键调节。";
+    [TextArea(2, 5)] public string englishMixerPrompt = "Adjust music, sound effects, and speech volume. Use up and down to select, left and right to adjust.";
+    public string chineseMixerContinuePrompt = "按易继续。";
+    public string englishMixerContinuePrompt = "Press E to continue.";
+    public string chineseMixerSample = "这是语音音量的试听。";
+    public string englishMixerSample = "This is the speech volume preview.";
     [TextArea(3, 8)] public string chineseInstructions = "选择你的语言。";
     [TextArea(3, 8)] public string englishInstructions = "Choose your language.";
     public string chineseSpeedPrompt = "请选择你的语速。";

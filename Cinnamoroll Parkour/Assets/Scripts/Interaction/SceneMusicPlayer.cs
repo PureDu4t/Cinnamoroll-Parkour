@@ -1,39 +1,53 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(AkGameObj))]
-[DisallowMultipleComponent]
 public class SceneMusicPlayer : MonoBehaviour
 {
+    public enum PlaybackCondition
+    {
+        [InspectorName("Scene 加载时")] SceneLoaded,
+        [InspectorName("加载完毕（加载页结束后）")] LoadingFinished
+    }
+
+    [Header("Playback")]
+    [SerializeField] private PlaybackCondition condition = PlaybackCondition.LoadingFinished;
+    [Tooltip("留空则使用当前物体。")]
+    [SerializeField] private GameObject eventTarget;
+    [Min(1f), SerializeField] private float initializationTimeout = 30f;
+
     [Header("Optional SoundBank")]
     [SerializeField] private AK.Wwise.Bank bankToLoad;
     [SerializeField] private bool unloadBankOnDestroy;
 
     [Header("Wwise Events")]
+    [FormerlySerializedAs("eventToPlay")]
     [SerializeField] private AK.Wwise.Event playMusicEvent;
-    [SerializeField] private AK.Wwise.Event stopMusicEvent;
     [SerializeField] private string playMusicEventName;
-    [SerializeField] private string stopMusicEventName;
-
-    [Header("Stop Fallback")]
-    [SerializeField] private int stopFadeMilliseconds = 200;
-    [SerializeField] private AkCurveInterpolation stopFadeCurve =
-        AkCurveInterpolation.AkCurveInterpolation_Linear;
 
     [Header("Debug")]
     [SerializeField] private bool debugLogging;
 
     private uint playingId = AkSoundEngine.AK_INVALID_PLAYING_ID;
     private bool bankLoaded;
-    private bool musicStarted;
-    private bool musicStopped;
 
-    private IEnumerator Start()
+    protected IEnumerator Start()
     {
-        while (GameSpeechSettings.IsChoosing || TtsSceneLoading.IsLoading(gameObject.scene)) yield return null;
-        while (!AkSoundEngine.IsInitialized())
+        if (condition == PlaybackCondition.LoadingFinished)
         {
             yield return null;
+            while (isActiveAndEnabled && (GameSpeechSettings.IsChoosing
+                || TtsSceneLoading.IsLoading(gameObject.scene))) yield return null;
+        }
+        double deadline = Time.realtimeSinceStartupAsDouble + Mathf.Max(1f, initializationTimeout);
+        while (isActiveAndEnabled && !AkSoundEngine.IsInitialized()
+            && Time.realtimeSinceStartupAsDouble < deadline) yield return null;
+        if (!isActiveAndEnabled) yield break;
+        if (!AkSoundEngine.IsInitialized())
+        {
+            Debug.LogError(name + " 无法播放场景 Event：Wwise 初始化超时。", this);
+            yield break;
         }
 
         if (bankToLoad != null && bankToLoad.IsValid())
@@ -46,16 +60,21 @@ public class SceneMusicPlayer : MonoBehaviour
         PlayMusic();
     }
 
+    private GameObject PlaybackTarget => eventTarget != null ? eventTarget : gameObject;
+
     private void PlayMusic()
     {
+        var emitter = PlaybackTarget.GetComponent<AkGameObj>();
+        if (emitter == null) emitter = PlaybackTarget.AddComponent<AkGameObj>();
+        emitter.Register();
         TtsText.TryPlay(gameObject);
         if (!string.IsNullOrWhiteSpace(playMusicEventName))
         {
-            playingId = AkSoundEngine.PostEvent(playMusicEventName, gameObject);
+            playingId = AkSoundEngine.PostEvent(playMusicEventName, PlaybackTarget);
         }
         else if (playMusicEvent != null && playMusicEvent.IsValid())
         {
-            playingId = playMusicEvent.Post(gameObject);
+            playingId = playMusicEvent.Post(PlaybackTarget);
         }
         else
         {
@@ -73,9 +92,6 @@ public class SceneMusicPlayer : MonoBehaviour
             return;
         }
 
-        musicStarted = true;
-        musicStopped = false;
-
         if (debugLogging)
         {
             Debug.Log(
@@ -84,85 +100,8 @@ public class SceneMusicPlayer : MonoBehaviour
         }
     }
 
-    private void StopMusic()
+    protected void OnDestroy()
     {
-        var text = GetComponent<TtsText>();
-        if (text != null) text.Stop();
-        if (!AkSoundEngine.IsInitialized())
-        {
-            return;
-        }
-
-        if (!musicStarted || musicStopped)
-        {
-            return;
-        }
-
-        musicStopped = true;
-
-        if (!string.IsNullOrWhiteSpace(stopMusicEventName))
-        {
-            uint stopPlayingId = AkSoundEngine.PostEvent(
-                stopMusicEventName,
-                gameObject
-            );
-
-            if (debugLogging)
-            {
-                Debug.Log(
-                    name + " posted scene music Stop Event by name. Playing ID: "
-                    + stopPlayingId
-                );
-            }
-
-            playingId = AkSoundEngine.AK_INVALID_PLAYING_ID;
-            return;
-        }
-
-        if (stopMusicEvent != null && stopMusicEvent.IsValid())
-        {
-            uint stopPlayingId = stopMusicEvent.Post(gameObject);
-
-            if (debugLogging)
-            {
-                Debug.Log(
-                    name + " posted scene music Stop Event. Playing ID: "
-                    + stopPlayingId
-                );
-            }
-
-            playingId = AkSoundEngine.AK_INVALID_PLAYING_ID;
-            return;
-        }
-
-        if (playingId == AkSoundEngine.AK_INVALID_PLAYING_ID)
-        {
-            return;
-        }
-
-        AkSoundEngine.StopPlayingID(
-            playingId,
-            stopFadeMilliseconds,
-            stopFadeCurve
-        );
-
-        if (debugLogging)
-        {
-            Debug.Log(name + " stopped scene music by Playing ID.");
-        }
-
-        playingId = AkSoundEngine.AK_INVALID_PLAYING_ID;
-    }
-
-    private void OnDisable()
-    {
-        StopMusic();
-    }
-
-    private void OnDestroy()
-    {
-        StopMusic();
-
         if (bankLoaded
             && unloadBankOnDestroy
             && bankToLoad != null

@@ -25,14 +25,18 @@ namespace AK
         static const AkUniqueID G = 84696440U;
         static const AkUniqueID LORE_COLLISION = 264866792U;
         static const AkUniqueID MUTE_PLAYERPOSITIONTONE_AIRBORNE = 2549646816U;
-        static const AkUniqueID PLAY_BROADCAST_DRUMS = 2403889813U;
+        static const AkUniqueID PLAY_BROADCAST_TICK = 2138430365U;
         static const AkUniqueID PLAY_CLOUD = 145119921U;
+        static const AkUniqueID PLAY_CMAJORSCALECN = 4100829809U;
         static const AkUniqueID PLAY_COFFEE = 1012391550U;
+        static const AkUniqueID PLAY_CREDITS = 2970769112U;
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_END_CREDITS = 2949884818U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_FOREST = 207755397U;
+        static const AkUniqueID PLAY_GAME_TITLE = 4123851415U;
         static const AkUniqueID PLAY_GROUND0 = 1148704825U;
+        static const AkUniqueID PLAY_GROUNDSFX = 1497791424U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_JUMP_RANDOMVO = 495578665U;
         static const AkUniqueID PLAY_L2_1 = 3475640672U;
@@ -72,12 +76,30 @@ namespace AK
         static const AkUniqueID PLAY_RANDOMVO = 820981162U;
         static const AkUniqueID PLAY_STARTVO = 2419452367U;
         static const AkUniqueID PLAY_SUCCESSVO = 2158585690U;
+        static const AkUniqueID PLAY_TITLE = 3849537216U;
+        static const AkUniqueID PLAY_TUTORIAL = 283731184U;
         static const AkUniqueID PLAY_TUTORIAL_START = 4069469053U;
         static const AkUniqueID PLAY_TUTORIAL_VOICES = 3614464626U;
         static const AkUniqueID PLAY_WALL0 = 562855446U;
+        static const AkUniqueID PLAY_WALLSFX = 729683827U;
         static const AkUniqueID PLAY_WIN = 2955987680U;
+        static const AkUniqueID PLAY_WINSFX = 4192513573U;
         static const AkUniqueID PLAY_XPULSE = 3778343913U;
         static const AkUniqueID PULSE_PLAYERPOSITIONTONE_XPULSE = 2431650291U;
+        static const AkUniqueID SET_CLOUDCLIMAX = 2584365085U;
+        static const AkUniqueID SET_CLOUDLAYER1 = 3342340245U;
+        static const AkUniqueID SET_CLOUDLAYER2 = 3342340246U;
+        static const AkUniqueID SET_CLOUDOUTRO = 3905568434U;
+        static const AkUniqueID SET_CN = 108388249U;
+        static const AkUniqueID SET_COFFEEB1 = 2170256337U;
+        static const AkUniqueID SET_COFFEEB2 = 2170256338U;
+        static const AkUniqueID SET_COFFEEB3 = 2170256339U;
+        static const AkUniqueID SET_COFFEEOUTRO = 204599459U;
+        static const AkUniqueID SET_FORESTLAYER1 = 551443993U;
+        static const AkUniqueID SET_FORESTLAYER2 = 551443994U;
+        static const AkUniqueID SET_FORESTLAYER3 = 551443995U;
+        static const AkUniqueID SET_FORESTOUTRO = 3355700478U;
+        static const AkUniqueID START_GAME = 1114964412U;
         static const AkUniqueID STOP_ALL_LORE = 1981237384U;
         static const AkUniqueID STOP_END_CREDITS = 1902799896U;
         static const AkUniqueID STOP_FOOTSTEPS = 2963349357U;
@@ -98,12 +120,9 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID CLOUD_B1 = 1522068880U;
-                static const AkUniqueID CLOUD_B2 = 1522068883U;
-                static const AkUniqueID CLOUD_B3 = 1522068882U;
-                static const AkUniqueID CLOUD_B4 = 1522068885U;
+                static const AkUniqueID CLOUD_CLIMAX = 58968699U;
+                static const AkUniqueID CLOUD_LAYERS = 3134999537U;
                 static const AkUniqueID CLOUD_OUTRO = 1894821564U;
-                static const AkUniqueID CLOUD_T34 = 1794864920U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace CLOUD_BRANCHING
@@ -129,11 +148,22 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID FOREST_ENDING = 242565924U;
-                static const AkUniqueID FOREST_INTRO = 2629624105U;
                 static const AkUniqueID FOREST_LAYER = 1257194736U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace FOREST_INOUT
+
+        namespace LANGUAGE
+        {
+            static const AkUniqueID GROUP = 2441027675U;
+
+            namespace STATE
+            {
+                static const AkUniqueID CN = 1853303386U;
+                static const AkUniqueID ENG = 529726535U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace LANGUAGE
 
         namespace LOADING_STATE
         {
@@ -146,6 +176,23 @@ namespace AK
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace LOADING_STATE
+
+        namespace MUSICSTATES
+        {
+            static const AkUniqueID GROUP = 3103015060U;
+
+            namespace STATE
+            {
+                static const AkUniqueID CLOUD_LEVEL = 2282027U;
+                static const AkUniqueID COFFEESHOP_LEVEL = 2655931314U;
+                static const AkUniqueID CREDITS = 2201105581U;
+                static const AkUniqueID FOREST_LEVEL = 4286836357U;
+                static const AkUniqueID LOADING = 3573931707U;
+                static const AkUniqueID MAINTITLE = 2189086104U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID TUTORIAL = 3762955427U;
+            } // namespace STATE
+        } // namespace MUSICSTATES
 
     } // namespace STATES
 
@@ -238,12 +285,16 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID CLOUDS_LAYERS = 3572665816U;
         static const AkUniqueID DUCKING = 2712164154U;
+        static const AkUniqueID FOREST_LAYERS = 3869869475U;
         static const AkUniqueID JUMP_HINTTONE_DISTANCE = 930156571U;
         static const AkUniqueID LOADING_RTPC = 2930467551U;
+        static const AkUniqueID MUSIC_VOLUME = 1006694123U;
         static const AkUniqueID PLAYER_POSITIONTONE_VOLUME = 1766625469U;
         static const AkUniqueID PLAYER_X_PAN = 1047257139U;
         static const AkUniqueID PLAYER_Y_PITCH = 926379701U;
+        static const AkUniqueID SFX_VOLUME = 1564184899U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;
@@ -265,15 +316,17 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID BROADCAST = 649003210U;
-        static const AkUniqueID DIALOGUE_BUS = 573466488U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID NARRATION_AI_ = 3920982602U;
         static const AkUniqueID NARRATION_ME_ = 3584738722U;
         static const AkUniqueID NAV = 377197776U;
         static const AkUniqueID PLAYER_SFX = 817096458U;
         static const AkUniqueID PLAYERPOSITIONTONE_BUS = 120894080U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID SFX_CHILD = 4292287381U;
         static const AkUniqueID VO = 1534528548U;
+        static const AkUniqueID VOICE = 3170124113U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES

@@ -3,39 +3,186 @@
 	<States>
 		<WorkUnit Name="Default Work Unit" ID="{5C3751BB-CDDA-439B-B9D8-6FFCFBE8A4BF}" PersistMode="Standalone">
 			<ChildrenList>
-				<StateGroup Name="Coffee_Branching" ID="{7E3D025A-256E-4EFB-AC6B-C6C77FB7963C}">
-					<ChildrenList>
-						<State Name="None" ID="{E0A386CD-D688-409B-9E9E-55C143587DC0}"/>
-						<State Name="Coffee_B1" ID="{F29561A3-0D3A-49C5-A911-9CA7BA2BEBC9}"/>
-						<State Name="Coffee_B2" ID="{F7F04244-A1B3-4204-8BB3-1DE98B128260}"/>
-						<State Name="Coffee_B3" ID="{013D4881-412D-4992-858D-2D3673C717D7}"/>
-						<State Name="Coffee_Outro" ID="{6247F64E-C309-4B1B-B2B0-08505FB4DEE7}"/>
-					</ChildrenList>
-				</StateGroup>
-				<StateGroup Name="Forest_InOut" ID="{CC53F9F8-68A1-43D2-BFFB-B06F0EA14E9A}">
-					<ChildrenList>
-						<State Name="None" ID="{A80BAFBF-3A14-45E2-90D4-DACF09AF62DE}"/>
-						<State Name="Forest_Intro" ID="{BBD5164E-D911-44A6-83A6-A677FF1BE7E3}"/>
-						<State Name="Forest_Ending" ID="{1ABCD5A8-A176-42B8-AF7C-B5C417F5CFC5}"/>
-						<State Name="Forest_Layer" ID="{3BCA8D5B-5EF3-4555-9FE4-2EEE1DB14780}"/>
-					</ChildrenList>
-				</StateGroup>
-				<StateGroup Name="Cloud_Branching" ID="{10044C64-4542-4AD4-9E40-AD10BE5D400F}">
-					<ChildrenList>
-						<State Name="None" ID="{E60C455E-AE52-4384-993C-3CBE1166F394}"/>
-						<State Name="Cloud_B1" ID="{9EB1FEB9-D8CA-4A34-9349-11263EFBE4D8}"/>
-						<State Name="Cloud_B2" ID="{B214F730-E529-45F6-95A4-10619331550C}"/>
-						<State Name="Cloud_B3" ID="{FEDA578B-2300-43E7-B7E7-079F47070F24}"/>
-						<State Name="Cloud_B4" ID="{163C97CB-1728-4423-AFFF-02BF629A993B}"/>
-						<State Name="Cloud_T34" ID="{0579D74E-53F5-43E6-9C92-0453626B7023}"/>
-						<State Name="Cloud_Outro" ID="{15B27A64-FBA5-499F-80C1-BDA1B684E84F}"/>
-					</ChildrenList>
-				</StateGroup>
 				<StateGroup Name="Loading_State" ID="{33C9D688-3B88-46E8-BE90-EBCE4D107AC9}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{4EEB331D-6F0B-4FBB-9BB9-A884DAA2F64F}"/>
-						<State Name="Loop" ID="{9E50D593-9DB8-4333-B16A-480313DEEDE0}"/>
-						<State Name="Finish" ID="{2B94A19A-D0C1-4A84-95EB-0DBE61A37DAA}"/>
+						<State Name="Loop" ID="{9E50D593-9DB8-4333-B16A-480313DEEDE0}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Finish" ID="{2B94A19A-D0C1-4A84-95EB-0DBE61A37DAA}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="MusicStates" ID="{7C157A5E-4CFD-4B22-BBF8-91C684E1325E}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{48BFC975-C64A-4660-BFB8-2D853316D692}"/>
+						<State Name="Loading" ID="{F726E092-05F8-440C-B0B2-957CA9E53892}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="MainTitle" ID="{1D150A69-03C4-4878-A4F3-62B8EF102536}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Cloud_Level" ID="{9A842AB9-CC4D-47D2-BE53-D5182F680B3D}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Forest_Level" ID="{82C472BB-8224-4671-A635-02BAD6B5C6E5}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="CoffeeShop_Level" ID="{F5CD54A8-31E8-4F60-B469-549E0E375CBA}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Credits" ID="{01D3FBE3-D48F-4CEA-ACED-4E0B6C001432}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Tutorial" ID="{7F22B77D-192C-496D-97C0-B103552C30EC}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+					</ChildrenList>
+				</StateGroup>
+				<Folder Name="LevelBranching" ID="{CF405A15-DBAA-4BB7-9669-BAA5E094FCF4}" ShortID="774161555">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<StateGroup Name="Coffee_Branching" ID="{7E3D025A-256E-4EFB-AC6B-C6C77FB7963C}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<State Name="None" ID="{E0A386CD-D688-409B-9E9E-55C143587DC0}"/>
+								<State Name="Coffee_B1" ID="{F29561A3-0D3A-49C5-A911-9CA7BA2BEBC9}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</State>
+								<State Name="Coffee_B2" ID="{F7F04244-A1B3-4204-8BB3-1DE98B128260}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</State>
+								<State Name="Coffee_B3" ID="{013D4881-412D-4992-858D-2D3673C717D7}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</State>
+								<State Name="Coffee_Outro" ID="{6247F64E-C309-4B1B-B2B0-08505FB4DEE7}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</State>
+							</ChildrenList>
+						</StateGroup>
+						<StateGroup Name="Forest_InOut" ID="{CC53F9F8-68A1-43D2-BFFB-B06F0EA14E9A}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<State Name="None" ID="{A80BAFBF-3A14-45E2-90D4-DACF09AF62DE}"/>
+								<State Name="Forest_Ending" ID="{1ABCD5A8-A176-42B8-AF7C-B5C417F5CFC5}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</State>
+								<State Name="Forest_Layer" ID="{3BCA8D5B-5EF3-4555-9FE4-2EEE1DB14780}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</State>
+							</ChildrenList>
+						</StateGroup>
+						<StateGroup Name="Cloud_Branching" ID="{10044C64-4542-4AD4-9E40-AD10BE5D400F}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<State Name="None" ID="{E60C455E-AE52-4384-993C-3CBE1166F394}"/>
+								<State Name="Cloud_Layers" ID="{9EB1FEB9-D8CA-4A34-9349-11263EFBE4D8}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</State>
+								<State Name="Cloud_Climax" ID="{B214F730-E529-45F6-95A4-10619331550C}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</State>
+								<State Name="Cloud_Outro" ID="{15B27A64-FBA5-499F-80C1-BDA1B684E84F}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</State>
+							</ChildrenList>
+						</StateGroup>
+					</ChildrenList>
+				</Folder>
+				<StateGroup Name="Language" ID="{75C08F9F-F2EC-4CC4-9CA1-2AA51C5C10A0}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{BC9523DC-5852-46AD-A28C-200047B80AF6}"/>
+						<State Name="Eng" ID="{F17130C6-ED4C-4923-836D-20C351EBE3D5}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="CN" ID="{58629B33-34F3-41B5-8DB3-9AC3ACF5B91D}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

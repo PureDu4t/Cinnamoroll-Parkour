@@ -36,6 +36,8 @@ public class DeathSceneResetTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (LoadingInteractionGate.TryDefer(this, other.gameObject,
+            () => { if (other != null) OnTriggerEnter2D(other); })) return;
         if (respawnStarted || !other.CompareTag(playerTag))
         {
             return;

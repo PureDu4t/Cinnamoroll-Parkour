@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc7bd65106da4be6890f8379ed10619, type: 3}
+  m_Name: 67F78139-5922-41C8-ACD5-D8449A0EE0BF
+  m_EditorClassIdentifier: 
+  objectName: Set_CloudClimax
+  id: 2584365085
+  guid: 67F78139-5922-41C8-ACD5-D8449A0EE0BF
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1

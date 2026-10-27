@@ -2703,8 +2703,6 @@ GameObject:
   - component: {fileID: 179125500}
   - component: {fileID: 179125503}
   - component: {fileID: 179125502}
-  - component: {fileID: 179125505}
-  - component: {fileID: 179125504}
   - component: {fileID: 1941712647}
   m_Layer: 0
   m_Name: LevelSelectSystem
@@ -2783,42 +2781,6 @@ MonoBehaviour:
   moveDownFiveKey: 274
   confirmKey: 101
   cancelKey: 27
---- !u!114 &179125504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179125499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7bcf50b096240ef9cc46ba377f65eec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerKey: 275
-  eventToPlay:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: fa8bdaa0b94264d86856930161a2106a, type: 2}
---- !u!114 &179125505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179125499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d425dc60119e54ddb836064f9c57a548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerKey: 276
-  eventToPlay:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: fa8bdaa0b94264d86856930161a2106a, type: 2}
-  playChance: 1
-  cooldown: 0
 --- !u!1 &195181335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2829,7 +2791,6 @@ GameObject:
   m_Component:
   - component: {fileID: 195181338}
   - component: {fileID: 195181337}
-  - component: {fileID: 195181336}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -2837,36 +2798,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &195181336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195181335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a4987c422ec439c94d05a44dd284d67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bankToLoad:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  unloadBankOnDestroy: 0
-  playMusicEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a7bc331c9e9b6416b96a97c9ad3724bb, type: 2}
-  stopMusicEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: c477f065c26284fa1879cd7998fc3556, type: 2}
-  playMusicEventName: 
-  stopMusicEventName: 
-  stopFadeMilliseconds: 200
-  stopFadeCurve: 4
-  debugLogging: 0
 --- !u!114 &195181337
 MonoBehaviour:
   m_ObjectHideFlags: 0

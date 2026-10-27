@@ -3,42 +3,106 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{E3ADEA0B-6846-4C63-A4BB-B579431EFAD4}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="Player_Y_Pitch" ID="{4C36F1ED-902F-4B3E-BB04-36461CADA361}">
+				<Folder Name="Volume_Control" ID="{30A17CEB-999B-4EA6-AC6B-A273D1C7CD42}" ShortID="300867335">
 					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-						<Property Name="Max" Type="Real64" Value="2400"/>
+						<Property Name="Color" Type="int16" Value="8"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="Player_X_Pan" ID="{F379228B-8AAA-4716-AE8E-D06D05D24D17}">
+					<ChildrenList>
+						<GameParameter Name="Music_Volume" ID="{6317EED3-50CD-495C-9897-43C4A8096933}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="8"/>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="SFX_Volume" ID="{6895F8A5-823F-4E59-92EE-B27026E58555}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="8"/>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Ducking" ID="{F7259D1B-E51B-4750-ACC6-332B5ECD7BC2}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="8"/>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="Max" Type="Real64" Value="0"/>
+								<Property Name="Min" Type="Real64" Value="-48"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Nav" ID="{34357162-F36D-49E8-965A-40B65862B31D}" ShortID="227328915">
 					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-						<Property Name="Min" Type="Real64" Value="-100"/>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="Player_PositionTone_Volume" ID="{5DCC8410-A708-4ED9-A97C-7981EA9608C7}">
+					<ChildrenList>
+						<GameParameter Name="Player_Y_Pitch" ID="{4C36F1ED-902F-4B3E-BB04-36461CADA361}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="Max" Type="Real64" Value="2400"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Player_X_Pan" ID="{F379228B-8AAA-4716-AE8E-D06D05D24D17}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="Min" Type="Real64" Value="-100"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Player_PositionTone_Volume" ID="{5DCC8410-A708-4ED9-A97C-7981EA9608C7}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="InitialValue" Type="Real64" Value="-96"/>
+								<Property Name="Max" Type="Real64" Value="0"/>
+								<Property Name="Min" Type="Real64" Value="-96"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Jump_HintTone_Distance" ID="{EE273CD8-815C-493A-8E2E-F1D74B284491}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Levels" ID="{A44FC5CF-0F47-45DE-B33D-F0B5A8F97680}" ShortID="845573078">
 					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="-96"/>
-						<Property Name="Max" Type="Real64" Value="0"/>
-						<Property Name="Min" Type="Real64" Value="-96"/>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="Ducking" ID="{F7259D1B-E51B-4750-ACC6-332B5ECD7BC2}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-						<Property Name="Max" Type="Real64" Value="0"/>
-						<Property Name="Min" Type="Real64" Value="-48"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="Jump_HintTone_Distance" ID="{EE273CD8-815C-493A-8E2E-F1D74B284491}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="Loading_RTPC" ID="{311F9509-D8B7-478F-88D2-BE099196DC99}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-					</PropertyList>
-				</GameParameter>
+					<ChildrenList>
+						<GameParameter Name="Loading_RTPC" ID="{311F9509-D8B7-478F-88D2-BE099196DC99}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Forest_Layers" ID="{04751E97-BE76-44E3-BBF9-E495E52ED702}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Clouds_Layers" ID="{D73A836B-DC77-4D8C-BB4F-0E83734EC2B1}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

@@ -156,6 +156,13 @@ crashlytics-build.properties
 # Temp Install Files
 **/WwiseUnityIntegration_*_Src.zip
 
+# Generated Wwise SoundBank binaries and converted audio (regenerate locally).
+# Keep the Wwise project, source audio and Unity bank-reference .asset files.
+*.bnk
+*.bnk.meta
+*.wem
+*.wem.meta
+
 ####################################################
 ###################### VSCode ######################
 ####################################################
@@ -212,6 +219,9 @@ crashlytics-build.properties
 # Exported game builds, old installers and ZIPs kept under APP.
 /Cinnamoroll Parkour/APP/
 
+# Local delivery archive; keep outside GitHub source history.
+/mi_yu_wwise_final_part_1.zip
+
 # Generated native debug symbols (not needed to run the game).
 **/*.dSYM/
 **/*.dSYM.meta
@@ -236,7 +246,7 @@ mono_crash.*
 *.rej
 
 # Wwise authoring caches and generated export output.
-# Unity's imported Assets/WwiseData banks are intentionally retained.
+# Unity bank-reference assets and metadata are retained; binary payloads are ignored above.
 **/[Ww]wise/**/.cache/
 **/[Ww]wise/**/.backup/
 **/[Ww]wise/**/GeneratedSoundBanks/
@@ -247,6 +257,6 @@ mono_crash.*
 /Cinnamoroll Parkour/Assets/StreamingAssets/SherpaOnnx/tts-models/vits-melo-tts-zh_en/
 /Cinnamoroll Parkour/Assets/StreamingAssets/SherpaOnnx/tts-models/vits-melo-tts-zh_en.meta
 
-# Keep required runtime/source files: other .onnx profiles, .wav, .bnk,
-# .wem, .dll, .dylib, .a, .bundle and ordinary Unity .meta files.
+# Keep required runtime/source files: other .onnx profiles, .wav,
+# .dll, .dylib, .a, .bundle and ordinary Unity .meta files.
 # Required large binaries should use Git LFS instead of blanket ignore rules.

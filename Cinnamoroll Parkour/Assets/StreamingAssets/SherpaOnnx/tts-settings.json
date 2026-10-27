@@ -4,7 +4,7 @@
     "buildOnlyActiveProfile": false,
     "cache": {
         "offlineTtsEnabled": true,
-        "offlineTtsPoolSize": 4,
+        "offlineTtsPoolSize": 1,
         "resultCacheEnabled": true,
         "resultCacheSize": 8,
         "audioClipEnabled": true,

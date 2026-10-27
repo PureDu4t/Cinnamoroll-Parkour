@@ -1,0 +1,200 @@
+{
+    "entries": [
+        {
+            "chineseText": "按艺进入关卡",
+            "englishText": "Press E to Start adventure",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "按替进入教学",
+            "englishText": "Press T for Tutorial",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "按[en:S]进行语音设置",
+            "englishText": "Press S for Voice settings",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "按[en:Escape]退出游戏",
+            "englishText": "Press escape to Quit game",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第一关。",
+            "englishText": "Level 1.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第二关。",
+            "englishText": "Level 2.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第三关。",
+            "englishText": "Level 3.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第四关。",
+            "englishText": "Level 4.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第五关。",
+            "englishText": "Level 5.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第六关。",
+            "englishText": "Level 6.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第七关。",
+            "englishText": "Level 7.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第八关。",
+            "englishText": "Level 8.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第九关。",
+            "englishText": "Level 9.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第十关。",
+            "englishText": "Level 10.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第十一关。",
+            "englishText": "Level 11.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第十二关。",
+            "englishText": "Level 12.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第十三关。",
+            "englishText": "Level 13.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第十四关。",
+            "englishText": "Level 14.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "第十五关。",
+            "englishText": "Level 15.",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "",
+            "englishText": "",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "",
+            "englishText": "",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "",
+            "englishText": "",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "",
+            "englishText": "",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "",
+            "englishText": "",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "",
+            "englishText": "",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "",
+            "englishText": "",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "",
+            "englishText": "",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        },
+        {
+            "chineseText": "",
+            "englishText": "",
+            "usePlayerSpeechSettings": true,
+            "language": 0,
+            "speechSpeed": 2.0
+        }
+    ]
+}

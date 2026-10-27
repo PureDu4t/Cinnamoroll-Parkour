@@ -19,11 +19,11 @@ public class GameTtsManager : MonoBehaviour
     private readonly Dictionary<string, AudioClip> clips = new Dictionary<string, AudioClip>();
     private TtsService service;
     private AudioSource source;
-    private Task initialization;
+    private Task initialization = Task.CompletedTask;
     private Task tail = Task.CompletedTask;
     private Task prewarming = Task.CompletedTask;
     private Task externalPreparation = Task.CompletedTask;
-    private readonly SemaphoreSlim synthesisGate = new SemaphoreSlim(1, 1);
+    private SemaphoreSlim synthesisGate;
     private readonly Queue<(string text, float speed, string profile)> prewarmQueue =
         new Queue<(string, float, string)>();
     private int requestVersion;
@@ -34,6 +34,12 @@ public class GameTtsManager : MonoBehaviour
     private bool playerLocked;
     private TtsText lastText;
     private uint inlinePlayingId = AkSoundEngine.AK_INVALID_PLAYING_ID;
+    private const float InterruptFadeSeconds = 0.008f;
+    // Audio thread states: 0 = normal, 1 = fading out, 2 = silent.
+    private int audioFadeState;
+    private volatile int outputSampleRate;
+    private float audioFadeGain = 1f; // Accessed only by the audio thread.
+    private Task interruptFade = Task.CompletedTask;
     public bool IsSpeakingFor(UnityEngine.Object owner) => activeOwner == owner;
 
     public static GameTtsManager GetOrCreate()
@@ -44,32 +50,21 @@ public class GameTtsManager : MonoBehaviour
 
     private void Awake()
     {
+        outputSampleRate = AudioSettings.outputSampleRate;
+        AudioSettings.OnAudioConfigurationChanged += OnAudioConfigurationChanged;
         source = gameObject.AddComponent<AudioSource>();
         source.playOnAwake = false;
         source.spatialBlend = 0f;
         source.loop = false;
+        ApplyTtsVolume();
+        GameAudioSettings.VolumeChanged += ApplyTtsVolume;
 
-        // Wwise listeners do not replace Unity's AudioListener.
-        if (FindFirstObjectByType<AudioListener>() == null)
-        {
-            GameObject listenerObject = Camera.main != null ? Camera.main.gameObject : gameObject;
-            listenerObject.AddComponent<AudioListener>();
-        }
-
-        service = new TtsService();
-        initialization = InitializeAsync();
-    }
-
-    private async Task InitializeAsync()
-    {
-        try
-        {
-            await service.InitializeAsync();
-        }
-        catch (Exception exception)
-        {
-            Debug.LogError("TTS 初始化失败：" + exception.Message);
-        }
+        // Keep the Unity listener independent of both scene cameras and the TTS engine.
+        PersistentAudioListener.EnsureExists();
+        var runtime = SharedTtsRuntime.GetOrCreate();
+        service = runtime.Service;
+        initialization = runtime.Initialization;
+        synthesisGate = runtime.SynthesisGate;
     }
 
     private void Start()
@@ -90,7 +85,7 @@ public class GameTtsManager : MonoBehaviour
     {
         foreach (var step in steps)
             if (step.kind == TtsText.StepKind.Speech)
-                prewarmQueue.Enqueue((step.text, Mathf.Clamp(speed, 0.5f, 4f), profile));
+                prewarmQueue.Enqueue((step.text, GameSpeechSettings.ClampSpeed(speed), step.profile ?? profile));
     }
 
     public void RefreshScenePrewarm()
@@ -115,7 +110,8 @@ public class GameTtsManager : MonoBehaviour
             {
                 await GetOrGenerateClipAsync(item.text, item.speed, item.profile,
                     () => !destroyed && activeOwner == null && !GameSpeechSettings.IsChoosing);
-                if (!destroyed && !clips.ContainsKey(ClipKey(item.text, item.speed, item.profile)))
+                if (!destroyed && !clips.ContainsKey(ClipKey(item.text, item.speed, item.profile))
+                    && !SharedMenuSpeech.TryGet(ClipKey(item.text, item.speed, item.profile), out _))
                     prewarmQueue.Enqueue(item);
             }
             catch (Exception exception)
@@ -148,18 +144,24 @@ public class GameTtsManager : MonoBehaviour
         if (owner is TtsText textComponent) lastText = textComponent;
         SetPlayerLocked(lockPlayer);
         Task previous = tail;
-        Task<bool> operation = SpeakAfterAsync(previous, steps, Mathf.Clamp(speed, 0.5f, 4f), profile, version, owner);
+        Task<bool> operation = SpeakAfterAsync(previous, steps, GameSpeechSettings.ClampSpeed(speed), profile, version, owner);
         tail = operation;
         return operation;
     }
 
-    private string ClipKey(string text, float speed, string profile) => profile + "\n"
+    internal static string ClipKey(string text, float speed, string profile) => profile + "\n"
         + speed.ToString("R", System.Globalization.CultureInfo.InvariantCulture) + "\n" + text;
+
+    internal void SharePreparedSpeech(string text, float speed, string profile)
+    {
+        string key = ClipKey(text, speed, profile);
+        if (clips.TryGetValue(key, out var clip)) SharedMenuSpeech.Store(key, clip);
+    }
 
     /// <summary>Prepare startup prompts without playing them; shares the normal speech cache.</summary>
     public Task PrepareSpeechAsync(string text, float speed, string profile)
     {
-        Task operation = PrepareSpeechCoreAsync(externalPreparation, text, Mathf.Clamp(speed, 0.5f, 4f), profile);
+        Task operation = PrepareSpeechCoreAsync(externalPreparation, text, GameSpeechSettings.ClampSpeed(speed), profile);
         externalPreparation = operation;
         return operation;
     }
@@ -182,17 +184,21 @@ public class GameTtsManager : MonoBehaviour
         {
             // Serialize synthesis/model changes, including work canceled during native generation.
             await previous;
+            await interruptFade;
             if (!IsCurrent(version)) return false;
             bool hasSpeech = steps.Exists(step => step.kind == TtsText.StepKind.Speech);
             if (hasSpeech)
             {
-                await initialization;
+                if (steps.Exists(step => step.kind == TtsText.StepKind.Speech
+                    && !clips.ContainsKey(ClipKey(step.text, speed, step.profile ?? profile))
+                    && !SharedMenuSpeech.TryGet(ClipKey(step.text, speed, step.profile ?? profile), out _)))
+                    await initialization;
                 if (!IsCurrent(version)) return false;
                 // Keep scene-local audio for replay. Generate in order while earlier clips play.
                 foreach (var step in steps)
                 {
                     if (step.kind != TtsText.StepKind.Speech) continue;
-                    Task<AudioClip> clipTask = PrepareClipAfterAsync(preparation, step.text, speed, profile, version);
+                    Task<AudioClip> clipTask = PrepareClipAfterAsync(preparation, step.text, speed, step.profile ?? profile, version);
                     preparedClips.Add(step, clipTask);
                     preparation = clipTask;
                 }
@@ -207,6 +213,7 @@ public class GameTtsManager : MonoBehaviour
                     case TtsText.StepKind.Speech:
                         AudioClip readyClip = await preparedClips[step];
                         if (!IsCurrent(version) || readyClip == null) return false;
+                        Volatile.Write(ref audioFadeState, 0);
                         source.clip = readyClip;
                         source.Play();
                         Debug.Log("TTS 开始播放：" + step.text);
@@ -259,6 +266,7 @@ public class GameTtsManager : MonoBehaviour
     {
         string key = ClipKey(text, speed, profile);
         if (clips.TryGetValue(key, out AudioClip cached)) return cached;
+        if (SharedMenuSpeech.TryGet(key, out cached)) return cached;
         await synthesisGate.WaitAsync();
         try
         {
@@ -330,6 +338,54 @@ public class GameTtsManager : MonoBehaviour
 
     private bool IsCurrent(int version) => !destroyed && version == requestVersion;
 
+    private void ApplyTtsVolume()
+    {
+        if (source != null) source.volume = GameAudioSettings.TtsVolume;
+    }
+
+    private void OnAudioConfigurationChanged(bool deviceWasChanged)
+        => outputSampleRate = AudioSettings.outputSampleRate;
+
+    private void OnAudioFilterRead(float[] data, int channels)
+    {
+        int state = Volatile.Read(ref audioFadeState);
+        if (state == 0)
+        {
+            audioFadeGain = 1f;
+            return;
+        }
+        if (state == 2)
+        {
+            Array.Clear(data, 0, data.Length);
+            return;
+        }
+        if (channels <= 0) return;
+        float decrement = 1f / (Math.Max(1, outputSampleRate) * InterruptFadeSeconds);
+        for (int i = 0; i < data.Length; i += channels)
+        {
+            audioFadeGain = Math.Max(0f, audioFadeGain - decrement);
+            for (int channel = 0; channel < channels && i + channel < data.Length; channel++)
+                data[i + channel] *= audioFadeGain;
+        }
+        if (audioFadeGain <= 0f) Interlocked.CompareExchange(ref audioFadeState, 2, 1);
+    }
+
+    private async Task FadeOutAndStopAsync()
+    {
+        Volatile.Write(ref audioFadeState, 1);
+        // A short fallback also releases playback if the audio device is suspended.
+        double deadline = Time.realtimeSinceStartupAsDouble + 0.1;
+        while (!destroyed && source != null && source.isPlaying
+            && Volatile.Read(ref audioFadeState) == 1 && Time.realtimeSinceStartupAsDouble < deadline)
+            await Task.Yield();
+        if (source != null)
+        {
+            source.Stop();
+            source.clip = null;
+        }
+        Volatile.Write(ref audioFadeState, 0);
+    }
+
     public void Stop()
     {
         var stoppedText = activeOwner as TtsText;
@@ -339,8 +395,13 @@ public class GameTtsManager : MonoBehaviour
         activeOwner = null;
         if (source != null)
         {
-            source.Stop();
-            source.clip = null;
+            if (destroyed || !isActiveAndEnabled || !source.isPlaying)
+            {
+                source.Stop();
+                source.clip = null;
+            }
+            else if (interruptFade.IsCompleted)
+                interruptFade = FadeOutAndStopAsync();
         }
         if (stoppedText != null) stoppedText.NotifyStopped();
     }
@@ -374,29 +435,20 @@ public class GameTtsManager : MonoBehaviour
     {
         foreach (AudioClip clip in clips.Values)
         {
-            if (clip != null) Destroy(clip);
+            if (clip != null && !SharedMenuSpeech.Owns(clip)) Destroy(clip);
         }
         clips.Clear();
     }
 
     private void OnDisable() => Stop();
 
-    private async void OnDestroy()
+    private void OnDestroy()
     {
+        GameAudioSettings.VolumeChanged -= ApplyTtsVolume;
+        AudioSettings.OnAudioConfigurationChanged -= OnAudioConfigurationChanged;
         destroyed = true;
         Stop();
         ClearClips();
-        // Avoid freeing native ONNX objects during initialization or synthesis.
-        try
-        {
-            await initialization;
-            await tail;
-            await prewarming;
-            try { await externalPreparation; } catch (Exception) { /* Reported by the loading UI. */ }
-        }
-        finally
-        {
-            service?.Dispose();
-        }
+        // The persistent SharedTtsRuntime owns native model cleanup.
     }
 }

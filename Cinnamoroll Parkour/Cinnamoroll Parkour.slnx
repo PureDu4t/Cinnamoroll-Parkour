@@ -52,6 +52,7 @@
   <Project Path="Unity.Addressables.DocExampleCode.Editor.Tests.csproj" />
   <Project Path="Unity.Services.Core.csproj" />
   <Project Path="Unity.VisualScripting.Flow.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.PerformanceTesting.csproj" />
   <Project Path="Unity.2D.Tilemap.Extras.Editor.csproj" />
   <Project Path="AK.Wwise.Unity.Timeline.csproj" />
@@ -72,7 +73,6 @@
   <Project Path="Unity.Rider.Editor.csproj" />
   <Project Path="Unity.VisualScripting.State.csproj" />
   <Project Path="Unity.InternalAPIEditorBridge.001.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="UnityEditor.UI.csproj" />
   <Project Path="Unity.Analytics.DataPrivacy.csproj" />
   <Project Path="AK.Wwise.Unity.Timeline.Editor.csproj" />
@@ -155,6 +155,7 @@
   <Project Path="Unity.RenderPipelines.Universal.Runtime.Player.csproj" />
   <Project Path="Unity.Services.Core.Player.csproj" />
   <Project Path="Unity.VisualScripting.Flow.Player.csproj" />
+  <Project Path="Assembly-CSharp.Player.csproj" />
   <Project Path="Unity.PerformanceTesting.Player.csproj" />
   <Project Path="AK.Wwise.Unity.Timeline.Player.csproj" />
   <Project Path="Unity.TextMeshPro.Player.csproj" />
@@ -164,7 +165,6 @@
   <Project Path="Unity.InternalAPIEngineBridge.001.Player.csproj" />
   <Project Path="AK.Wwise.Unity.API.WwiseTypes.Player.csproj" />
   <Project Path="Unity.VisualScripting.State.Player.csproj" />
-  <Project Path="Assembly-CSharp.Player.csproj" />
   <Project Path="Unity.Analytics.DataPrivacy.Player.csproj" />
   <Project Path="Unity.Services.Core.Configuration.Player.csproj" />
   <Project Path="Unity.Services.Core.Environments.Internal.Player.csproj" />

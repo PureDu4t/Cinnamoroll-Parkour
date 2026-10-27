@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private Quaternion startRotation;
 
     public int LastMoveDirection { get; private set; } = 1;
+    public event System.Action PositionReset;
 
     private void Awake()
     {
@@ -83,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
         rb.position = startPosition;
         rb.rotation = startRotation.eulerAngles.z;
         transform.SetPositionAndRotation(startPosition, startRotation);
+        PositionReset?.Invoke();
         UpdateVisualFacing();
     }
 

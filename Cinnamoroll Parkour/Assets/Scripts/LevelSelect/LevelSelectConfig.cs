@@ -13,8 +13,11 @@ public class LevelSelectConfig : ScriptableObject
         [Tooltip("Unity中对应关卡Scene的名字。")]
         public string sceneName;
 
-        [Tooltip("选中该关卡时设置的Wwise Switch。")]
-        public AK.Wwise.Switch announcementSwitch;
+        [InspectorName("中文 TTS 文本"), TextArea(2, 6)]
+        public string chineseTtsText;
+        [InspectorName("英文 TTS 文本"), TextArea(2, 6)]
+        public string englishTtsText;
+
     }
 
     [Tooltip("按照需要播报的顺序填写。选关界面可以填关卡，教学界面可以填教学语音。")]

@@ -502,6 +502,15 @@ MonoBehaviour:
     sceneName: Tutorial
     quitApplication: 0
   debugLogging: 0
+  mainMenuSpeech:
+  - chineseText: "\u6309\u827A\u8FDB\u5165\u5173\u5361"
+    englishText: Press E to Start adventure
+  - chineseText: "\u6309\u66FF\u8FDB\u5165\u6559\u5B66"
+    englishText: Press T for Tutorial
+  - chineseText: "\u6309[en:S]\u8FDB\u884C\u8BED\u97F3\u8BBE\u7F6E"
+    englishText: Press S for Voice settings
+  - chineseText: "\u6309[en:Escape]\u9000\u51FA\u6E38\u620F"
+    englishText: Press escape to Quit game
 --- !u!1 &729880710
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,7 +662,6 @@ GameObject:
   m_Component:
   - component: {fileID: 931569061}
   - component: {fileID: 931569060}
-  - component: {fileID: 931569059}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -661,36 +669,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &931569059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931569058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a4987c422ec439c94d05a44dd284d67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bankToLoad:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 16d45e18054ce410abb23f4f29f7151a, type: 2}
-  unloadBankOnDestroy: 1
-  playMusicEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a9b34e30b81194819a5ceae861a6bb29, type: 2}
-  stopMusicEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 7c2d38de5c18c44a3908f1df5f4ef5b3, type: 2}
-  playMusicEventName: Play_MX_Menu
-  stopMusicEventName: Stop_MX_Menu
-  stopFadeMilliseconds: 1000
-  stopFadeCurve: 4
-  debugLogging: 0
 --- !u!114 &931569060
 MonoBehaviour:
   m_ObjectHideFlags: 0

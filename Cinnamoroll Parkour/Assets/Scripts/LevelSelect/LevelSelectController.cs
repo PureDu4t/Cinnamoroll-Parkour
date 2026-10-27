@@ -2,11 +2,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(AkGameObj))]
 public class LevelSelectController : MonoBehaviour
 {
     [Header("Level Configuration")]
-    [Tooltip("包含15关Scene和Wwise Switch的配置文件。")]
+    [Tooltip("包含关卡 Scene 和中英文 TTS 文本的配置文件。")]
     [SerializeField] private LevelSelectConfig config;
 
     [Tooltip("进入选关页面时默认选中的关卡。1代表第一关。")]
@@ -15,19 +14,6 @@ public class LevelSelectController : MonoBehaviour
     [Header("Scene Navigation")]
     [Tooltip("按Esc时返回的主界面Scene名称。")]
     [SerializeField] private string mainMenuSceneName = "MainMenu";
-
-    [Header("Wwise")]
-    [Tooltip("统一播放关卡播报的Wwise Event。")]
-    [SerializeField] private AK.Wwise.Event playLevelSelectionEvent;
-
-    [Tooltip("按E确认关卡时播放的Wwise Event，例如玉桂狗叫声。")]
-    [SerializeField] private AK.Wwise.Event confirmSelectionEvent;
-
-    [Tooltip("确认Event缺失或播放失败时，等待多久再切换Scene。")]
-    [SerializeField] private float confirmLoadDelay = 0.35f;
-
-    [Tooltip("确认Event如果一直没有结束，最多等待多久再切换Scene。")]
-    [SerializeField] private float maximumConfirmWaitTime = 1.5f;
 
     [Header("Keys")]
     [SerializeField] private KeyCode previousLevelKey =
@@ -49,7 +35,6 @@ public class LevelSelectController : MonoBehaviour
     private int selectedIndex;
     private bool isLoadingSelectedLevel;
     private bool hasPlayedInitialSelectionAnnouncement;
-    private bool confirmEventFinished;
     public int SelectedLevel => selectedIndex + 1;
     public int LevelCount => config != null ? config.LevelCount : 0;
     public void SelectFromUI(int index)
@@ -75,10 +60,46 @@ public class LevelSelectController : MonoBehaviour
             return;
         }
 
+        StartCoroutine(RestoreSelectionMusicState());
         selectedIndex = WrapIndex(startingLevel - 1);
 
-        // 暂时不在Start中播放，避免SoundBank尚未加载完成。
+        // 进入页面的说明由 LT_Start 播放，选关播报在切换时触发。
         Debug.Log("Currently selected level: " + (selectedIndex + 1));
+    }
+
+    private IEnumerator RestoreSelectionMusicState()
+    {
+        // The loading flow requests the destination State before its Cue.
+        // Do not override Loading while entering this scene from Main Menu.
+        while (TtsSceneLoading.IsLoading(gameObject.scene) || GameSpeechSettings.IsChoosing)
+            yield return null;
+        var settings = Resources.Load<TtsLoadingAudioSettings>("TtsLoadingAudioSettings");
+        if (settings == null)
+        {
+            Debug.LogWarning("选关页无法设置音乐 State：缺少 TtsLoadingAudioSettings。", this);
+            yield break;
+        }
+        var route = settings.sceneRoutes.Find(item => item != null
+            && item.sourceScene == gameObject.scene.name);
+        if (route == null || string.IsNullOrWhiteSpace(route.targetState)
+            || string.IsNullOrWhiteSpace(settings.loadingStateGroup))
+        {
+            Debug.LogWarning("请在 TtsLoadingAudioSettings 的 Scene Routes 配置选关页 Target State。", this);
+            yield break;
+        }
+        double deadline = Time.realtimeSinceStartupAsDouble + settings.initializationTimeout;
+        while (!AkSoundEngine.IsInitialized() && Time.realtimeSinceStartupAsDouble < deadline)
+            yield return null;
+        if (!AkSoundEngine.IsInitialized())
+        {
+            Debug.LogError("选关页设置 State 失败：Wwise 初始化超时。", this);
+            yield break;
+        }
+        var result = AkSoundEngine.SetState(settings.loadingStateGroup, route.targetState);
+        if (result != AKRESULT.AK_Success)
+            Debug.LogError("选关页设置 State 失败：" + settings.loadingStateGroup + "/" + route.targetState, this);
+        else
+            Debug.Log("进入选关页，已设置 State：" + settings.loadingStateGroup + "/" + route.targetState, this);
     }
 
     private void Update()
@@ -120,6 +141,7 @@ public class LevelSelectController : MonoBehaviour
     private void ChangeSelection(int amount)
     {
         selectedIndex = WrapIndex(selectedIndex + amount);
+        UiActionSfx.Play();
 
         Debug.Log("Currently selected level: " + (selectedIndex + 1));
 
@@ -130,6 +152,7 @@ public class LevelSelectController : MonoBehaviour
     {
         if (!hasPlayedInitialSelectionAnnouncement)
         {
+            UiActionSfx.Play();
             Debug.Log(
                 "Currently selected level: " + (selectedIndex + 1)
             );
@@ -160,33 +183,11 @@ public class LevelSelectController : MonoBehaviour
             return;
         }
 
-        TtsText.TryPlay(gameObject);
+        var text = GetComponent<TtsText>();
+        if (text == null) text = gameObject.AddComponent<TtsText>();
+        if (!text.PlayBilingual(level.chineseTtsText, level.englishTtsText))
+            TtsText.TryPlay(gameObject);
 
-        if (level.announcementSwitch == null)
-        {
-            Debug.LogError(
-                "Level " + (selectedIndex + 1)
-                + " has no Wwise Switch."
-            );
-
-            return;
-        }
-
-        if (playLevelSelectionEvent == null)
-        {
-            Debug.LogError(
-                "Play Level Selection Event is not configured."
-            );
-
-            return;
-        }
-
-        // 先告诉Wwise当前选择的是哪一关。
-        level.announcementSwitch.SetValue(gameObject);
-
-        // 再播放统一Event。
-        // Switch Container会根据刚才设置的Switch决定播放哪条语音。
-        playLevelSelectionEvent.Post(gameObject);
         hasPlayedInitialSelectionAnnouncement = true;
     }
 
@@ -205,67 +206,10 @@ public class LevelSelectController : MonoBehaviour
             return;
         }
 
-        StartCoroutine(LoadSelectedLevelAfterConfirm(level.sceneName));
-    }
-
-    private IEnumerator LoadSelectedLevelAfterConfirm(string sceneName)
-    {
         isLoadingSelectedLevel = true;
-        confirmEventFinished = false;
-
-        TtsText.TryPlay(gameObject);
-        if (confirmSelectionEvent != null)
-        {
-            confirmEventFinished = false;
-
-            uint playingId = confirmSelectionEvent.Post(
-                gameObject,
-                (uint)AkCallbackType.AK_EndOfEvent,
-                OnConfirmEventCallback,
-                this
-            );
-
-            if (playingId == AkSoundEngine.AK_INVALID_PLAYING_ID)
-            {
-                Debug.LogError(
-                    "Wwise could not play the level confirm Event."
-                );
-
-                if (confirmLoadDelay > 0f)
-                {
-                    yield return new WaitForSeconds(confirmLoadDelay);
-                }
-            }
-            else
-            {
-                float waitStartedAt = Time.time;
-                while (!confirmEventFinished
-                    && Time.time - waitStartedAt < maximumConfirmWaitTime)
-                {
-                    yield return null;
-                }
-            }
-        }
-
-        if (confirmSelectionEvent == null && confirmLoadDelay > 0f)
-        {
-            yield return new WaitForSeconds(confirmLoadDelay);
-        }
-
-        Debug.Log("Loading Scene: " + sceneName);
-        SceneManager.LoadScene(sceneName);
-    }
-
-    private void OnConfirmEventCallback(
-        object cookie,
-        AkCallbackType callbackType,
-        AkCallbackInfo callbackInfo
-    )
-    {
-        if (callbackType == AkCallbackType.AK_EndOfEvent)
-        {
-            confirmEventFinished = true;
-        }
+        UiActionSfx.Play();
+        Debug.Log("Loading Scene: " + level.sceneName);
+        SceneManager.LoadSceneAsync(level.sceneName, LoadSceneMode.Single);
     }
 
     private void ReturnToMainMenu()
@@ -276,7 +220,9 @@ public class LevelSelectController : MonoBehaviour
             return;
         }
 
-        SceneManager.LoadScene(mainMenuSceneName);
+        UiActionSfx.Play();
+        isLoadingSelectedLevel = true;
+        SceneManager.LoadSceneAsync(mainMenuSceneName, LoadSceneMode.Single);
     }
 
     private bool ValidateConfiguration()

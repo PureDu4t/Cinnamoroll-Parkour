@@ -39,6 +39,6 @@ public class SceneInteractionAction : MonoBehaviour, IInteractionAction
     private void LoadScene()
     {
         isLoading = true;
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
     }
 }

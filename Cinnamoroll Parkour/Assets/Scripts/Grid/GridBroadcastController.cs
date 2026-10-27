@@ -6,6 +6,13 @@ using UnityEngine.Serialization;
 [RequireComponent(typeof(AkGameObj))]
 public class GridBroadcastController : MonoBehaviour
 {
+    private enum ClockStartMode
+    {
+        SceneMusicEntry,
+        OnEnable,
+        Manual
+    }
+
     private enum BroadcastStartMode
     {
         FullMap,
@@ -98,8 +105,10 @@ public class GridBroadcastController : MonoBehaviour
     [SerializeField] private AK.Wwise.Event defaultBroadcastEvent;
 
     [FormerlySerializedAs("stepTickEvent")]
-    [Tooltip("Optional looping tick Event started with the broadcast and stopped when the broadcast ends.")]
-    [SerializeField] private AK.Wwise.Event broadcastLoopTickEvent;
+    [FormerlySerializedAs("broadcastLoopTickEvent")]
+    [Tooltip("Optional Wwise tick Event posted once on every broadcast clock beat, immediately before that beat's cell pitch Events.")]
+    [InspectorName("Play Tick")]
+    [SerializeField] private AK.Wwise.Event playTickEvent;
 
     [Tooltip("Optional: one Wwise Event per CellType. Leave empty if all cells use Default Broadcast Event.")]
     [SerializeField] private List<CellTypeEventMapping> cellTypeEvents =
@@ -153,14 +162,17 @@ public class GridBroadcastController : MonoBehaviour
     [Tooltip("Design Y for pitch step 0. Used only when Use Broadcast Minimum Y For Pitch is off.")]
     [SerializeField] private int minimumGridY = 1;
 
-    [Tooltip("Broadcast tempo. 120 BPM means one grid step every 0.5 seconds.")]
-    [SerializeField] private float beatsPerMinute = 120f;
+    [Header("Unity Beat Clock")]
+    [Min(1f)]
+    [Tooltip("Unity timing only; never sent to Wwise. 90 BPM = 2/3 second per beat. Call RestartClock after changing this value during Play Mode.")]
+    [SerializeField] private float beatsPerMinute = 90f;
+
+    [Tooltip("Scene Music Entry waits for the destination music segment after LoadingFinished. On Enable starts immediately. Manual waits for RestartClock().")]
+    [SerializeField] private ClockStartMode clockStartMode = ClockStartMode.SceneMusicEntry;
 
     [FormerlySerializedAs("beatsPerCell")]
     [Tooltip("How many beats each X-column step lasts.")]
     [SerializeField] private float beatsPerStep = 1f;
-    [Tooltip("Length of the looping drum source in seconds. MUS_Broadcast_Drums.wav is 32 seconds.")]
-    [SerializeField] private float drumLoopLengthSeconds = 32f;
 
     [FormerlySerializedAs("maxCellsPerBroadcast")]
     [Tooltip("0 means no limit. A positive number stops after this many X columns.")]
@@ -172,6 +184,7 @@ public class GridBroadcastController : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private bool debugLogging = true;
 
+    private BroadcastBeatClock beatClock;
     private Coroutine broadcastRoutine;
     private readonly List<ActiveBroadcastVoice> activeVoices =
         new List<ActiveBroadcastVoice>();
@@ -182,9 +195,6 @@ public class GridBroadcastController : MonoBehaviour
     private int currentBroadcastMinimumX;
     private int currentBroadcastMaximumX = 1;
     private int currentBroadcastMinimumY;
-    private AK.Wwise.Event activeLoopTickEvent;
-    private GameObject activeLoopTickGameObject;
-    private uint activeLoopTickPlayingId = AkSoundEngine.AK_INVALID_PLAYING_ID;
 
     public bool IsBroadcasting
     {
@@ -195,6 +205,79 @@ public class GridBroadcastController : MonoBehaviour
     {
         AutoAssignMissingReferences();
     }
+
+    public bool IsClockRunning => beatClock != null;
+
+    private void OnEnable()
+    {
+        beatClock = null;
+        if (clockStartMode == ClockStartMode.SceneMusicEntry)
+        {
+            TtsLoadingMusic.DestinationMusicEntered += OnDestinationMusicEntered;
+            TryStartClockFromLastMusicEntry();
+        }
+        else if (clockStartMode == ClockStartMode.OnEnable)
+        {
+            RestartClock();
+        }
+    }
+
+    /// <summary>Starts a new local beat epoch. Can be wired to a UnityEvent in Manual mode.</summary>
+    [ContextMenu("Restart Unity Beat Clock")]
+    public void RestartClock()
+    {
+        StartClockAt(AudioSettings.dspTime);
+    }
+
+    private void StartClockAt(double originDspTime)
+    {
+        if (!IsValidTempo())
+        {
+            Debug.LogError("Grid broadcast BPM must be a finite number above zero.", this);
+            return;
+        }
+        StopBroadcast();
+        beatClock = new BroadcastBeatClock(originDspTime, beatsPerMinute);
+        if (debugLogging) Debug.Log("Unity broadcast clock started from scene music Entry at "
+            + originDspTime.ToString("F3") + " DSP seconds; " + beatsPerMinute + " BPM.", this);
+    }
+
+    private void OnDestinationMusicEntered(string targetState, double entryDspTime)
+    {
+        if (clockStartMode != ClockStartMode.SceneMusicEntry
+            || beatClock != null
+            || !IsMusicStateForActiveScene(targetState)) return;
+        StartClockAt(entryDspTime);
+    }
+
+    private void TryStartClockFromLastMusicEntry()
+    {
+        if (beatClock != null || !TtsLoadingMusic.HasDestinationMusicEntry) return;
+        if (IsMusicStateForActiveScene(TtsLoadingMusic.LastDestinationMusicState))
+            StartClockAt(TtsLoadingMusic.LastDestinationMusicEntryDspTime);
+    }
+
+    private bool IsMusicStateForActiveScene(string state)
+    {
+        if (string.IsNullOrWhiteSpace(state)) return false;
+        var settings = Resources.Load<TtsLoadingAudioSettings>("TtsLoadingAudioSettings");
+        if (settings == null) return false;
+        try
+        {
+            return string.Equals(
+                settings.StateFor(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name),
+                state,
+                System.StringComparison.Ordinal
+            );
+        }
+        catch (System.InvalidOperationException)
+        {
+            return false;
+        }
+    }
+
+    private bool IsValidTempo() => beatsPerMinute > 0f
+        && !float.IsNaN(beatsPerMinute) && !float.IsInfinity(beatsPerMinute);
 
     private void Reset()
     {
@@ -252,8 +335,7 @@ public class GridBroadcastController : MonoBehaviour
     {
         bool hadActiveBroadcast =
             broadcastRoutine != null
-            || activeVoices.Count > 0
-            || activeLoopTickPlayingId != AkSoundEngine.AK_INVALID_PLAYING_ID;
+            || activeVoices.Count > 0;
 
         if (broadcastRoutine != null)
         {
@@ -261,7 +343,6 @@ public class GridBroadcastController : MonoBehaviour
             broadcastRoutine = null;
         }
 
-        StopBroadcastLoopTick();
         StopCurrentEvents();
 
         if (debugLogging && hadActiveBroadcast)
@@ -281,8 +362,13 @@ public class GridBroadcastController : MonoBehaviour
             return;
         }
 
-        // The drum has a one-instance limit. Finish the old source immediately before restarting.
-        StopBroadcastLoopTick(true);
+        if (beatClock == null)
+        {
+            Debug.LogWarning("Grid broadcast clock has not started. Call RestartClock or select an automatic Clock Start Mode.", this);
+            return;
+        }
+
+        // Keep the clock running while restarting/canceling a broadcast.
         StopBroadcast();
 
         List<BroadcastStep> steps = BuildBroadcastSteps(
@@ -301,7 +387,7 @@ public class GridBroadcastController : MonoBehaviour
         if (debugLogging)
         {
             Debug.Log(
-                "Grid broadcast started. Columns: " + steps.Count
+                "Grid broadcast queued for the next Unity beat. Columns: " + steps.Count
                 + ", Mode: " + startMode
                 + ", Direction: " + direction
                 + ", Layer Only: " + layerOnly
@@ -309,11 +395,10 @@ public class GridBroadcastController : MonoBehaviour
             );
         }
 
-        // Allocate/register before the drum starts; first-column allocation must not delay its onset.
+        // Prepare emitters before the scheduled beat to avoid first-column allocation delays.
         int requiredVoices = 0;
         foreach (var step in steps) requiredVoices = Mathf.Max(requiredVoices, step.cells.Count);
         for (int i = 0; i < requiredVoices; i++) EnsureVoiceGameObjectRegistered(GetVoiceGameObject(i));
-        StartBroadcastLoopTick();
         broadcastRoutine = StartCoroutine(PlayBroadcast(steps));
     }
 
@@ -471,117 +556,53 @@ public class GridBroadcastController : MonoBehaviour
 
     private IEnumerator PlayBroadcast(List<BroadcastStep> steps)
     {
-        double secondsPerStep = GetSecondsPerStep();
-        double fallbackOrigin = Time.realtimeSinceStartupAsDouble;
-        var clock = new BroadcastAudioClock(drumLoopLengthSeconds);
-        bool sourceClockSeen = false;
-        bool clockWarningReported = false;
-        // Submit the first column in the same Unity frame/audio command batch as the drum.
-        PlayStep(steps[0]);
-        int next = 1;
-        while (true)
+        var clock = beatClock;
+        double stepBeats = beatsPerStep;
+        double interval = clock.SecondsPerBeat * stepBeats;
+        long nextTick = clock.NextStepIndexAfter(AudioSettings.dspTime, stepBeats);
+        int nextColumn = 0;
+        bool stallReported = false;
+        while (nextColumn < steps.Count)
         {
-            double elapsed;
-            int position;
-            if (activeLoopTickPlayingId != AkSoundEngine.AK_INVALID_PLAYING_ID
-                && AkUnitySoundEngine.GetSourcePlayPosition(activeLoopTickPlayingId, out position, true) == AKRESULT.AK_Success)
+            double now = AudioSettings.dspTime;
+            double target = clock.TimeAtStep(nextTick, stepBeats);
+            if (now < target) { yield return null; continue; }
+            if (now - target >= interval)
             {
-                elapsed = clock.Observe(position / 1000.0);
-                sourceClockSeen = true;
-                fallbackOrigin = Time.realtimeSinceStartupAsDouble - elapsed;
-            }
-            else
-            {
-                elapsed = Time.realtimeSinceStartupAsDouble - fallbackOrigin;
-                if (!clockWarningReported && elapsed > .25 && activeLoopTickPlayingId != AkSoundEngine.AK_INVALID_PLAYING_ID)
+                // A long stall must not turn missed beats into a burst of columns.
+                // Keep all unread columns and resume on the next future clock beat.
+                nextTick = clock.NextStepIndexAfter(now, stepBeats);
+                if (!stallReported)
                 {
-                    Debug.LogWarning("Broadcast drum playback clock unavailable; using absolute realtime clock. Check Wwise source playback.", this);
-                    clockWarningReported = true;
+                    Debug.LogWarning("Grid broadcast: frame stall; unread columns will resume on the next Unity beat.", this);
+                    stallReported = true;
                 }
-                // A pending drum source must not advance columns before it begins playback.
-                if (!sourceClockSeen && activeLoopTickPlayingId != AkSoundEngine.AK_INVALID_PLAYING_ID && elapsed < 2)
-                { yield return null; continue; }
+                yield return null;
+                continue;
             }
-            if (next < steps.Count && elapsed >= next * secondsPerStep)
-            {
-                PlayStep(steps[next]);
-                next++;
-            }
-            // Let the final column keep its drum beat instead of immediately stopping the loop.
-            if (next == steps.Count && elapsed >= steps.Count * secondsPerStep) break;
+            PlayTick();
+            PlayStep(steps[nextColumn++]);
+            nextTick++;
             yield return null;
         }
-
-        StopBroadcastLoopTick();
+        // Preserve the final column's full beat before marking the broadcast complete.
+        double finishAt = clock.TimeAtStep(nextTick, stepBeats);
+        while (AudioSettings.dspTime < finishAt) yield return null;
         broadcastRoutine = null;
-
-        if (debugLogging)
-        {
-            Debug.Log("Grid broadcast finished.");
-        }
+        if (debugLogging) Debug.Log("Grid broadcast finished.");
     }
 
-    private float GetSecondsPerStep()
+    private void PlayTick()
     {
-        float safeBpm = Mathf.Max(1f, beatsPerMinute);
-        float safeBeatsPerStep = Mathf.Max(0.01f, beatsPerStep);
-
-        return 60f / safeBpm * safeBeatsPerStep;
-    }
-
-    private void StartBroadcastLoopTick()
-    {
-        if (broadcastLoopTickEvent == null
-            || !broadcastLoopTickEvent.IsValid())
+        if (playTickEvent == null || !playTickEvent.IsValid())
         {
             return;
         }
 
-        StopBroadcastLoopTick();
-
-        activeLoopTickEvent = broadcastLoopTickEvent;
-        activeLoopTickGameObject = GetPlaybackGameObject();
-        TtsText.TryPlay(gameObject);
-        activeLoopTickPlayingId = activeLoopTickEvent.Post(
-            activeLoopTickGameObject
-        );
-
-        if (activeLoopTickPlayingId == AkSoundEngine.AK_INVALID_PLAYING_ID)
+        if (playTickEvent.Post(GetPlaybackGameObject()) == AkSoundEngine.AK_INVALID_PLAYING_ID)
         {
-            Debug.LogError("Wwise could not play broadcast loop tick.");
-            activeLoopTickEvent = null;
-            activeLoopTickGameObject = null;
+            Debug.LogError("Wwise could not play the Grid Broadcast Play Tick Event.", this);
         }
-    }
-
-    private void StopBroadcastLoopTick(bool immediately = false)
-    {
-        var text = GetComponent<TtsText>();
-        if (text != null) text.Stop();
-        if (activeLoopTickPlayingId == AkSoundEngine.AK_INVALID_PLAYING_ID
-            || activeLoopTickEvent == null
-            || !activeLoopTickEvent.IsValid())
-        {
-            activeLoopTickPlayingId = AkSoundEngine.AK_INVALID_PLAYING_ID;
-            activeLoopTickEvent = null;
-            activeLoopTickGameObject = null;
-            return;
-        }
-
-        AkSoundEngine.ExecuteActionOnEvent(
-            activeLoopTickEvent.Id,
-            AkActionOnEventType.AkActionOnEventType_Stop,
-            activeLoopTickGameObject != null
-                ? activeLoopTickGameObject
-                : GetPlaybackGameObject(),
-            immediately ? 0 : stopFadeMilliseconds,
-            AkCurveInterpolation.AkCurveInterpolation_Linear,
-            activeLoopTickPlayingId
-        );
-
-        activeLoopTickPlayingId = AkSoundEngine.AK_INVALID_PLAYING_ID;
-        activeLoopTickEvent = null;
-        activeLoopTickGameObject = null;
     }
 
     private void PlayStep(BroadcastStep step)
@@ -1207,7 +1228,7 @@ public class GridBroadcastController : MonoBehaviour
             return false;
         }
 
-        if (beatsPerMinute <= 0f)
+        if (!IsValidTempo())
         {
             Debug.LogError(
                 "GridBroadcastController Beats Per Minute must be above 0."
@@ -1215,7 +1236,7 @@ public class GridBroadcastController : MonoBehaviour
             return false;
         }
 
-        if (beatsPerStep <= 0f)
+        if (beatsPerStep <= 0f || float.IsNaN(beatsPerStep) || float.IsInfinity(beatsPerStep))
         {
             Debug.LogError(
                 "GridBroadcastController Beats Per Step must be above 0."
@@ -1255,7 +1276,9 @@ public class GridBroadcastController : MonoBehaviour
 
     private void OnDisable()
     {
+        TtsLoadingMusic.DestinationMusicEntered -= OnDestinationMusicEntered;
         StopBroadcast();
+        beatClock = null;
         UnregisterVoiceGameObjects();
     }
 }

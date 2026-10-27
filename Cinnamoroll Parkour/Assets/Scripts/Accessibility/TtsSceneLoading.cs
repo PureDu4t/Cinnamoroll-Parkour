@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -17,7 +18,7 @@ public class TtsSceneLoading : MonoBehaviour
     private GUIStyle textStyle;
     private float progress;
     private bool failed, destroyed, finished;
-    private string status = "Loading...";
+    private string status = L("加载中……", "Loading...");
     private int sceneHandle;
     private readonly TtsSceneTransition sceneTransition = new TtsSceneTransition();
     private readonly List<AkEvent> deferredStartVoices = new List<AkEvent>();
@@ -35,9 +36,10 @@ public class TtsSceneLoading : MonoBehaviour
 
     private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        bool menuNeedsLoading = SharedMenuSpeech.IsMenu(scene.name) && !SharedMenuSpeech.IsReady();
         bool level = scene.name.StartsWith("Level ", StringComparison.Ordinal)
             && int.TryParse(scene.name.Substring(6), out _);
-        if (!level && scene.name != "Tutorial") return;
+        if (!level && scene.name != "Tutorial" && !menuNeedsLoading) return;
         loadingScenes.Add(scene.handle);
         foreach (var existing in FindObjectsByType<TtsSceneLoading>(FindObjectsInactive.Include, FindObjectsSortMode.None))
             if (existing.gameObject.scene == scene && existing.isActiveAndEnabled) return;
@@ -74,8 +76,10 @@ public class TtsSceneLoading : MonoBehaviour
         }
     }
 
-    private void PlayDeferredStartVoices()
+    private IEnumerator PlayDeferredStartVoices()
     {
+        // The closing frame still blocks gameplay input. Wait until TtsText can accept the deferred Start.
+        while (GameSpeechSettings.BlocksGameInput) yield return null;
         foreach (var voice in deferredStartVoices)
         {
             if (voice == null || !voice.isActiveAndEnabled) continue;
@@ -88,7 +92,7 @@ public class TtsSceneLoading : MonoBehaviour
     private async void LoadLevel()
     {
         failed = false;
-        status = "Loading...";
+        status = L("加载中……", "Loading...");
         progress = 0;
         try
         {
@@ -96,6 +100,10 @@ public class TtsSceneLoading : MonoBehaviour
             if (destroyed) return;
             manager = GameTtsManager.GetOrCreate();
             await music.BeginAsync();
+            if (destroyed) return;
+            if (SharedMenuSpeech.IsMenu(gameObject.scene.name))
+                await SharedMenuSpeech.PrepareAsync(manager, GameSpeechSettings.Language, GameSpeechSettings.Speed,
+                    value => { progress = value; music.SetProgress(value); });
             if (destroyed) return;
             var jobs = new List<GameTtsManager.PreparationRequest>();
             foreach (var text in FindObjectsByType<TtsText>(FindObjectsInactive.Include, FindObjectsSortMode.None))
@@ -116,23 +124,31 @@ public class TtsSceneLoading : MonoBehaviour
             var settings = Resources.Load<TtsLoadingAudioSettings>("TtsLoadingAudioSettings");
             string target = !string.IsNullOrWhiteSpace(sceneAfterLoading) ? sceneAfterLoading
                 : settings != null ? settings.TargetFor(gameObject.scene.name) : "";
-            status = "正在准备场景 / Preparing scene…";
+            status = L("正在准备场景……", "Preparing scene…");
             await sceneTransition.PrepareAsync(target);
             if (destroyed) return;
-            status = "加载完成，等待音乐过渡 / Finishing music transition…";
-            await music.FinishAsync();
+            // Reset branching/layer State before Wwise selects the destination music.
+            // Only the current scene's explicitly configured music initializers run here.
+            if (!sceneTransition.WillChangeScene)
+                foreach (var trigger in FindObjectsByType<AkTriggerEnter2D>(FindObjectsInactive.Exclude,
+                    FindObjectsSortMode.None))
+                    if (trigger.gameObject.scene.handle == sceneHandle)
+                        trigger.InitializeMusicForLoading();
+            status = L("加载完成，等待音乐过渡……", "Finishing music transition…");
+            await music.FinishAsync(settings != null
+                ? settings.StateFor(sceneTransition.WillChangeScene ? target : gameObject.scene.name) : "");
             if (destroyed) return;
             finished = true;
             loadingScenes.Remove(sceneHandle);
             closedFrame = Time.frameCount;
-            if (!sceneTransition.WillChangeScene) PlayDeferredStartVoices();
+            if (!sceneTransition.WillChangeScene) StartCoroutine(PlayDeferredStartVoices());
             sceneTransition.Activate();
         }
         catch (Exception exception)
         {
             if (destroyed) return;
             failed = true;
-            status = "加载失败，按 R 重试 / Loading failed. Press R to retry.";
+            status = L("加载失败，按 R 重试", "Loading failed. Press R to retry.");
             Debug.LogError("关卡 TTS 加载失败：" + exception.Message);
         }
     }
@@ -141,6 +157,8 @@ public class TtsSceneLoading : MonoBehaviour
     {
         if (failed && Input.GetKeyDown(KeyCode.R)) LoadLevel();
     }
+
+    private static string L(string chinese, string english) => GameSpeechSettings.Language == TtsText.SpeechLanguage.Chinese ? chinese : english;
 
     private void OnGUI()
     {
@@ -153,7 +171,7 @@ public class TtsSceneLoading : MonoBehaviour
         float y = Screen.height * 0.4f;
         PixelArtUi.Frame(new Rect(x - 30, y - 35, width + 60, 235),
             theme != null ? theme.panel : Color.white, theme != null ? theme.border : new Color(.7f, .8f, .95f));
-        GUI.Label(new Rect(x, y, width, 55), "Loading... " + Mathf.FloorToInt(progress * 100) + "%", textStyle);
+        GUI.Label(new Rect(x, y, width, 55), "加载中 / Loading... " + Mathf.FloorToInt(progress * 100) + "%", textStyle);
         PixelArtUi.Progress(new Rect(x, y + 75, width, 32), progress);
         GUI.Label(new Rect(x, y + 115, width, 75), status, textStyle);
     }

@@ -131,6 +131,9 @@ public class AkEvent : AkDragDropTriggerHandler
 
 	public override void HandleEvent(UnityEngine.GameObject in_gameObject)
 	{
+		// Only physical/interaction callbacks supply an object. Start/music callbacks remain independent.
+		if (UnityEngine.Application.isPlaying && in_gameObject != null
+			&& AkEventLoadingGate.Defer != null && AkEventLoadingGate.Defer(this, in_gameObject)) return;
 		var gameObj = useOtherObject && in_gameObject != null ? in_gameObject : gameObject;
 		soundEmitterObject = gameObj;
 		if (useOtherObject)

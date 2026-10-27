@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BrowserIcon_0: -4431723955820355010
+      BrowserIcon_1: 8026048721938573776
+      BrowserIcon_2: 1394237917244217900
+      BrowserIcon_3: -2842032025192460814
+      BrowserIcon_4: -7636649662205065063
+      BrowserIcon_5: 9198109726643459964
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,7 +10,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="DIalogue_Bus" ID="{02A2B534-4583-4BD8-A5D1-4149D29A9E3E}">
+						<Bus Name="Voice" ID="{02A2B534-4583-4BD8-A5D1-4149D29A9E3E}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="4"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -140,25 +140,69 @@
 								<Bus Name="Narration(AI)" ID="{BF0EEFA5-FDDD-4D81-A206-17E125850995}"/>
 							</ChildrenList>
 						</Bus>
-						<Bus Name="Nav" ID="{CC04263F-1DFD-460B-80E5-72C4FEAB8421}">
+						<Bus Name="Music" ID="{08D423A0-2E3E-48FB-A9FD-2584E3A18FBC}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{0185E65B-9331-4C06-934E-56DBAA3E28A0}" ShortID="2219226">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="Music_Volume" ID="{6317EED3-50CD-495C-9897-43C4A8096933}" WorkUnitID="{E3ADEA0B-6846-4C63-A4BB-B579431EFAD4}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{CE3396ED-1775-44DF-8647-7AE0C6CC70BE}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
+						<Bus Name="SFX" ID="{BC3413B3-01D2-4556-B864-E1CEE51F5A09}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="19"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
-								<Bus Name="PlayerPositionTone_Bus" ID="{CAC17DB5-BD6C-4799-A3A7-5E6DA407CC42}">
+								<Bus Name="SFX_Child" ID="{C7961CEF-6649-4F86-8249-BC084DAB8592}">
 									<PropertyList>
-										<Property Name="BusVolume" Type="Real64">
-											<ValueList>
-												<Value>-27</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Color" Type="int16" Value="19"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
+									<ChildrenList>
+										<Bus Name="Player_SFX" ID="{58AF5D52-CADC-4482-94B5-E6F29A736DCB}">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="19"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+										</Bus>
+									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
-											<RTPC Name="" ID="{98884830-43C8-4421-A001-70F66BED4B45}" ShortID="93083152">
+											<RTPC Name="" ID="{F058515D-365E-4C99-9D82-B09B47899BA9}" ShortID="236831480">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
 												</PropertyList>
@@ -168,7 +212,7 @@
 													</Reference>
 													<Reference Name="Curve">
 														<Custom>
-															<Curve Name="" ID="{771DB56B-7E91-4A62-8654-8A9A40058693}">
+															<Curve Name="" ID="{9153B0DF-1D52-430F-8526-8CB2FE2BCCAF}">
 																<PropertyList>
 																	<Property Name="Flags" Type="int32" Value="3"/>
 																</PropertyList>
@@ -203,119 +247,159 @@
 										</ObjectList>
 									</ObjectLists>
 								</Bus>
-								<Bus Name="Broadcast" ID="{BA28F6AC-5F12-42B6-A1A8-8B13A2A4A533}">
+								<Bus Name="Nav" ID="{CC04263F-1DFD-460B-80E5-72C4FEAB8421}">
 									<PropertyList>
 										<Property Name="Color" Type="int16" Value="19"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
-									<ObjectLists>
-										<ObjectList Name="Effects">
-											<EffectSlot Name="" ID="{FA9401B5-356C-4331-8F3D-7449CFBE7430}" ShortID="109025664">
-												<ReferenceList>
-													<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
-														<ObjectRef Name="New_Compressor" ID="{88F54D34-A1B8-4D10-9F23-15EAA2297A91}" WorkUnitID="{EA41AF7A-4169-4B1C-BAC3-F068C0221B3A}"/>
-													</Reference>
-												</ReferenceList>
-											</EffectSlot>
-											<EffectSlot Name="" ID="{5CABDB98-18BF-4762-8642-875CBEEF1AA8}" ShortID="461098985"/>
-										</ObjectList>
-									</ObjectLists>
+									<ChildrenList>
+										<Bus Name="PlayerPositionTone_Bus" ID="{CAC17DB5-BD6C-4799-A3A7-5E6DA407CC42}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-27</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Color" Type="int16" Value="19"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<RTPC Name="" ID="{98884830-43C8-4421-A001-70F66BED4B45}" ShortID="93083152">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="Ducking" ID="{F7259D1B-E51B-4750-ACC6-332B5ECD7BC2}" WorkUnitID="{E3ADEA0B-6846-4C63-A4BB-B579431EFAD4}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{771DB56B-7E91-4A62-8654-8A9A40058693}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-48</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>-30.9622641509434</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Log1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>-25.92453</XPos>
+																				<YPos>-5</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-5</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</ObjectList>
+											</ObjectLists>
+										</Bus>
+										<Bus Name="Broadcast" ID="{BA28F6AC-5F12-42B6-A1A8-8B13A2A4A533}">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="19"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{FA9401B5-356C-4331-8F3D-7449CFBE7430}" ShortID="109025664">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																<ObjectRef Name="New_Compressor" ID="{88F54D34-A1B8-4D10-9F23-15EAA2297A91}" WorkUnitID="{EA41AF7A-4169-4B1C-BAC3-F068C0221B3A}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+													<EffectSlot Name="" ID="{5CABDB98-18BF-4762-8642-875CBEEF1AA8}" ShortID="461098985"/>
+												</ObjectList>
+											</ObjectLists>
+										</Bus>
+									</ChildrenList>
 								</Bus>
-							</ChildrenList>
-						</Bus>
-						<AuxBus Name="Reverb" ID="{20E4FD48-F22F-4D6A-BEB8-AF26BE1EC4E2}">
-							<ChildrenList>
-								<AuxBus Name="Plate" ID="{073CC210-CDFC-4966-B3CA-2204E720D8BD}">
-									<PropertyList>
-										<Property Name="BusVolume" Type="Real64">
-											<ValueList>
-												<Value>-11</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ObjectLists>
-										<ObjectList Name="Effects">
-											<EffectSlot Name="" ID="{E41DA4A9-1370-4A1F-A1D7-6018236681CE}" ShortID="999666452">
-												<ReferenceList>
-													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-														<ObjectRef Name="New_RoomVerb" ID="{234E0F61-3732-415F-A86B-1A6D411D12FB}" WorkUnitID="{EA41AF7A-4169-4B1C-BAC3-F068C0221B3A}"/>
-													</Reference>
-												</ReferenceList>
-											</EffectSlot>
-										</ObjectList>
-									</ObjectLists>
+								<AuxBus Name="Reverb" ID="{20E4FD48-F22F-4D6A-BEB8-AF26BE1EC4E2}">
+									<ChildrenList>
+										<AuxBus Name="Plate" ID="{073CC210-CDFC-4966-B3CA-2204E720D8BD}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-11</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{E41DA4A9-1370-4A1F-A1D7-6018236681CE}" ShortID="999666452">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="New_RoomVerb" ID="{234E0F61-3732-415F-A86B-1A6D411D12FB}" WorkUnitID="{EA41AF7A-4169-4B1C-BAC3-F068C0221B3A}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+										</AuxBus>
+										<AuxBus Name="Med_Room" ID="{7C590B93-3C32-4CA6-8D41-D77B12EC90AD}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{EA24B2C8-EAF5-4374-800B-011812E981E0}" ShortID="929181119">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Room_Medium_Tiled" ID="{0C0A3A92-A571-4FDB-AB40-ACFED04E0217}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+										</AuxBus>
+									</ChildrenList>
 								</AuxBus>
-								<AuxBus Name="Med_Room" ID="{7C590B93-3C32-4CA6-8D41-D77B12EC90AD}">
-									<PropertyList>
-										<Property Name="BusVolume" Type="Real64">
-											<ValueList>
-												<Value>-8</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ObjectLists>
-										<ObjectList Name="Effects">
-											<EffectSlot Name="" ID="{EA24B2C8-EAF5-4374-800B-011812E981E0}" ShortID="929181119">
-												<ReferenceList>
-													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-														<ObjectRef Name="Room_Medium_Tiled" ID="{0C0A3A92-A571-4FDB-AB40-ACFED04E0217}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-													</Reference>
-												</ReferenceList>
-											</EffectSlot>
-										</ObjectList>
-									</ObjectLists>
-								</AuxBus>
-							</ChildrenList>
-						</AuxBus>
-						<Bus Name="SFX" ID="{C7961CEF-6649-4F86-8249-BC084DAB8592}">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="24"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-							<ChildrenList>
-								<Bus Name="Player_SFX" ID="{58AF5D52-CADC-4482-94B5-E6F29A736DCB}">
-									<PropertyList>
-										<Property Name="Color" Type="int16" Value="24"/>
-										<Property Name="OverrideColor" Type="bool" Value="True"/>
-									</PropertyList>
-								</Bus>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									<RTPC Name="" ID="{F058515D-365E-4C99-9D82-B09B47899BA9}" ShortID="236831480">
+									<RTPC Name="" ID="{03116B7A-F373-4069-9F42-42589A24E331}" ShortID="169390772">
 										<PropertyList>
 											<Property Name="PropertyName" Type="string" Value="BusVolume"/>
 										</PropertyList>
 										<ReferenceList>
 											<Reference Name="ControlInput">
-												<ObjectRef Name="Ducking" ID="{F7259D1B-E51B-4750-ACC6-332B5ECD7BC2}" WorkUnitID="{E3ADEA0B-6846-4C63-A4BB-B579431EFAD4}"/>
+												<ObjectRef Name="SFX_Volume" ID="{6895F8A5-823F-4E59-92EE-B27026E58555}" WorkUnitID="{E3ADEA0B-6846-4C63-A4BB-B579431EFAD4}"/>
 											</Reference>
 											<Reference Name="Curve">
 												<Custom>
-													<Curve Name="" ID="{9153B0DF-1D52-430F-8526-8CB2FE2BCCAF}">
+													<Curve Name="" ID="{02DA50D3-203C-44B7-B261-98F4C6AA867A}">
 														<PropertyList>
 															<Property Name="Flags" Type="int32" Value="3"/>
 														</PropertyList>
 														<PointList>
 															<Point>
-																<XPos>-48</XPos>
-																<YPos>0</YPos>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
 																<Flags>5</Flags>
 															</Point>
 															<Point>
-																<XPos>-30.9622641509434</XPos>
+																<XPos>100</XPos>
 																<YPos>0</YPos>
-																<Flags>0</Flags>
-																<SegmentShape>Log1</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>-25.92453</XPos>
-																<YPos>-5</YPos>
-																<Flags>0</Flags>
-															</Point>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>-5</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>

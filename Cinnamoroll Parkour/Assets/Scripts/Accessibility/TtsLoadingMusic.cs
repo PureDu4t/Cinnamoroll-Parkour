@@ -7,18 +7,30 @@ using AK.Wwise.Unity.WwiseAddressables;
 [RequireComponent(typeof(AkGameObj))]
 public class TtsLoadingMusic : MonoBehaviour
 {
+    public static event Action<string, double> DestinationMusicEntered;
+    public static bool HasDestinationMusicEntry { get; private set; }
+    public static string LastDestinationMusicState { get; private set; }
+    public static double LastDestinationMusicEntryDspTime { get; private set; }
+
     private TtsLoadingAudioSettings settings;
     private uint playingId;
     private bool bankLoaded, destroyed, rtpcFailed, finishRequested, released, eventEnded;
     private int playbackVersion;
     private TaskCompletionSource<bool> finishedCue;
-    private double releaseDeadline;
+    private TaskCompletionSource<bool> loadingStarted;
+    private bool awaitingDestinationMusicEntry;
+    private string requestedDestinationState;
     private float sentProgress = float.NaN;
     private float progress;
-    public bool HasMusic => settings != null && settings.HasLoadingEvent;
+    private double diagnosticLastTime;
+    private double diagnosticLastDsp;
+    private double diagnosticUntil;
+    public bool HasMusic => settings != null && settings.startGameEvent != null && settings.startGameEvent.IsValid();
 
     public static TtsLoadingMusic Create()
     {
+        var existing = FindFirstObjectByType<TtsLoadingMusic>();
+        if (existing != null) return existing;
         var root = new GameObject("TTS Loading Music");
         DontDestroyOnLoad(root);
         return root.AddComponent<TtsLoadingMusic>();
@@ -28,12 +40,16 @@ public class TtsLoadingMusic : MonoBehaviour
 
     public async Task BeginAsync()
     {
-        int version = ++playbackVersion;
-        finishRequested = released = eventEnded = rtpcFailed = false;
+        TraceAudioWindow("Begin loading");
+        finishRequested = released = rtpcFailed = false;
+        awaitingDestinationMusicEntry = false;
+        requestedDestinationState = null;
+        HasDestinationMusicEntry = false;
+        LastDestinationMusicState = null;
+        LastDestinationMusicEntryDspTime = 0;
         finishedCue = new TaskCompletionSource<bool>();
+        loadingStarted = new TaskCompletionSource<bool>();
         sentProgress = float.NaN;
-        if (playingId != 0 && AkSoundEngine.IsInitialized()) AkSoundEngine.StopPlayingID(playingId);
-        playingId = 0;
         if (!HasMusic) { SetProgress(0); return; }
         double deadline = Time.realtimeSinceStartupAsDouble + settings.initializationTimeout;
         while (!destroyed && !AkSoundEngine.IsInitialized() && Time.realtimeSinceStartupAsDouble < deadline)
@@ -45,6 +61,11 @@ public class TtsLoadingMusic : MonoBehaviour
             var bank = settings.soundBank.WwiseObjectReference.AddressableBank;
             if (!bankLoaded || bank.LoadState == BankLoadState.Unloaded)
             {
+                if (bank.LoadState == BankLoadState.Unloaded)
+                {
+                    ++playbackVersion;
+                    playingId = 0;
+                }
                 settings.soundBank.Load();
                 bankLoaded = true;
             }
@@ -53,6 +74,7 @@ public class TtsLoadingMusic : MonoBehaviour
             if (destroyed) throw new OperationCanceledException();
             if (bank.LoadState != BankLoadState.Loaded) throw new InvalidOperationException("加载音乐的 SoundBank 未加载成功。");
         }
+        GameAudioSettings.ApplyWwiseVolumes();
         GetComponent<AkGameObj>().Register();
         if (!string.IsNullOrWhiteSpace(settings.loadingStateGroup) && !string.IsNullOrWhiteSpace(settings.loadingInitialState))
         {
@@ -61,22 +83,68 @@ public class TtsLoadingMusic : MonoBehaviour
                 throw new InvalidOperationException("无法重置 Loading State：" + settings.loadingStateGroup + "/" + settings.loadingInitialState);
         }
         SetProgress(0);
-        // Register on the original Play Event: the transition Event only sets a State.
-        playingId = AkSoundEngine.PostEvent(settings.loadingEvent.Id, gameObject,
-            (uint)(AkCallbackType.AK_MusicSyncUserCue | AkCallbackType.AK_EndOfEvent),
-            (cookie, type, info) => OnMusicCallback(version, type, info), null);
-        if (playingId == AkSoundEngine.AK_INVALID_PLAYING_ID)
-            throw new InvalidOperationException("加载音乐 Event 无法播放：" + settings.loadingEvent.Name);
+        // Start_Game owns the persistent music instance and its Cue callbacks.
+        // Play_Loading is a separate request and must not replace that PlayingID.
+        if (playingId != 0 && AkSoundEngine.GetEventIDFromPlayingID(playingId) == 0)
+            eventEnded = true;
+        if (playingId == 0 || eventEnded)
+        {
+            eventEnded = false;
+            int version = ++playbackVersion;
+            playingId = AkSoundEngine.PostEvent(settings.startGameEvent.Id, gameObject,
+                (uint)(AkCallbackType.AK_MusicSyncUserCue | AkCallbackType.AK_MusicSyncEntry | AkCallbackType.AK_EndOfEvent),
+                (cookie, type, info) => OnMusicCallback(version, type, info), null);
+            if (playingId == AkSoundEngine.AK_INVALID_PLAYING_ID)
+                throw new InvalidOperationException("Start Game Event 无法播放：" + settings.startGameEvent.Name);
+        }
+        if (settings.HasLoadingEvent)
+        {
+            uint loadingRequestId = AkSoundEngine.PostEvent(settings.loadingEvent.Id, gameObject);
+            if (loadingRequestId == AkSoundEngine.AK_INVALID_PLAYING_ID)
+                throw new InvalidOperationException("Loading Event 无法播放：" + settings.loadingEvent.Name);
+        }
+        // A fast/cached load must not overwrite Loading before the audio thread
+        // actually enters it. The loop's Cue acknowledges the requested state.
+        double entryDeadline = Time.realtimeSinceStartupAsDouble + settings.transitionTimeout;
+        while (!destroyed && !loadingStarted.Task.IsCompleted)
+        {
+            if (eventEnded) throw new InvalidOperationException("总音乐已结束，无法进入 Loading。");
+            if (Time.realtimeSinceStartupAsDouble >= entryDeadline)
+                throw new TimeoutException("未收到 " + settings.loadingStartedCueName + "，请检查 Loading 路径及 SoundBank。");
+            await Task.Yield();
+        }
+        if (destroyed) throw new OperationCanceledException();
+        await loadingStarted.Task;
+        Debug.Log("TTS Loading：Loading 音乐已开始，可准备目标关卡。");
     }
 
     private void OnMusicCallback(int version, AkCallbackType type, AkCallbackInfo info)
     {
         if (destroyed || version != playbackVersion) return;
         if (type == AkCallbackType.AK_EndOfEvent) eventEnded = true;
-        else if (finishRequested && type == AkCallbackType.AK_MusicSyncUserCue
-            && info is AkMusicSyncCallbackInfo musicInfo
-            && string.Equals(musicInfo.userCueName, settings.finishedCueName, StringComparison.Ordinal))
-            finishedCue.TrySetResult(true);
+        else if (type == AkCallbackType.AK_MusicSyncEntry && info is AkMusicSyncCallbackInfo
+            && awaitingDestinationMusicEntry)
+        {
+            awaitingDestinationMusicEntry = false;
+            HasDestinationMusicEntry = true;
+            LastDestinationMusicState = requestedDestinationState;
+            LastDestinationMusicEntryDspTime = AudioSettings.dspTime;
+            Debug.Log("TTS Loading：目标音乐段已进入 State " + requestedDestinationState
+                + "；Unity DSP 时间 " + LastDestinationMusicEntryDspTime.ToString("F3") + " 秒。");
+            DestinationMusicEntered?.Invoke(LastDestinationMusicState, LastDestinationMusicEntryDspTime);
+        }
+        else if (type == AkCallbackType.AK_MusicSyncUserCue && info is AkMusicSyncCallbackInfo musicInfo)
+        {
+            string cueName = musicInfo.userCueName;
+            Debug.Log("TTS Loading：Event " + settings.startGameEvent.Name + " 收到 Custom Cue：" + cueName);
+            if (string.Equals(cueName?.Trim(), settings.loadingStartedCueName?.Trim(), StringComparison.Ordinal))
+                loadingStarted?.TrySetResult(true);
+            if (finishRequested && string.Equals(cueName?.Trim(), settings.finishedCueName?.Trim(), StringComparison.Ordinal))
+            {
+                awaitingDestinationMusicEntry = true;
+                finishedCue.TrySetResult(true);
+            }
+        }
     }
 
     public void SetProgress(float normalized)
@@ -93,7 +161,7 @@ public class TtsLoadingMusic : MonoBehaviour
         }
     }
 
-    public async Task FinishAsync()
+    public async Task FinishAsync(string targetState)
     {
         // A scene AkBank may force-unload the shared bank. Restore the music session
         // before requesting the transition instead of posting into an unloaded bank.
@@ -103,19 +171,29 @@ public class TtsLoadingMusic : MonoBehaviour
             Debug.LogWarning("TTS Loading：共享 SoundBank 已被卸载，重新加载音乐后再请求过渡。");
             await BeginAsync();
         }
+        if (HasMusic && (playingId == 0 || eventEnded))
+            await BeginAsync();
         SetProgress(1);
-        if (!HasMusic) { Destroy(gameObject); return; }
-        if (!settings.HasStingerEvent || string.IsNullOrWhiteSpace(settings.finishedCueName))
-            throw new InvalidOperationException("请配置 Transition Event 和 Finished Cue Name。");
+        if (!HasMusic)
+            throw new InvalidOperationException("请配置播放总 Music Switch Container 的 Start Game Event；收到 Custom Cue 前不会切换场景。");
+        if (string.IsNullOrWhiteSpace(settings.finishedCueName)
+            || string.IsNullOrWhiteSpace(settings.loadingStateGroup) || string.IsNullOrWhiteSpace(targetState))
+            throw new InvalidOperationException("请配置 State Group、Target State 和 Finished Cue Name。");
         if (!finishRequested)
         {
+            TraceAudioWindow("Request destination: " + targetState);
+            // Arm the callback before requesting the destination State.
             finishRequested = true;
-            uint id = AkSoundEngine.PostEvent(settings.transitionStingerEvent.Id, gameObject);
-            if (id == AkSoundEngine.AK_INVALID_PLAYING_ID)
+            awaitingDestinationMusicEntry = false;
+            requestedDestinationState = targetState;
+            var result = AkSoundEngine.SetState(settings.loadingStateGroup, targetState);
+            if (result != AKRESULT.AK_Success)
             {
                 finishRequested = false;
-                throw new InvalidOperationException("Loading Transition Event 无法触发。");
+                throw new InvalidOperationException("无法切换音乐 State：" + settings.loadingStateGroup + "/" + targetState);
             }
+            Debug.Log("TTS Loading：场景尚未激活，已请求音乐 State " + settings.loadingStateGroup + "/" + targetState
+                + "；等待 " + settings.finishedCueName + "。监听 Event：" + settings.startGameEvent.Name);
         }
         double deadline = Time.realtimeSinceStartupAsDouble + settings.transitionTimeout;
         while (!destroyed && !finishedCue.Task.IsCompleted)
@@ -127,9 +205,8 @@ public class TtsLoadingMusic : MonoBehaviour
         }
         if (destroyed) throw new OperationCanceledException();
         await finishedCue.Task;
-        // A persistent emitter carries post-exit audio across Scenes until the Event ends.
+        // The unified music emitter continues playing the destination music across Scenes.
         released = true;
-        releaseDeadline = Time.realtimeSinceStartupAsDouble + settings.tailTimeout;
         Debug.Log("TTS Loading：收到 " + settings.finishedCueName + "，允许进入场景。");
     }
 
@@ -137,19 +214,40 @@ public class TtsLoadingMusic : MonoBehaviour
 
     private void Update()
     {
-        if (released)
-        {
-            if (eventEnded || Time.realtimeSinceStartupAsDouble >= releaseDeadline) Destroy(gameObject);
-            return;
-        }
+        double now = Time.realtimeSinceStartupAsDouble;
+        double dsp = AudioSettings.dspTime;
+        if (diagnosticLastTime > 0 && now < diagnosticUntil && now - diagnosticLastTime > 0.1)
+            Debug.LogFormat(LogType.Warning, LogOption.NoStacktrace, this,
+                "[Music transition] Main thread gap={0:F0} ms; Unity DSP advance={1:F0} ms; scene={2}; focused={3}; music ended={4}",
+                (now - diagnosticLastTime) * 1000, (dsp - diagnosticLastDsp) * 1000,
+                UnityEngine.SceneManagement.SceneManager.GetActiveScene().name, Application.isFocused, eventEnded);
+        diagnosticLastTime = now;
+        diagnosticLastDsp = dsp;
+        if (released) return;
         if (!rtpcFailed && settings != null && AkSoundEngine.IsInitialized()) SetProgress(progress);
     }
+
+    private void TraceAudioWindow(string action)
+    {
+        diagnosticUntil = Time.realtimeSinceStartupAsDouble + 10;
+        Debug.LogFormat(LogType.Log, LogOption.NoStacktrace, this,
+            "[Music transition] {0}; realtime={1:F3}; DSP={2:F3}; focused={3}",
+            action, Time.realtimeSinceStartupAsDouble, AudioSettings.dspTime, Application.isFocused);
+    }
+
+    private void OnApplicationFocus(bool focused) => TraceAudioWindow("Window focus: " + focused);
+    private void OnApplicationPause(bool paused) => TraceAudioWindow("Application pause: " + paused);
 
     private void OnDestroy()
     {
         destroyed = true;
+        DestinationMusicEntered = null;
+        HasDestinationMusicEntry = false;
+        LastDestinationMusicState = null;
+        LastDestinationMusicEntryDspTime = 0;
         ++playbackVersion;
         finishedCue?.TrySetCanceled();
+        loadingStarted?.TrySetCanceled();
         if (AkSoundEngine.IsInitialized())
         {
             if (playingId != 0 && !eventEnded) AkSoundEngine.StopPlayingID(playingId);

@@ -1,0 +1,1 @@
+Built-in imagegen: six sheets of newly drawn intermediate pixel-art Cinnamoroll DJ poses, referencing the original wide sheet. Quiet upper area for HUD. Extracted 58 actual frames (one generated sheet contains 8 rather than 10). No optical-flow or crossfade frames. Unity plays 30 FPS, GIF uses repeating 30/30/40 ms delays for approximately 30 FPS. Full-screen background retained.

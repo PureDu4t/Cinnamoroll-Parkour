@@ -1,3 +1,5 @@
+> 当前 GridBroadcast 已改用 Unity DSP 节拍时钟，见 [UnityBroadcastClock.md](UnityBroadcastClock.md)。以下记录的是之前鼓音源位置时钟的修复过程。
+
 # Broadcast 鼓声与格子声同步修复
 
 ## 证据

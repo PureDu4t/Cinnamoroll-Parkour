@@ -16,54 +16,82 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 16d45e18054ce410abb23f4f29f7151a, type: 2}
+  startGameEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b6001f5ccccd3460c8b46db7fc109bd4, type: 2}
   loadingEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 91e047ccb63d1429380aae90416890d5, type: 2}
-  transitionStingerEvent:
+  uiActionEvent:
     idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6bfc20b17d6fb4a859a6f93af481e94c, type: 2}
+    valueGuidInternal:
+    WwiseObjectReference: {fileID: 11400000, guid: fa8bdaa0b94264d86856930161a2106a, type: 2}
   loadingRtpcName: Loading_RTPC
+  loadingStartedCueName: LoadingStarted
   finishedCueName: LoadingFinished
-  loadingStateGroup: Loading_State
-  loadingInitialState: Loop
+  loadingStateGroup: MusicStates
+  loadingInitialState: Loading
   transitionTimeout: 30
-  tailTimeout: 15
-  bpm: 90
-  beatsPerBar: 4
   startupTargetScene: Main Menu
+  startupTargetState: MainTitle
   sceneRoutes:
+  - sourceScene: Main Menu
+    targetScene:
+    targetState: MainTitle
+  - sourceScene: Level Select
+    targetScene:
+    targetState: MainTitle
   - sourceScene: Tutorial
     targetScene: Tutorial
-  - sourceScene: 
+    targetState: Tutorial
+  - sourceScene: Level 1
     targetScene: Level 1
-  - sourceScene: 
+    targetState: CoffeeShop_Level
+  - sourceScene: Level 2
     targetScene: Level 2
-  - sourceScene: 
+    targetState: CoffeeShop_Level
+  - sourceScene: Level 3
     targetScene: Level 3
-  - sourceScene: 
+    targetState: CoffeeShop_Level
+  - sourceScene: Level 4
     targetScene: Level 4
-  - sourceScene: 
+    targetState: CoffeeShop_Level
+  - sourceScene: Level 5
     targetScene: Level 5
-  - sourceScene: 
+    targetState: CoffeeShop_Level
+  - sourceScene: Level 6
     targetScene: Level 6
-  - sourceScene: 
+    targetState: Forest_Level
+  - sourceScene: Level 7
     targetScene: Level 7
-  - sourceScene: 
+    targetState: Forest_Level
+  - sourceScene: Level 8
     targetScene: Level 8
-  - sourceScene: 
+    targetState: Forest_Level
+  - sourceScene: Level 9
     targetScene: Level 9
-  - sourceScene: 
+    targetState: Forest_Level
+  - sourceScene: Level 10
     targetScene: Level 10
-  - sourceScene: 
+    targetState: Forest_Level
+  - sourceScene: Level 11
     targetScene: Level 11
-  - sourceScene: 
+    targetState: Cloud_Level
+  - sourceScene: Level 12
     targetScene: Level 12
-  - sourceScene: 
+    targetState: Cloud_Level
+  - sourceScene: Level 13
     targetScene: Level 13
-  - sourceScene: 
+    targetState: Cloud_Level
+  - sourceScene: Level 14
     targetScene: Level 14
-  - sourceScene: 
+    targetState: Cloud_Level
+  - sourceScene: Level 15
     targetScene: Level 15
+    targetState: Cloud_Level
+  - sourceScene: Credits
+    targetScene:
+    targetState: Credits
   initializationTimeout: 30

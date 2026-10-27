@@ -16,6 +16,7 @@ public class PlayerWallCollisionAudio : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (GameSpeechSettings.BlocksGameInput) return;
         if (Time.time < nextAllowedHitTime)
         {
             return;

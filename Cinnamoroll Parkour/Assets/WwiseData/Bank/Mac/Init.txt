@@ -1,8 +1,10 @@
 State Group	ID	Name			Wwise Object Path	Notes
-	1011905588	Coffee_Branching			\Default Work Unit\Coffee_Branching	
-	2679118456	Forest_InOut			\Default Work Unit\Forest_InOut	
+	1011905588	Coffee_Branching			\Default Work Unit\LevelBranching\Coffee_Branching	
+	2441027675	Language			\Default Work Unit\Language	
+	2679118456	Forest_InOut			\Default Work Unit\LevelBranching\Forest_InOut	
+	3103015060	MusicStates			\Default Work Unit\MusicStates	
 	3438831509	Loading_State			\Default Work Unit\Loading_State	
-	3829554629	Cloud_Branching			\Default Work Unit\Cloud_Branching	
+	3829554629	Cloud_Branching			\Default Work Unit\LevelBranching\Cloud_Branching	
 
 State	ID	Name	State Group			Notes
 	589294033	Coffee_Outro	Coffee_Branching			
@@ -10,40 +12,51 @@ State	ID	Name	State Group			Notes
 	3068162896	Coffee_B2	Coffee_Branching			
 	3068162897	Coffee_B3	Coffee_Branching			
 	3068162899	Coffee_B1	Coffee_Branching			
+	529726535	Eng	Language			
+	748895195	None	Language			
+	1853303386	CN	Language			
 	242565924	Forest_Ending	Forest_InOut			
 	748895195	None	Forest_InOut			
 	1257194736	Forest_Layer	Forest_InOut			
-	2629624105	Forest_Intro	Forest_InOut			
+	2282027	Cloud_Level	MusicStates			
+	748895195	None	MusicStates			
+	2189086104	MainTitle	MusicStates			
+	2201105581	Credits	MusicStates			
+	2655931314	CoffeeShop_Level	MusicStates			
+	3573931707	Loading	MusicStates			
+	3762955427	Tutorial	MusicStates			
+	4286836357	Forest_Level	MusicStates			
 	691006007	Loop	Loading_State			
 	748895195	None	Loading_State			
 	2555741448	Finish	Loading_State			
+	58968699	Cloud_Climax	Cloud_Branching			
 	748895195	None	Cloud_Branching			
-	1522068880	Cloud_B1	Cloud_Branching			
-	1522068882	Cloud_B3	Cloud_Branching			
-	1522068883	Cloud_B2	Cloud_Branching			
-	1522068885	Cloud_B4	Cloud_Branching			
-	1794864920	Cloud_T34	Cloud_Branching			
 	1894821564	Cloud_Outro	Cloud_Branching			
+	3134999537	Cloud_Layers	Cloud_Branching			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	2712164154	Ducking			\Default Work Unit\Ducking	
+	1006694123	Music_Volume			\Default Work Unit\Volume_Control\Music_Volume	
+	1564184899	SFX_Volume			\Default Work Unit\Volume_Control\SFX_Volume	
+	2712164154	Ducking			\Default Work Unit\Volume_Control\Ducking	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	120894080	PlayerPositionTone_Bus			\Default Work Unit\Master Audio Bus\Nav\PlayerPositionTone_Bus	
-	377197776	Nav			\Default Work Unit\Master Audio Bus\Nav	
+	120894080	PlayerPositionTone_Bus			\Default Work Unit\Master Audio Bus\SFX\Nav\PlayerPositionTone_Bus	
+	377197776	Nav			\Default Work Unit\Master Audio Bus\SFX\Nav	
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
-	573466488	DIalogue_Bus			\Default Work Unit\Master Audio Bus\DIalogue_Bus	
-	649003210	Broadcast			\Default Work Unit\Master Audio Bus\Nav\Broadcast	
-	817096458	Player_SFX			\Default Work Unit\Master Audio Bus\SFX\Player_SFX	
-	1534528548	Vo			\Default Work Unit\Master Audio Bus\DIalogue_Bus\Vo	
-	3584738722	Narration(Me)			\Default Work Unit\Master Audio Bus\DIalogue_Bus\Narration(Me)	
+	649003210	Broadcast			\Default Work Unit\Master Audio Bus\SFX\Nav\Broadcast	
+	817096458	Player_SFX			\Default Work Unit\Master Audio Bus\SFX\SFX_Child\Player_SFX	
+	1534528548	Vo			\Default Work Unit\Master Audio Bus\Voice\Vo	
+	3170124113	Voice			\Default Work Unit\Master Audio Bus\Voice	
+	3584738722	Narration(Me)			\Default Work Unit\Master Audio Bus\Voice\Narration(Me)	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
-	3920982602	Narration(AI)			\Default Work Unit\Master Audio Bus\DIalogue_Bus\Narration(AI)	
+	3920982602	Narration(AI)			\Default Work Unit\Master Audio Bus\Voice\Narration(AI)	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+	4292287381	SFX_Child			\Default Work Unit\Master Audio Bus\SFX\SFX_Child	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	278471273	Med_Room			\Default Work Unit\Master Audio Bus\Reverb\Med_Room	
-	282449107	Plate			\Default Work Unit\Master Audio Bus\Reverb\Plate	
-	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
+	278471273	Med_Room			\Default Work Unit\Master Audio Bus\SFX\Reverb\Med_Room	
+	282449107	Plate			\Default Work Unit\Master Audio Bus\SFX\Reverb\Plate	
+	348963605	Reverb			\Default Work Unit\Master Audio Bus\SFX\Reverb	
 
 Effect plug-ins	ID	Name	Type				Notes
 	1159390747	Room_Medium_Tiled	Wwise RoomVerb			

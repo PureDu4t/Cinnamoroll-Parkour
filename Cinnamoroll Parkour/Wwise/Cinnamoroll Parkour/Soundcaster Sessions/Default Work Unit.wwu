@@ -6,19 +6,15 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{8E8E9EB6-F719-4E20-AC6F-BEC4069503D1}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Play_LT_Start" ID="{A9F620D5-22DF-45D0-A82F-19978EF6252E}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<ObjectRef Name="Play_LT_Start" ID="{A9F620D5-22DF-45D0-A82F-19978EF6252E}" WorkUnitID="{9681D61D-55BD-4311-B5DC-8B755766AF39}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Broadcast_Drums" ID="{96FC4C57-096F-4901-990C-99C4213CDBDD}" WorkUnitID="{484DE43C-4946-41D6-8306-338A0AD93E58}"/>
-							<Position X="0" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_Jump_RandomVo" ID="{8CF09977-08C2-4ECC-98B5-FAF7D3210C08}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<ObjectRef Name="Play_Jump_RandomVo" ID="{8CF09977-08C2-4ECC-98B5-FAF7D3210C08}" WorkUnitID="{049D0EA6-0EB5-4BAC-A85F-B57C54238E49}"/>
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_LevelSelect" ID="{87492B21-466F-49F1-BF0B-F3C06F64720F}" WorkUnitID="{0653B117-1D75-4BE0-BF11-0289E1DCBA99}"/>
+							<ObjectRef Name="Play_LevelSelect" ID="{87492B21-466F-49F1-BF0B-F3C06F64720F}" WorkUnitID="{9681D61D-55BD-4311-B5DC-8B755766AF39}"/>
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
@@ -26,7 +22,7 @@
 							<Position X="0" Y="4"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_LT_1" ID="{6D458A33-6F03-4A46-A50B-9852757429DD}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<ObjectRef Name="Play_LT_1" ID="{6D458A33-6F03-4A46-A50B-9852757429DD}" WorkUnitID="{9681D61D-55BD-4311-B5DC-8B755766AF39}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
@@ -38,7 +34,7 @@
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_LevelSelectLore" ID="{F51A164E-B382-49EC-AADB-4735B9008037}" WorkUnitID="{0653B117-1D75-4BE0-BF11-0289E1DCBA99}"/>
+							<ObjectRef Name="Play_LevelSelectLore" ID="{F51A164E-B382-49EC-AADB-4735B9008037}" WorkUnitID="{9681D61D-55BD-4311-B5DC-8B755766AF39}"/>
 							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
@@ -46,7 +42,7 @@
 							<Position X="1" Y="4"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_StartVo" ID="{AE6EA5CF-ACCA-4BFC-89C2-478F65849F93}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<ObjectRef Name="Play_StartVo" ID="{AE6EA5CF-ACCA-4BFC-89C2-478F65849F93}" WorkUnitID="{049D0EA6-0EB5-4BAC-A85F-B57C54238E49}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
@@ -54,11 +50,11 @@
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_L2_OnStart" ID="{6DBD542F-B56A-4861-A1DD-9F87F534764F}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<ObjectRef Name="Play_L2_OnStart" ID="{6DBD542F-B56A-4861-A1DD-9F87F534764F}" WorkUnitID="{9681D61D-55BD-4311-B5DC-8B755766AF39}"/>
 							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_LT_1OnCollision" ID="{127276E1-D66A-41E6-9279-EA1FA21E9692}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<ObjectRef Name="Play_LT_1OnCollision" ID="{127276E1-D66A-41E6-9279-EA1FA21E9692}" WorkUnitID="{9681D61D-55BD-4311-B5DC-8B755766AF39}"/>
 							<Position X="2" Y="3"/>
 						</Module>
 						<Module>
@@ -66,7 +62,11 @@
 							<Position X="2" Y="4"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_RandomVo" ID="{72BB4BA1-E7E8-47F8-9A0C-F753B60C9263}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<ObjectRef Name="Set_CloudOutro" ID="{E5D16646-8B05-4E60-AEDE-0E1F25D4C99D}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="2" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_RandomVo" ID="{72BB4BA1-E7E8-47F8-9A0C-F753B60C9263}" WorkUnitID="{049D0EA6-0EB5-4BAC-A85F-B57C54238E49}"/>
 							<Position X="3" Y="0"/>
 						</Module>
 						<Module>
@@ -74,12 +74,20 @@
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_L4_1" ID="{BCD19046-64AE-4550-9451-4E46FA4EE823}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<ObjectRef Name="Play_L4_1" ID="{BCD19046-64AE-4550-9451-4E46FA4EE823}" WorkUnitID="{9681D61D-55BD-4311-B5DC-8B755766AF39}"/>
 							<Position X="3" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_LT_1" ID="{6D458A33-6F03-4A46-A50B-9852757429DD}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<ObjectRef Name="Play_LT_1" ID="{6D458A33-6F03-4A46-A50B-9852757429DD}" WorkUnitID="{9681D61D-55BD-4311-B5DC-8B755766AF39}"/>
 							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Start_Game" ID="{C656A0E8-B3F1-41BA-9355-381883F1E8CC}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="3" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Set_CloudClimax" ID="{67F78139-5922-41C8-ACD5-D8449A0EE0BF}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="3" Y="5"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_End_Credits" ID="{48D4EDA0-5E96-4A9C-A6BC-222D96E32558}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
@@ -90,8 +98,16 @@
 							<Position X="4" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_LT_2" ID="{CCCE03D8-848F-4E2B-8C3C-D6F4A369E1A2}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<ObjectRef Name="Play_LT_2" ID="{CCCE03D8-848F-4E2B-8C3C-D6F4A369E1A2}" WorkUnitID="{9681D61D-55BD-4311-B5DC-8B755766AF39}"/>
 							<Position X="4" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Set_CloudLayer1" ID="{76007EBA-A0A3-42F9-AFBE-AE9EBBE138DB}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Set_CloudLayer2" ID="{D207BD1D-8CA3-4DBE-9E97-28751EA121DD}" WorkUnitID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}"/>
+							<Position X="4" Y="5"/>
 						</Module>
 					</ModuleList>
 				</SoundcasterSession>

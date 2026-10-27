@@ -2703,8 +2703,6 @@ GameObject:
   - component: {fileID: 179125500}
   - component: {fileID: 179125503}
   - component: {fileID: 179125502}
-  - component: {fileID: 179125505}
-  - component: {fileID: 179125504}
   - component: {fileID: 2048208345}
   m_Layer: 0
   m_Name: LevelSelectSystem
@@ -2767,58 +2765,12 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: 8234524190d3a4f43b1372088f620eb5, type: 2}
   startingLevel: 1
   mainMenuSceneName: Main Menu
-  playLevelSelectionEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3cfabed07ede9443aa0c5631c577e60e, type: 2}
-  confirmSelectionEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 5b2380f3fbae04b03a01e36da2f25700, type: 2}
-  confirmLoadDelay: 0.35
-  maximumConfirmWaitTime: 1.5
   previousLevelKey: 276
   nextLevelKey: 275
   moveUpFiveKey: 0
   moveDownFiveKey: 0
   confirmKey: 0
   cancelKey: 27
---- !u!114 &179125504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179125499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7bcf50b096240ef9cc46ba377f65eec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerKey: 275
-  eventToPlay:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: fa8bdaa0b94264d86856930161a2106a, type: 2}
---- !u!114 &179125505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179125499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d425dc60119e54ddb836064f9c57a548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerKey: 276
-  eventToPlay:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: fa8bdaa0b94264d86856930161a2106a, type: 2}
-  playChance: 1
-  cooldown: 0
 --- !u!1 &195181335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2829,7 +2781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 195181338}
   - component: {fileID: 195181337}
-  - component: {fileID: 195181336}
+  - component: {fileID: 195181339}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -2837,36 +2789,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &195181336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195181335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a4987c422ec439c94d05a44dd284d67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bankToLoad:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  unloadBankOnDestroy: 0
-  playMusicEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a7bc331c9e9b6416b96a97c9ad3724bb, type: 2}
-  stopMusicEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: c477f065c26284fa1879cd7998fc3556, type: 2}
-  playMusicEventName: 
-  stopMusicEventName: 
-  stopFadeMilliseconds: 200
-  stopFadeCurve: 4
-  debugLogging: 0
 --- !u!114 &195181337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2906,6 +2828,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &195181339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195181335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4987c422ec439c94d05a44dd284d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  condition: 1
+  eventTarget: {fileID: 0}
+  initializationTimeout: 30
+  bankToLoad:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  unloadBankOnDestroy: 0
+  playMusicEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6da04c7360d3f4d03b6f2b04d3259c6f, type: 2}
+  playMusicEventName: 
+  debugLogging: 0
 --- !u!1 &437419263
 GameObject:
   m_ObjectHideFlags: 0
@@ -3583,6 +3531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockPlayerDuringPlayback: 0
+  triggerTts: 1
   actionBehaviours: []
 --- !u!114 &639609503
 MonoBehaviour:
@@ -3682,6 +3631,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: ef3703d4e531141e3aafde81f71dc263, type: 2}
+  triggerTts: 1
   playerTag: Player
   playOnlyOnce: 0
 --- !u!114 &639609507
@@ -3797,7 +3747,9 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 692dac02866f84f0c9a000a9c3741e8b, type: 2}
+  playStartEvent: 1
   lockPlayerDuringPlayback: 0
+  triggerTts: 1
 --- !u!114 &781406650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3962,7 +3914,9 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 324f7f469cf7e4905a7edd771f2c9c3a, type: 2}
+  playStartEvent: 1
   lockPlayerDuringPlayback: 0
+  triggerTts: 1
 --- !u!1 &877036373
 GameObject:
   m_ObjectHideFlags: 0
@@ -4059,6 +4013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockPlayerDuringPlayback: 0
+  triggerTts: 1
   actionBehaviours: []
 --- !u!114 &877036377
 MonoBehaviour:
@@ -4759,6 +4714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockPlayerDuringPlayback: 0
+  triggerTts: 1
   actionBehaviours: []
 --- !u!114 &1357767012
 MonoBehaviour:
@@ -4858,6 +4814,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: ef3703d4e531141e3aafde81f71dc263, type: 2}
+  triggerTts: 1
   playerTag: Player
   playOnlyOnce: 0
 --- !u!114 &1357767016
@@ -4987,6 +4944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockPlayerDuringPlayback: 0
+  triggerTts: 1
   actionBehaviours: []
 --- !u!114 &1771937365
 MonoBehaviour:
@@ -5086,6 +5044,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: ef3703d4e531141e3aafde81f71dc263, type: 2}
+  triggerTts: 1
   playerTag: Player
   playOnlyOnce: 0
 --- !u!114 &1771937369
@@ -5301,6 +5260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockPlayerDuringPlayback: 0
+  triggerTts: 1
   actionBehaviours: []
 --- !u!114 &1941712640
 MonoBehaviour:
@@ -5342,6 +5302,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 452e6b091803c424899f3085159d090c, type: 2}
+  triggerTts: 1
   playerTag: Player
   playOnlyOnce: 0
 --- !u!114 &1941712642
@@ -5360,6 +5321,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 4c7ba27eb361f409eb3ddeafe9ddc070, type: 2}
+  triggerTts: 1
   playerTag: Player
   playOnlyOnce: 0
 --- !u!114 &1941712643
@@ -5460,6 +5422,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4987c422ec439c94d05a44dd284d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  condition: 1
+  eventTarget: {fileID: 0}
+  initializationTimeout: 30
   bankToLoad:
     idInternal: 0
     valueGuidInternal: 
@@ -5469,14 +5434,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: f97d103072d6c4ee294a223c8b08b945, type: 2}
-  stopMusicEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
   playMusicEventName: 
-  stopMusicEventName: 
-  stopFadeMilliseconds: 200
-  stopFadeCurve: 4
   debugLogging: 0
 --- !u!114 &2048208342
 MonoBehaviour:
@@ -5494,8 +5452,9 @@ MonoBehaviour:
   englishText: 
   language: 0
   speechSpeed: 2
+  usePlayerSpeechSettings: 1
   lockPlayerDuringPlayback: 0
-  eventName: Play_Lore
+  inlineSounds: []
 --- !u!114 &2048208343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5512,8 +5471,9 @@ MonoBehaviour:
   englishText: 
   language: 0
   speechSpeed: 2
+  usePlayerSpeechSettings: 1
   lockPlayerDuringPlayback: 0
-  eventName: Play_Lore
+  inlineSounds: []
 --- !u!114 &2048208344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5530,8 +5490,9 @@ MonoBehaviour:
   englishText: 
   language: 0
   speechSpeed: 2
+  usePlayerSpeechSettings: 1
   lockPlayerDuringPlayback: 0
-  eventName: Play_Lore
+  inlineSounds: []
 --- !u!114 &2048208345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5548,7 +5509,9 @@ MonoBehaviour:
   englishText: 
   language: 0
   speechSpeed: 2
+  usePlayerSpeechSettings: 1
   lockPlayerDuringPlayback: 0
+  inlineSounds: []
 --- !u!114 &2048208346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5565,7 +5528,9 @@ MonoBehaviour:
   englishText: 
   language: 0
   speechSpeed: 2
+  usePlayerSpeechSettings: 1
   lockPlayerDuringPlayback: 0
+  inlineSounds: []
 --- !u!114 &2048208347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5582,7 +5547,9 @@ MonoBehaviour:
   englishText: 
   language: 0
   speechSpeed: 2
+  usePlayerSpeechSettings: 1
   lockPlayerDuringPlayback: 0
+  inlineSounds: []
 --- !u!114 &2048208348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5599,7 +5566,9 @@ MonoBehaviour:
   englishText: 
   language: 0
   speechSpeed: 2
+  usePlayerSpeechSettings: 1
   lockPlayerDuringPlayback: 0
+  inlineSounds: []
 --- !u!114 &2048208349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5616,7 +5585,9 @@ MonoBehaviour:
   englishText: 
   language: 0
   speechSpeed: 2
+  usePlayerSpeechSettings: 1
   lockPlayerDuringPlayback: 0
+  inlineSounds: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

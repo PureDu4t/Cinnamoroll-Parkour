@@ -71,3 +71,7 @@ Ui Skin 使用 PixelCartoonUiSkin 图集：云朵角面板、蓝色立体按钮�
 
 ## HUD 修正与字体
 文本容器统一使用矩形云朵角面板，不再九宫格拉伸云形剪影，避免长条状边缘和线。关卡牌、操作提示栏增加内部留白，文字使用自动缩小和区域裁切。UI 主字体改为 Google Fonts 的 ZCOOL KuaiLe（站酷快乐体），Include Font Data 开启，Noto Sans CJK SC 用于缺失字符回退；许可证保存在 Assets/Resources/Fonts/ZCOOL-KuaiLe-LICENSE.txt。代码编译通过，尚未在 Play 模式检查当前布局。
+
+## 2026-10-25：前景图集边缘清理
+PixelArtAtlasImporter 在编辑器导入时统一处理当前使用的十组透明前景图集：清除切片边界串入的相邻物件像素及透明区域的细线、孤立碎片，并保留主要轮廓。固定使用原始尺寸、Point、无 Mip Maps、无压缩，避免平台导入缩放改变切片位置。PixelArtDirector 与 PixelArtUi 的切片边界统一取整数像素；运行时不进行像素清理。原 PNG、关卡格子类型、碰撞和音效判定不变。
+已导出并逐组检查 Unity 实际导入后的十组前景纹理；覆盖咖啡馆家具、道路、森林地形、云端平台、藤蔓、云朵、角色、道具及 UI 图集。未逐关运行，已有 Build 需要重新构建才包含修正。

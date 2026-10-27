@@ -50,6 +50,7 @@ public class JumpVoicePlayer : MonoBehaviour
 
     private void TryPlayJumpVoice()
     {
+        if (GameSpeechSettings.BlocksGameInput) return;
         if (jumpVoiceEvent == null)
         {
             Debug.LogError(name + " has no jump voice Event configured.");

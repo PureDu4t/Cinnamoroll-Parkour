@@ -3,8 +3,7 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{C6D73447-BEF6-4EF2-BC63-EFF2180E3750}" PersistMode="Standalone">
 			<ChildrenList>
-				<WorkUnit Name="Tutorial" ID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}" PersistMode="Reference"/>
-				<WorkUnit Name="Level Select" ID="{0653B117-1D75-4BE0-BF11-0289E1DCBA99}" PersistMode="Reference"/>
+				<WorkUnit Name="Music" ID="{A5917033-40E9-41A5-9C6D-E3F185E24C17}" PersistMode="Reference"/>
 				<WorkUnit Name="Navigation" ID="{484DE43C-4946-41D6-8306-338A0AD93E58}" PersistMode="Reference"/>
 				<WorkUnit Name="Player" ID="{049D0EA6-0EB5-4BAC-A85F-B57C54238E49}" PersistMode="Reference"/>
 				<Folder Name="Narration" ID="{8811B522-D113-4AA7-BE38-3F5A9CA106B0}" ShortID="651351488">
@@ -43,8 +42,23 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Game_Title" ID="{273F9BEB-3294-4899-A5EA-2EB30761EF63}">
+							<ChildrenList>
+								<Action Name="" ID="{FE321D73-D58C-4AB8-B590-E3D6DE0AEB83}" ShortID="488555790">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Nar_Title" ID="{6A7AAC08-2C72-438A-89AE-1BC9255086B1}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
+				<WorkUnit Name="In_Game" ID="{9681D61D-55BD-4311-B5DC-8B755766AF39}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

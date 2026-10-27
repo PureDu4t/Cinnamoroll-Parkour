@@ -1,0 +1,1 @@
+Built-in imagegen: eight equal wide 16:9 frames in 2 columns by 4 rows; sunglasses Cinnamoroll DJ scratching vinyl, pastel cream and blue pixel art stage, fixed camera, quiet upper 23 percent for UI, main character and equipment lower central 65 percent. Motion interpolation to 64 frames at 24 FPS.

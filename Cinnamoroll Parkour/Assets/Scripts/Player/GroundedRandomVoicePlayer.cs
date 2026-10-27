@@ -52,6 +52,11 @@ public class GroundedRandomVoicePlayer : MonoBehaviour
 
     private void Update()
     {
+        if (GameSpeechSettings.BlocksGameInput)
+        {
+            ScheduleNextAttempt(initialDelay);
+            return;
+        }
         if (playerJump != null && !playerJump.IsGrounded())
         {
             StopActiveVoice();

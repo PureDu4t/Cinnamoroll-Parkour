@@ -2,19 +2,16 @@
 <WwiseDocument Type="WorkUnit" ID="{484DE43C-4946-41D6-8306-338A0AD93E58}" SchemaVersion="133" RootDocumentID="{C6D73447-BEF6-4EF2-BC63-EFF2180E3750}" ParentDocumentID="{C6D73447-BEF6-4EF2-BC63-EFF2180E3750}">
 	<Events>
 		<WorkUnit Name="Navigation" ID="{484DE43C-4946-41D6-8306-338A0AD93E58}" OwnerID="{C6D73447-BEF6-4EF2-BC63-EFF2180E3750}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="19"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
-				<Event Name="Play_Broadcast_Drums" ID="{96FC4C57-096F-4901-990C-99C4213CDBDD}">
-					<ChildrenList>
-						<Action Name="" ID="{5707C438-09C2-4E07-81B2-38D14B3D291D}" ShortID="423038494">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MUS_Broadcast_Drums" ID="{48583F0F-198F-467A-882F-8E0D8BE15661}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Folder Name="Play_Broadcast_Cell" ID="{E0396705-69A7-425D-B98C-4A8E9430E5A7}" ShortID="639743012">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="C" ID="{5DC380E8-DD10-4FEF-B12E-0339D68B8933}">
 							<ChildrenList>
@@ -128,6 +125,21 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_Broadcast_Tick" ID="{64BB503E-8F16-4979-A0FE-5FAC12AE5203}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{E98405AC-9962-4E6D-AA09-52810D3C45AC}" ShortID="977860514">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BroadcastCowbell" ID="{7412903E-B6A1-42BD-BC0E-7A2B8872BEA0}" WorkUnitID="{05E429A8-841A-4951-9B6E-0D824E93D1B5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
