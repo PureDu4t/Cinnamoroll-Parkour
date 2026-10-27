@@ -6453,7 +6453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c42aa887ec94fab9111b0061edf4116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chineseText: "\u8FD9\u4E2A\u58F0\u97F3\u4EE3\u8868\u4F60\u8D70\u5230\u4E86\u7EC8\u70B9\uFF0C\u6309E\u901A\u5173\n"
+  chineseText: "\u8FD9\u4E2A\u58F0\u97F3\u4EE3\u8868\u4F60\u8D70\u5230\u4E86\u7EC8\u70B9\uFF0C\u6309\u4EBF\u901A\u5173\n"
   englishText: This sound means you've reached the finish line! Press E to complete
     the level
   language: 0
